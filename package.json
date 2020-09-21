@@ -1,0 +1,41 @@
+{
+  "name": "pixabayfinder",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cra-template": "1.0.3",
+    "fslightbox-react": "^1.5.0",
+    "react": "^16.13.1",
+    "react-awesome-lightbox": "^1.7.3",
+    "react-dom": "^16.13.1",
+    "react-lightbox-component": "^1.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "simple-react-lightbox": "^3.3.4-1",
+    "styled-components": "*",
+    "websocket-extensions": "^0.1.4",
+    "yarn": "^1.22.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
