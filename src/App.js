@@ -29,7 +29,7 @@ const App = () => {
       }).then((res) => setList(res.data));
       setLoading(true);
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   };
 
@@ -87,7 +87,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  @media (max-width: 1800px) {
+  @media (max-width: 1900px) {
     flex-direction: column;
   }
 `;
@@ -104,7 +104,7 @@ const ImageCol = styled.div`
     width: 100%;
     height: 500px;
   }
-  @media (max-width: 1800px) {
+  @media (max-width: 1900px) {
     width: 100%;
   }
 `;
