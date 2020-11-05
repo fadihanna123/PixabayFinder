@@ -26,7 +26,9 @@ const App = () => {
           "https://pixabay.com/api/?key=18269871-9984b5717c4bef14378a76910&q=" +
           image +
           "&image_type=photo&pretty=true",
-      }).then((res) => setList(res.data));
+      })
+        .then((res) => setList(res.data))
+        .catch((err) => setList(err));
       setLoading(true);
     } catch (err) {
       console.error(err);
@@ -37,7 +39,7 @@ const App = () => {
     <>
       <Container>
         <h1>PixaBay Finder</h1>
-        <Row>
+        <InputRow>
           <Col>
             <Input
               id="query"
@@ -47,7 +49,7 @@ const App = () => {
               onChange={typer}
             />
           </Col>
-        </Row>
+        </InputRow>
 
         <Row>
           {search.query ? (
@@ -61,10 +63,10 @@ const App = () => {
                   </ImageCol>
                 ))
               ) : (
-                "No data..."
+                <div className="spinner"></div>
               )
             ) : (
-              <div className="spinner"></div>
+              <NoData>No images found</NoData>
             )
           ) : (
             ""
@@ -83,29 +85,41 @@ const Container = styled.div`
   text-align: center;
 `;
 
+const InputRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+`;
+
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   @media (max-width: 1900px) {
-    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
   }
 `;
 
 const Col = styled.div`
-  width: 100%;
   margin-top: 30px;
 `;
 
-const ImageCol = styled.div`
-  width: 20%;
-  padding: 10px;
-  img {
-    width: 100%;
-    height: 500px;
-  }
+const NoData = styled.div`
+  grid-column-start: 3;
+  grid-column-end: 5;
   @media (max-width: 1900px) {
-    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+`;
+
+const ImageCol = styled.div`
+  padding: 20px;
+
+  img {
+    height: 300px;
   }
 `;
 
@@ -125,6 +139,7 @@ const Input = styled.input`
   border-radius: 0.25rem;
   margin-bottom: 10px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
   &:focus {
     border-color: #0275d8;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px lightblue;

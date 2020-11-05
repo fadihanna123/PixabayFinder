@@ -13,7 +13,7 @@ export default createGlobalStyle`
     content: "";
     box-sizing: border-box;
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 50%;
     height: 60px;
     width: 60px;
