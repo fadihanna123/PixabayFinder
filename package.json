@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.21.0",
-    "cra-template": "1.1.0",
-    "fslightbox-react": "^1.5.0",
+    "axios": "^0.21.1",
+    "cra-template": "1.1.1",
+    "fslightbox-react": "^1.6.0",
     "react": "^17.0.1",
     "react-awesome-lightbox": "^1.7.3",
     "react-dom": "^17.0.1",
     "react-lightbox-component": "^1.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0",
-    "simple-react-lightbox": "^3.3.4-2",
+    "react-scripts": "4.0.1",
+    "simple-react-lightbox": "^3.5.1",
     "styled-components": "5.2.1",
     "websocket-extensions": "^0.1.4",
-    "yarn": "^1.22.4"
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "react-refresh": "^0.9.0"
   }
 }
