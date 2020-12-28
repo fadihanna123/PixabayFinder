@@ -20,18 +20,18 @@ const App = () => {
 
   const GetImages = async (image) => {
     try {
-      setLoading(false);
-      await axios({
+      setLoading(true);
+      const { data } = await axios({
         url:
           "https://pixabay.com/api/?key=18269871-9984b5717c4bef14378a76910&q=" +
           image +
           "&image_type=photo&pretty=true",
-      })
-        .then((res) => setList(res.data))
-        .catch((err) => setList(err));
-      setLoading(true);
+      });
+      setList(data);
     } catch (err) {
-      console.error(err);
+      console.log(err.response);
+    } finally {
+      setLoading(true);
     }
   };
 
