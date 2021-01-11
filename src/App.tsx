@@ -3,14 +3,48 @@ import styled from "styled-components";
 import axios from "axios";
 
 const App = () => {
-  const [search, setSearch] = useState({
+  interface Search {
+    query: string;
+  }
+
+  interface IList {
+    total: number;
+    totalHits: number;
+    hits: {
+      id: number;
+      pageURL: string;
+      type: string;
+      tags: string;
+      previewURL: string;
+      previewWidth: number;
+      previewHeight: number;
+      webformatURL: string;
+      webformatWidth: number;
+      webformatHeight: number;
+      largeImageURL: string;
+      imageWidth: number;
+      imageHeight: number;
+      imageSize: number;
+      views: number;
+      downloads: number;
+      favorites: number;
+      likes: number;
+      comments: number;
+      user_id: number;
+      user: string;
+      userImageURL: string;
+    }[];
+  }
+  const [search, setSearch] = useState<Search>({
     query: "",
   });
 
-  const [list, setList] = useState([]);
+  const [list, setList] = useState<IList>();
 
-  const [loading, setLoading] = useState(false);
-  const typer = (e) => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const typer = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setSearch({
       ...search,
       [e.target.name]: e.target.value,
@@ -18,7 +52,7 @@ const App = () => {
     GetImages(e.target.value);
   };
 
-  const GetImages = async (image) => {
+  const GetImages = async (image: string): Promise<void> => {
     try {
       setLoading(true);
       const { data } = await axios({
@@ -53,9 +87,9 @@ const App = () => {
 
         <Row>
           {search.query ? (
-            list.totalHits > 0 ? (
+            list && list.totalHits > 0 ? (
               loading ? (
-                list.hits.map((item, i) => (
+                list.hits.map((item, i: number) => (
                   <ImageCol key={i}>
                     <a data-lightbox="mygallery" href={item.largeImageURL}>
                       <img src={item.webformatURL} alt="" />
@@ -66,7 +100,7 @@ const App = () => {
                 <div className="spinner"></div>
               )
             ) : (
-              <NoData>No images found</NoData>
+              <NoData>No images found!</NoData>
             )
           ) : (
             ""
