@@ -62,11 +62,22 @@ export default SearchForm;
 
 const InputRow = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  width: 40%;
+  margin: 0 auto;
+
+  @media (max-width: 1900px) {
+    width: 100%;
+  }
 `;
 
 const Col = styled.div`
   margin-top: 30px;
+
+  @media (min-width: 900px) and (max-width: 1900px) {
+    display: grid;
+    width: 50%;
+    margin: 0 auto;
+  }
 `;
 
 const Input = styled.input`

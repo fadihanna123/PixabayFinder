@@ -32,13 +32,13 @@ const PhotosList = ({ search, list, loading }: Props) => {
 
 PhotosList.propTypes = {
   search: PropTypes.object.isRequired,
-  list: PropTypes.array.isRequired,
+  list: PropTypes.object,
   loading: PropTypes.bool.isRequired,
 };
 
 PhotosList.defaultProps = {
   search: { query: "" },
-  list: [],
+  list: {},
   loading: false,
 };
 
