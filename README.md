@@ -1,3 +1,4 @@
 # PixabayFinder
 Demo:
-[link](url){:target="_blank"}https://fadihanna123.github.io/PixabayFinder/
+<a href="https://fadihanna123.github.io/PixabayFinder/" target="_blank">Hello, world!</a>
+
