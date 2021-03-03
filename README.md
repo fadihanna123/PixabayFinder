@@ -1,3 +1,3 @@
 # PixabayFinder
 Demo:
-https://fadihanna123.github.io/PixabayFinder/
+[link](url){:target="_blank"}https://fadihanna123.github.io/PixabayFinder/
