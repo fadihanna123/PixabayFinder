@@ -33,9 +33,9 @@ export interface IList {
 
 export interface Props {
   search: { query: string };
-  list: IList | undefined;
-  loading: boolean;
-  setSearch: (search: { query: string }) => void;
-  setLoading: (loading: boolean) => void;
-  setList: (list: IList) => void;
+  list?: IList | undefined;
+  loading?: boolean;
+  setSearch?: (search: { query: string }) => void;
+  setLoading?: (loading: boolean) => void;
+  setList?: (list: IList) => void;
 }

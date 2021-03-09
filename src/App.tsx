@@ -17,21 +17,12 @@ const App = () => {
       <Container>
         <h1>PixaBay Finder</h1>
         <SearchForm
-          list={list}
           search={search}
           setSearch={setSearch}
-          loading={loading}
           setList={setList}
           setLoading={setLoading}
         />
-        <PhotosList
-          list={list}
-          search={search}
-          setSearch={setSearch}
-          loading={loading}
-          setList={setList}
-          setLoading={setLoading}
-        />
+        <PhotosList list={list} search={search} loading={loading} />
         <i>Created by Fadi Hanna.</i>
       </Container>
     </>

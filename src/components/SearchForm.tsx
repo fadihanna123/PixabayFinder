@@ -3,31 +3,32 @@ import PropTypes from "prop-types";
 import { Props } from "../typings/List";
 import axios from "axios";
 
-const SearchForm = ({ setSearch, search, setLoading, setList }: Props) => {
+const SearchForm = ({ search, setSearch, setLoading, setList }: Props) => {
   const GetImages = async (image: string) => {
     try {
-      setLoading(true);
+      setLoading && setLoading(true);
       const { data } = await axios({
         url:
           "https://pixabay.com/api/?key=18269871-9984b5717c4bef14378a76910&q=" +
           image +
           "&image_type=photo&pretty=true",
       });
-      setList(data);
+      setList && setList(data);
     } catch (err) {
       console.log(err.response);
     } finally {
-      setLoading(true);
+      setLoading && setLoading(true);
     }
   };
 
   const typer = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setSearch({
-      ...search,
-      [e.target.name]: e.target.value,
-    });
+    setSearch &&
+      setSearch({
+        ...search,
+        [e.target.name]: e.target.value,
+      });
     GetImages(e.target.value);
   };
 
