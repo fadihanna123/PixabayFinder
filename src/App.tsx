@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Search, IList } from "./typings/List";
+import { Search, IList } from "./typings";
 
 import SearchForm from "./components/SearchForm";
 import PhotosList from "./components/PhotosList";

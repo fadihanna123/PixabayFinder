@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Props } from "../typings/List";
+import { Props } from "../typings";
 import axios from "axios";
 
 const SearchForm = ({ search, setSearch, setLoading, setList }: Props) => {
