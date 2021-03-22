@@ -1,12 +1,20 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import { Props } from "../typings";
 import axios from "axios";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-const SearchForm = ({ search, setSearch, setLoading, setList }: Props) => {
+import { Props } from "../typings";
+
+const SearchForm = ({
+  search,
+  setSearch,
+  setLoading,
+  setList,
+  setError,
+}: Props) => {
   const GetImages = async (image: string) => {
     try {
       setLoading && setLoading(true);
+
       const { data } = await axios({
         url:
           "https://pixabay.com/api/?key=18269871-9984b5717c4bef14378a76910&q=" +
@@ -15,7 +23,7 @@ const SearchForm = ({ search, setSearch, setLoading, setList }: Props) => {
       });
       setList && setList(data);
     } catch (err) {
-      console.log(err.response);
+      setError && setError(err.message);
     } finally {
       setLoading && setLoading(true);
     }
@@ -52,11 +60,13 @@ const SearchForm = ({ search, setSearch, setLoading, setList }: Props) => {
 SearchForm.propTypes = {
   search: PropTypes.object.isRequired,
   setSearch: PropTypes.func.isRequired,
+  setError: PropTypes.func.isRequired,
 };
 
 SearchForm.defaultProps = {
   search: { query: "" },
   setSearch: { query: "" },
+  setError: "",
 };
 
 export default SearchForm;

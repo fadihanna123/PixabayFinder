@@ -2,13 +2,15 @@ import { Props } from "../typings";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const PhotosList = ({ search, list, loading }: Props) => {
+const PhotosList = ({ search, list, loading, error }: Props) => {
   return (
     <>
       <Row>
         {search.query ? (
           list && list.totalHits > 0 ? (
-            loading ? (
+            error ? (
+              <div style={{ color: "red" }}>{error}</div>
+            ) : loading ? (
               list.hits.map((item, i: number) => (
                 <ImageCol key={i}>
                   <a data-lightbox="mygallery" href={item.largeImageURL}>
@@ -34,12 +36,14 @@ PhotosList.propTypes = {
   search: PropTypes.object.isRequired,
   list: PropTypes.object,
   loading: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
 };
 
 PhotosList.defaultProps = {
   search: { query: "" },
   list: {},
   loading: false,
+  error: "",
 };
 
 export default PhotosList;

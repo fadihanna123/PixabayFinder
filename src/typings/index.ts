@@ -38,4 +38,6 @@ export interface Props {
   setSearch?: (search: { query: string }) => void;
   setLoading?: (loading: boolean) => void;
   setList?: (list: IList) => void;
+  error?: string;
+  setError?: (error: string) => void;
 }

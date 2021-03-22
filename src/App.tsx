@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
-import { Search, IList } from "./typings";
 
-import SearchForm from "./components/SearchForm";
 import PhotosList from "./components/PhotosList";
+import SearchForm from "./components/SearchForm";
+import { IList, Search } from "./typings";
 
 const App = () => {
+  const [error, setError] = useState<string>("");
+
   const [search, setSearch] = useState<Search>({
     query: "",
   });
@@ -21,8 +23,15 @@ const App = () => {
           setSearch={setSearch}
           setList={setList}
           setLoading={setLoading}
+          setError={setError}
         />
-        <PhotosList list={list} search={search} loading={loading} />
+        <PhotosList
+          error={error}
+          setError={setError}
+          list={list}
+          search={search}
+          loading={loading}
+        />
         <i>Created by Fadi Hanna.</i>
       </Container>
     </>
