@@ -1,3 +1,4 @@
+import { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -17,7 +18,7 @@ const SearchForm = ({
 
       const { data } = await axios({
         url:
-          "https://pixabay.com/api/?key=18269871-9984b5717c4bef14378a76910&q=" +
+          "?key=18269871-9984b5717c4bef14378a76910&q=" +
           image +
           "&image_type=photo&pretty=true",
       });
