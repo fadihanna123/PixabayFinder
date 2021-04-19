@@ -1,6 +1,6 @@
-import { Props } from "../typings";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Props } from "typings";
 
 const PhotosList = ({ search, list, loading, error }: Props) => {
   return (
@@ -50,6 +50,7 @@ export default PhotosList;
 
 const ImageCol = styled.div`
   padding: 20px;
+
   img {
     height: 300px;
   }
@@ -58,6 +59,7 @@ const ImageCol = styled.div`
 const NoData = styled.div`
   grid-column-start: 3;
   grid-column-end: 5;
+
   @media (max-width: 1900px) {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -67,9 +69,11 @@ const NoData = styled.div`
 const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+
   @media (max-width: 1900px) {
     grid-template-columns: repeat(3, 1fr);
   }
+
   @media (max-width: 560px) {
     grid-template-columns: 1fr;
   }

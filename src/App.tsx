@@ -1,10 +1,9 @@
 import axios from "axios";
+import PhotosList from "components/PhotosList";
+import SearchForm from "components/SearchForm";
 import { useState } from "react";
 import styled from "styled-components";
-
-import PhotosList from "./components/PhotosList";
-import SearchForm from "./components/SearchForm";
-import { IList, Search } from "./typings";
+import { IList, Search } from "typings";
 
 axios.defaults.baseURL = "https://pixabay.com/api/";
 axios.defaults.headers["Content-Type"] = "application/json";

@@ -1,9 +1,7 @@
-import { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
-import { Props } from "../typings";
+import { Props } from "typings";
 
 const SearchForm = ({
   search,
