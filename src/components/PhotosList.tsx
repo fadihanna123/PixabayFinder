@@ -50,9 +50,11 @@ export default PhotosList;
 
 const ImageCol = styled.div`
   padding: 20px;
+  overflow: hidden;
 
   img {
-    height: 300px;
+    max-width: 100%;
+    height: 100%;
   }
 `;
 
