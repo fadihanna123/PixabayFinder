@@ -9,7 +9,7 @@ const PhotosList = ({ search, list, loading, error }: Props) => {
         {search.query ? (
           list && list.totalHits > 0 ? (
             error ? (
-              <div style={{ color: "red" }}>{error}</div>
+              <Error>{error}</Error>
             ) : loading ? (
               list.hits.map((item, i: number) => (
                 <ImageCol key={i}>
@@ -47,6 +47,10 @@ PhotosList.defaultProps = {
 };
 
 export default PhotosList;
+
+const Error = styled.div`
+  color: red;
+`;
 
 const ImageCol = styled.div`
   padding: 20px;
