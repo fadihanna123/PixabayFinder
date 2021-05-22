@@ -22,7 +22,7 @@ const PhotosList = ({ search, list, loading, error }: Props) => {
               <div className="spinner"></div>
             )
           ) : (
-            <NoData>No images found!</NoData>
+            <NoData>No images found! 😔</NoData>
           )
         ) : (
           ""
@@ -50,21 +50,28 @@ export default PhotosList;
 
 const Error = styled.div`
   color: red;
+  transition: 0.3s;
 `;
 
 const ImageCol = styled.div`
-  padding: 20px;
+  padding: 0;
   overflow: hidden;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 10px;
+  transition: 0.3s;
 
   img {
     max-width: 100%;
     height: 100%;
+    transition: 0.3s;
   }
 `;
 
 const NoData = styled.div`
   grid-column-start: 3;
   grid-column-end: 5;
+  transition: 0.3s;
 
   @media (max-width: 1900px) {
     grid-column-start: 1;
@@ -75,6 +82,7 @@ const NoData = styled.div`
 const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  transition: 0.3s;
 
   @media (max-width: 1900px) {
     grid-template-columns: repeat(3, 1fr);

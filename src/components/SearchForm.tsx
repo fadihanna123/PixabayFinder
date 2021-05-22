@@ -74,6 +74,7 @@ const InputRow = styled.div`
   display: grid;
   width: 40%;
   margin: 0 auto;
+  transition: 0.3s;
 
   @media (max-width: 1900px) {
     width: 100%;
@@ -82,6 +83,7 @@ const InputRow = styled.div`
 
 const Col = styled.div`
   margin-top: 30px;
+  transition: 0.3s;
 
   @media (min-width: 900px) and (max-width: 1900px) {
     display: grid;
@@ -106,10 +108,12 @@ const Input = styled.input`
   border-radius: 0.25rem;
   margin-bottom: 10px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: 0.3s;
 
   &:focus {
     border-color: #0275d8;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px lightblue;
     outline: 0 none;
+    transition: 0.3s;
   }
 `;

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * 
@@ -8,6 +8,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     outline: 0;
     font-size: 100%;
+    transition: 0.3s;
   }
 
   .spinner:after {
@@ -28,7 +29,8 @@ export default createGlobalStyle`
 
   @keyframes spinner {
     to {
-      transform: rotate(360deg);
+      transform: rotate(360deg);  
+      transition: 0.3s;
     }
   }
 
@@ -38,6 +40,7 @@ export default createGlobalStyle`
     width: 100%;
     max-width: 100%;
     height: auto;
+    transition: 0.3s;
   }
 
   @media (max-width: 1500px)

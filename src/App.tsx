@@ -4,6 +4,7 @@ import SearchForm from "components/SearchForm";
 import { useState } from "react";
 import styled from "styled-components";
 import { IList, Search } from "typings";
+import Footer from "includes/Footer";
 
 axios.defaults.baseURL = "https://pixabay.com/api/";
 axios.defaults.headers["Content-Type"] = "application/json";
@@ -28,14 +29,16 @@ const App = () => {
           setLoading={setLoading}
           setError={setError}
         />
-        <PhotosList
-          error={error}
-          setError={setError}
-          list={list}
-          search={search}
-          loading={loading}
-        />
-        <i>Created by Fadi Hanna.</i>
+        <main>
+          <PhotosList
+            error={error}
+            setError={setError}
+            list={list}
+            search={search}
+            loading={loading}
+          />
+        </main>
+        <Footer />
       </Container>
     </>
   );
@@ -46,4 +49,5 @@ export default App;
 const Container = styled.div`
   margin: 10px;
   text-align: center;
+  transition: 0.3s;
 `;
