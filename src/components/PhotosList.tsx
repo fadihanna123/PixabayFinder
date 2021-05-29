@@ -1,49 +1,38 @@
-import PropTypes from "prop-types";
+import { useRecoilState } from "recoil";
+import { errorState, listState, loadingState, searchFormState } from "States";
 import styled from "styled-components";
-import { Props } from "typings";
 
-const PhotosList = ({ search, list, loading, error }: Props) => {
+const PhotosList = () => {
+  const [searchForm] = useRecoilState(searchFormState);
+  const [list] = useRecoilState(listState);
+  const [error] = useRecoilState(errorState);
+  const [loading] = useRecoilState(loadingState);
+
   return (
-    <>
-      <Row>
-        {search.query ? (
-          list && list.totalHits > 0 ? (
-            error ? (
-              <Error>{error}</Error>
-            ) : loading ? (
-              list.hits.map((item, i: number) => (
-                <ImageCol key={i}>
-                  <a data-lightbox="mygallery" href={item.largeImageURL}>
-                    <img src={item.webformatURL} alt="" />
-                  </a>
-                </ImageCol>
-              ))
-            ) : (
-              <div className="spinner"></div>
-            )
+    <Row>
+      {searchForm.query ? (
+        list && list.totalHits > 0 ? (
+          error ? (
+            <Error>{error}</Error>
+          ) : loading ? (
+            list.hits.map((item, i: number) => (
+              <ImageCol key={i}>
+                <a data-lightbox="mygallery" href={item.largeImageURL}>
+                  <img src={item.webformatURL} alt="" />
+                </a>
+              </ImageCol>
+            ))
           ) : (
-            <NoData>No images found! 😔</NoData>
+            <div className="spinner"></div>
           )
         ) : (
-          ""
-        )}
-      </Row>
-    </>
+          <NoData>No images found! 😔</NoData>
+        )
+      ) : (
+        ""
+      )}
+    </Row>
   );
-};
-
-PhotosList.propTypes = {
-  search: PropTypes.object.isRequired,
-  list: PropTypes.object,
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
-};
-
-PhotosList.defaultProps = {
-  search: { query: "" },
-  list: {},
-  loading: false,
-  error: "",
 };
 
 export default PhotosList;

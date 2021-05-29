@@ -1,4 +1,4 @@
-export interface Search {
+export interface SearchForm {
   query: string;
 }
 
@@ -29,15 +29,4 @@ export interface IList {
     user: string;
     userImageURL: string;
   }[];
-}
-
-export interface Props {
-  search: { query: string };
-  list?: IList | undefined;
-  loading?: boolean;
-  setSearch?: (search: { query: string }) => void;
-  setLoading?: (loading: boolean) => void;
-  setList?: (list: IList) => void;
-  error?: string;
-  setError?: (error: string) => void;
 }

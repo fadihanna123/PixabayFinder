@@ -1,18 +1,17 @@
 import axios from "axios";
-import PropTypes from "prop-types";
+import { useRecoilState } from "recoil";
+import { errorState, listState, loadingState, searchFormState } from "States";
 import styled from "styled-components";
-import { Props } from "typings";
 
-const SearchForm = ({
-  search,
-  setSearch,
-  setLoading,
-  setList,
-  setError,
-}: Props) => {
+const SearchForm = () => {
+  const [, setLoading] = useRecoilState(loadingState);
+  const [, setList] = useRecoilState(listState);
+  const [, setError] = useRecoilState(errorState);
+  const [searchForm, setSearchForm] = useRecoilState(searchFormState);
+
   const GetImages = async (image: string) => {
     try {
-      setLoading && setLoading(true);
+      setLoading(true);
 
       const { data } = await axios({
         url:
@@ -20,20 +19,20 @@ const SearchForm = ({
           image +
           "&image_type=photo&pretty=true",
       });
-      setList && setList(data);
+      setList(data);
     } catch (err) {
-      setError && setError(err.message);
+      setError(err.message);
     } finally {
-      setLoading && setLoading(true);
+      setLoading(true);
     }
   };
 
   const typer = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setSearch &&
-      setSearch({
-        ...search,
+    setSearchForm &&
+      setSearchForm({
+        ...searchForm,
         [e.target.name]: e.target.value,
       });
     GetImages(e.target.value);
@@ -47,25 +46,13 @@ const SearchForm = ({
             id="query"
             name="query"
             placeholder="Type here"
-            value={search.query}
+            value={searchForm.query}
             onChange={typer}
           />
         </Col>
       </InputRow>
     </>
   );
-};
-
-SearchForm.propTypes = {
-  search: PropTypes.object.isRequired,
-  setSearch: PropTypes.func.isRequired,
-  setError: PropTypes.func.isRequired,
-};
-
-SearchForm.defaultProps = {
-  search: { query: "" },
-  setSearch: { query: "" },
-  setError: "",
 };
 
 export default SearchForm;
