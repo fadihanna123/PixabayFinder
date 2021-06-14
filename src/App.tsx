@@ -13,9 +13,7 @@ const App = () => {
       <Container>
         <h1>PixaBay Finder</h1>
         <SearchForm />
-        <main>
-          <PhotosList />
-        </main>
+        <PhotosList />
         <Footer />
       </Container>
     </>

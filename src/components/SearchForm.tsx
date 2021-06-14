@@ -48,6 +48,7 @@ const SearchForm = () => {
             placeholder="Type here"
             value={searchForm.query}
             onChange={typer}
+            list="bros"
           />
         </Col>
       </InputRow>

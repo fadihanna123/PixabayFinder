@@ -9,29 +9,40 @@ const PhotosList = () => {
   const [loading] = useRecoilState(loadingState);
 
   return (
-    <Row>
-      {searchForm.query ? (
-        list && list.totalHits > 0 ? (
-          error ? (
-            <Error>{error}</Error>
-          ) : loading ? (
-            list.hits.map((item, i: number) => (
-              <ImageCol key={i}>
-                <a data-lightbox="mygallery" href={item.largeImageURL}>
-                  <img src={item.webformatURL} alt="" />
-                </a>
-              </ImageCol>
-            ))
+    <main>
+      {list?.hits.length === 0 ||
+      list?.hits.length === undefined ||
+      searchForm.query === "" ? (
+        ""
+      ) : (
+        <>
+          <b>Results found:</b> {list?.hits.length}
+        </>
+      )}
+      <Row>
+        {searchForm.query ? (
+          list && list.totalHits > 0 ? (
+            error ? (
+              <Error>{error}</Error>
+            ) : loading ? (
+              list.hits.map((item, i: number) => (
+                <ImageCol key={i}>
+                  <a data-lightbox="mygallery" href={item.largeImageURL}>
+                    <img src={item.webformatURL} alt="" />
+                  </a>
+                </ImageCol>
+              ))
+            ) : (
+              <div className="spinner"></div>
+            )
           ) : (
-            <div className="spinner"></div>
+            <NoData>No images found! 😔</NoData>
           )
         ) : (
-          <NoData>No images found! 😔</NoData>
-        )
-      ) : (
-        ""
-      )}
-    </Row>
+          ""
+        )}
+      </Row>
+    </main>
   );
 };
 
