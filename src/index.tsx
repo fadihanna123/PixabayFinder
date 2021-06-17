@@ -1,3 +1,5 @@
+import "normalize.css";
+
 import App from "App";
 import GlobalStyles from "global";
 import React from "react";
