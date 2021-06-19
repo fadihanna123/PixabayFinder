@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRecoilState } from "recoil";
 import { errorState, listState, loadingState, searchFormState } from "States";
 import styled from "styled-components";
+import { debounce } from "ts-debounce";
 
 const SearchForm = () => {
   const [, setLoading] = useRecoilState(loadingState);
@@ -29,13 +30,14 @@ const SearchForm = () => {
 
   const typer = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  ): void => {
     setSearchForm &&
       setSearchForm({
         ...searchForm,
         [e.target.name]: e.target.value,
       });
-    GetImages(e.target.value);
+
+    debounce<any>(GetImages(e.target.value), 1500);
   };
 
   return (
