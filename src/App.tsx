@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Container>
-        <h1>PixaBay Finder</h1>
+        <h1 data-aos="flip-left">PixaBay Finder</h1>
         <SearchForm />
         <PhotosList />
         <Footer />

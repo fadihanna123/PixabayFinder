@@ -16,7 +16,7 @@ const PhotosList = () => {
         ""
       ) : (
         <>
-          <b>Results found:</b> {list?.hits.length}
+          <b data-aos="flip-left">Results found:</b> {list?.hits.length}
         </>
       )}
       <Row>
@@ -26,7 +26,7 @@ const PhotosList = () => {
               <Error>{error}</Error>
             ) : loading ? (
               list.hits.map((item, i: number) => (
-                <ImageCol key={i}>
+                <ImageCol data-aos="zoom-in" key={i}>
                   <a data-lightbox="mygallery" href={item.largeImageURL}>
                     <img src={item.webformatURL} alt="" />
                   </a>
