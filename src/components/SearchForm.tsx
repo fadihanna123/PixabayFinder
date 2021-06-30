@@ -10,15 +10,12 @@ const SearchForm = () => {
   const [, setError] = useRecoilState(errorState);
   const [searchForm, setSearchForm] = useRecoilState(searchFormState);
 
-  const GetImages = async (image: string) => {
+  const GetImages = async (image: string): Promise<void> => {
     try {
       setLoading(true);
 
       const { data } = await axios({
-        url:
-          "?key=18269871-9984b5717c4bef14378a76910&q=" +
-          image +
-          "&image_type=photo&pretty=true",
+        url: "?key=x&q=" + image + "&image_type=photo&pretty=true",
       });
       setList(data);
     } catch (err) {
@@ -41,20 +38,18 @@ const SearchForm = () => {
   };
 
   return (
-    <>
-      <InputRow data-aos="zoom-in">
-        <Col>
-          <Input
-            id="query"
-            name="query"
-            placeholder="Type here"
-            value={searchForm.query}
-            onChange={typer}
-            list="bros"
-          />
-        </Col>
-      </InputRow>
-    </>
+    <InputRow data-aos="zoom-in">
+      <Col>
+        <Input
+          id="query"
+          name="query"
+          placeholder="Type here"
+          value={searchForm.query}
+          onChange={typer}
+          list="bros"
+        />
+      </Col>
+    </InputRow>
   );
 };
 
