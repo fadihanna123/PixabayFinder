@@ -1,14 +1,12 @@
 import "normalize.css";
+import "sal.js/dist/sal.css";
 
-import Aos from "aos";
 import App from "App";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import GlobalStyles from "styles/global";
-
-Aos.init();
 
 ReactDOM.render(
   <React.StrictMode>

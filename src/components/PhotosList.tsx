@@ -1,6 +1,7 @@
 import { useRecoilState } from "recoil";
 import { errorState, listState, loadingState, searchFormState } from "States";
 import styled from "styled-components";
+import ImageItem from "./ImageItem";
 
 const PhotosList = () => {
   const [searchForm] = useRecoilState(searchFormState);
@@ -16,21 +17,17 @@ const PhotosList = () => {
         ""
       ) : (
         <>
-          <b data-aos="flip-left">Results found:</b> {list?.hits.length}
+          <b data-sal="flip-left">Results found:</b> {list?.hits.length}
         </>
       )}
       <Row>
         {searchForm.query ? (
-          list && list.totalHits > 0 ? (
+          list && list.totalHits ? (
             error ? (
               <Error>{error}</Error>
             ) : loading ? (
               list.hits.map((item, i: number) => (
-                <ImageCol data-aos="zoom-in" key={i}>
-                  <a data-lightbox="mygallery" href={item.largeImageURL}>
-                    <img src={item.webformatURL} alt="" />
-                  </a>
-                </ImageCol>
+                <ImageItem item={item} i={i} />
               ))
             ) : (
               <div className="spinner"></div>
@@ -51,21 +48,6 @@ export default PhotosList;
 const Error = styled.div`
   color: red;
   transition: 0.3s;
-`;
-
-const ImageCol = styled.div`
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: 10px;
-  transition: 0.3s;
-
-  img {
-    max-width: 100%;
-    height: 100%;
-    transition: 0.3s;
-  }
 `;
 
 const NoData = styled.div`

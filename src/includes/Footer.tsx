@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer data-aos="fade-down-right">
+    <footer data-sal="fade">
       <i>Created by Fadi Hanna.</i>
     </footer>
   );

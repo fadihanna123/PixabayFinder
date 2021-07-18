@@ -15,7 +15,10 @@ const SearchForm = () => {
       setLoading(true);
 
       const { data } = await axios({
-        url: "?key=x&q=" + image + "&image_type=photo&pretty=true",
+        url:
+          "?key=18269871-9984b5717c4bef14378a76910&q=" +
+          image +
+          "&image_type=photo&pretty=true",
       });
       setList(data);
     } catch (err) {
@@ -38,7 +41,7 @@ const SearchForm = () => {
   };
 
   return (
-    <InputRow data-aos="zoom-in">
+    <InputRow data-sal="zoom-in">
       <Col>
         <Input
           id="query"
