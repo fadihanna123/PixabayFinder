@@ -1,12 +1,12 @@
+import { Flip, ToastContainer } from "react-toastify";
 import { useRecoilState } from "recoil";
-import { errorState, listState, loadingState, searchFormState } from "States";
+import { listState, loadingState, searchFormState } from "States";
 import styled from "styled-components";
 import ImageItem from "./ImageItem";
 
 const PhotosList = () => {
   const [searchForm] = useRecoilState(searchFormState);
   const [list] = useRecoilState(listState);
-  const [error] = useRecoilState(errorState);
   const [loading] = useRecoilState(loadingState);
 
   return (
@@ -23,11 +23,9 @@ const PhotosList = () => {
       <Row>
         {searchForm.query ? (
           list && list.totalHits ? (
-            error ? (
-              <Error>{error}</Error>
-            ) : loading ? (
+            loading ? (
               list.hits.map((item, i: number) => (
-                <ImageItem item={item} i={i} />
+                <ImageItem key={i} item={item} i={i} />
               ))
             ) : (
               <div className="spinner"></div>
@@ -39,16 +37,12 @@ const PhotosList = () => {
           ""
         )}
       </Row>
+      <ToastContainer transition={Flip} />
     </main>
   );
 };
 
 export default PhotosList;
-
-const Error = styled.div`
-  color: red;
-  transition: 0.3s;
-`;
 
 const NoData = styled.div`
   grid-column-start: 3;

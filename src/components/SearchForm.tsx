@@ -1,13 +1,13 @@
 import axios from "axios";
+import { Flip, toast } from "react-toastify";
 import { useRecoilState } from "recoil";
-import { errorState, listState, loadingState, searchFormState } from "States";
+import { listState, loadingState, searchFormState } from "States";
 import { Col, Input, InputRow } from "styles";
 import { debounce } from "ts-debounce";
 
 const SearchForm = () => {
   const [, setLoading] = useRecoilState(loadingState);
   const [, setList] = useRecoilState(listState);
-  const [, setError] = useRecoilState(errorState);
   const [searchForm, setSearchForm] = useRecoilState(searchFormState);
 
   const GetImages = async (image: string): Promise<void> => {
@@ -15,14 +15,11 @@ const SearchForm = () => {
       setLoading(true);
 
       const { data } = await axios({
-        url:
-          "?key=18269871-9984b5717c4bef14378a76910&q=" +
-          image +
-          "&image_type=photo&pretty=true",
+        url: "?key=x&q=" + image + "&image_type=photo&pretty=true",
       });
       setList(data);
     } catch (err) {
-      setError(err.message);
+      toast((err as Error).message, { transition: Flip, type: "error" });
     } finally {
       setLoading(true);
     }

@@ -1,3 +1,4 @@
+import sal from "sal.js";
 import styled from "styled-components";
 
 const ImageItem = ({
@@ -7,8 +8,10 @@ const ImageItem = ({
   item: { largeImageURL: string; webformatURL: string };
   i: number;
 }) => {
+  sal();
+
   return (
-    <ImageCol data-sal="zoom-in" key={i}>
+    <ImageCol data-sal="zoom-in">
       <a data-lightbox="mygallery" href={item.largeImageURL}>
         <img src={item.webformatURL} alt="" />
       </a>
