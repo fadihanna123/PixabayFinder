@@ -1,19 +1,26 @@
 import sal from "sal.js";
-import styled from "styled-components";
+import styled from "@emotion/styled";
+import { space, layout, border } from "styled-system";
 
 const ImageItem = ({
   item,
-  i,
 }: {
   item: { largeImageURL: string; webformatURL: string };
-  i: number;
 }) => {
   sal();
 
   return (
-    <ImageCol data-sal="zoom-in">
+    <ImageCol
+      data-sal="zoom-in"
+      p={0}
+      overflow="hidden"
+      border="1px solid"
+      borderColor="#000"
+      borderRadius="50%"
+      m={10}
+    >
       <a data-lightbox="mygallery" href={item.largeImageURL}>
-        <img src={item.webformatURL} alt="" />
+        <Img maxWidth="100%" height="100%" src={item.webformatURL} alt="" />
       </a>
     </ImageCol>
   );
@@ -21,17 +28,6 @@ const ImageItem = ({
 
 export default ImageItem;
 
-const ImageCol = styled.div`
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: 10px;
-  transition: 0.3s;
+const ImageCol = styled("section")(layout, space, border);
 
-  img {
-    max-width: 100%;
-    height: 100%;
-    transition: 0.3s;
-  }
-`;
+const Img = styled("img")(layout, space);

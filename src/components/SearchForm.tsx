@@ -38,15 +38,24 @@ const SearchForm = () => {
   };
 
   return (
-    <InputRow data-sal="zoom-in">
-      <Col>
+    <InputRow
+      data-sal="zoom-in"
+      display="grid"
+      width={["100%", "40%"]}
+      m="0 auto"
+    >
+      <Col
+        mt={30}
+        display={["grid", "auto"]}
+        width={["100%", "100%"]}
+        m={["margin 0 auto", "auto"]}
+      >
         <Input
           id="query"
           name="query"
           placeholder="Type here"
           value={searchForm.query}
           onChange={typer}
-          list="bros"
         />
       </Col>
     </InputRow>

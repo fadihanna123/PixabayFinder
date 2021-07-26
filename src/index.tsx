@@ -7,7 +7,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import GlobalStyles from "styles/global";
+import GlobalStyles from "styles";
 
 ReactDOM.render(
   <React.StrictMode>

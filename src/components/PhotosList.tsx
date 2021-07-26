@@ -2,6 +2,7 @@ import { Flip, ToastContainer } from "react-toastify";
 import { useRecoilState } from "recoil";
 import { listState, loadingState, searchFormState } from "States";
 import styled from "styled-components";
+
 import ImageItem from "./ImageItem";
 
 const PhotosList = () => {
@@ -25,7 +26,7 @@ const PhotosList = () => {
           list && list.totalHits ? (
             loading ? (
               list.hits.map((item, i: number) => (
-                <ImageItem key={i} item={item} i={i} />
+                <ImageItem key={i} item={item} />
               ))
             ) : (
               <div className="spinner"></div>

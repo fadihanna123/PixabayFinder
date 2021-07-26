@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@types/jest": "^26.0.24",
-    "@types/react": "^17.0.14",
+    "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "axios": "^0.21.1",
     "normalize.css": "^8.0.1",
@@ -16,6 +18,7 @@
     "recoil": "^0.3.1",
     "sal.js": "^0.8.5",
     "styled-components": "^5.3.0",
+    "styled-system": "^5.1.5",
     "ts-debounce": "^3.0.0"
   },
   "scripts": {
@@ -42,6 +45,7 @@
   "devDependencies": {
     "@types/react-router-dom": "^5.1.8",
     "@types/styled-components": "^5.1.11",
+    "@types/styled-system": "^5.1.12",
     "typescript": "^4.3.5"
   }
 }
