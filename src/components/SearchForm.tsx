@@ -14,9 +14,9 @@ const SearchForm = () => {
     try {
       setLoading(true);
 
-      const { data } = await axios({
-        url: "?key=x&q=" + image + "&image_type=photo&pretty=true",
-      });
+      const endPoint = "?key=x&q=" + image + "&image_type=photo&pretty=true";
+
+      const { data } = await axios.get(endPoint);
       setList(data);
     } catch (err) {
       toast((err as Error).message, { transition: Flip, type: "error" });
