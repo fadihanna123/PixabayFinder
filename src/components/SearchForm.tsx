@@ -14,7 +14,7 @@ const SearchForm = () => {
     try {
       setLoading(true);
 
-      const endPoint = "?key=x&q=" + image + "&image_type=photo&pretty=true";
+      const endPoint = `?key=x&q=${image}&image_type=photo&pretty=true`;
 
       const { data } = await axios.get(endPoint);
       setList(data);
