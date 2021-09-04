@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Flip, toast } from "react-toastify";
 import { useRecoilState } from "recoil";
-import { listState, loadingState, searchFormState } from "States";
+import { listState, loadingState, searchFormState } from "states";
 import { Col, Input, InputRow } from "styles";
 import { debounce } from "ts-debounce";
 

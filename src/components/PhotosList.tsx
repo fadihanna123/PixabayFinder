@@ -1,6 +1,6 @@
 import { Flip, ToastContainer } from "react-toastify";
 import { useRecoilState } from "recoil";
-import { listState, loadingState, searchFormState } from "States";
+import { listState, loadingState, searchFormState } from "states";
 import styled from "styled-components";
 
 import ImageItem from "./ImageItem";
