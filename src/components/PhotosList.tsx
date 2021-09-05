@@ -25,7 +25,7 @@ const PhotosList = () => {
         {searchForm.query ? (
           list && list.totalHits ? (
             loading ? (
-              list.hits.map((item, i: number) => (
+              list.hits.map((item: any, i: number) => (
                 <ImageItem key={i} item={item} />
               ))
             ) : (
