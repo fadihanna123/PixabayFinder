@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 import { listState, loadingState, searchFormState } from "states";
 import styled from "styled-components";
 
-import ImageItem from "./ImageItem";
+import ImageItem from "./PhotoItem";
 
 const PhotosList = () => {
   const [searchForm] = useRecoilState(searchFormState);

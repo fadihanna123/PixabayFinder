@@ -1,6 +1,8 @@
 import sal from "sal.js";
 import styled from "@emotion/styled";
 import { space, layout, border } from "styled-system";
+import FsLightbox from "fslightbox-react";
+import { useState } from "react";
 
 const ImageItem = ({
   item,
@@ -8,6 +10,7 @@ const ImageItem = ({
   item: { largeImageURL: string; webformatURL: string };
 }) => {
   sal();
+  const [toggler, setToggler] = useState(false);
 
   return (
     <ImageCol
@@ -19,9 +22,15 @@ const ImageItem = ({
       borderRadius="50%"
       m={10}
     >
-      <a data-lightbox="mygallery" href={item.largeImageURL}>
-        <Img maxWidth="100%" height="100%" src={item.webformatURL} alt="" />
-      </a>
+      <Img
+        aria-label=""
+        maxWidth="100%"
+        height="100%"
+        src={item.webformatURL}
+        alt=""
+        onClick={() => setToggler(!toggler)}
+      />
+      <FsLightbox toggler={toggler} sources={[item.largeImageURL]} />
     </ImageCol>
   );
 };
