@@ -13,6 +13,10 @@ export default createGlobalStyle`
     transition: 0.3s;
   }
 
+  .fslightbox-toolbar-button:nth-child(1) {
+    display: none;
+  }
+
   .spinner:after {
     content: "";
     box-sizing: border-box;

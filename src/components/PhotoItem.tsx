@@ -1,16 +1,21 @@
-import sal from "sal.js";
 import styled from "@emotion/styled";
-import { space, layout, border } from "styled-system";
 import FsLightbox from "fslightbox-react";
-import { useState } from "react";
+import { FC } from "react";
+import { useRecoilState } from "recoil";
+import sal from "sal.js";
+import { searchFormState, togglerState } from "states";
+import { border, layout, space } from "styled-system";
 
-const ImageItem = ({
-  item,
-}: {
+const ImageItem: FC<{
   item: { largeImageURL: string; webformatURL: string };
-}) => {
+}> = ({ item }: { item: { largeImageURL: string; webformatURL: string } }) => {
+  const [toggler, setToggler] = useRecoilState(togglerState);
+  const [searchForm] = useRecoilState(searchFormState);
   sal();
-  const [toggler, setToggler] = useState(false);
+
+  const toggleImagePreviewer = () => {
+    setToggler(!toggler);
+  };
 
   return (
     <ImageCol
@@ -21,14 +26,16 @@ const ImageItem = ({
       borderColor="#000"
       borderRadius="50%"
       m={10}
+      onClick={toggleImagePreviewer}
     >
       <Img
-        aria-label=""
+        aria-label={searchForm.query}
         maxWidth="100%"
         height="100%"
         src={item.webformatURL}
-        alt=""
-        onClick={() => setToggler(!toggler)}
+        alt={searchForm.query}
+        onClick={toggleImagePreviewer}
+        loading="lazy"
       />
       <FsLightbox toggler={toggler} sources={[item.largeImageURL]} />
     </ImageCol>

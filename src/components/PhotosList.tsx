@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Flip, ToastContainer } from "react-toastify";
 import { useRecoilState } from "recoil";
 import { listState, loadingState, searchFormState } from "states";
@@ -5,7 +6,7 @@ import styled from "styled-components";
 
 import ImageItem from "./PhotoItem";
 
-const PhotosList = () => {
+const PhotosList: FC = () => {
   const [searchForm] = useRecoilState(searchFormState);
   const [list] = useRecoilState(listState);
   const [loading] = useRecoilState(loadingState);
@@ -24,7 +25,7 @@ const PhotosList = () => {
       <Row>
         {searchForm.query ? (
           list && list.totalHits ? (
-            loading ? (
+            !loading ? (
               list.hits.map((item: any, i: number) => (
                 <ImageItem key={i} item={item} />
               ))

@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { IList, SearchForm } from "typings";
+import { IList, SearchForm } from "types";
 
 export const searchFormState = atom<SearchForm>({
   key: "searchFormState",
@@ -21,4 +21,9 @@ export const loadingState = atom<boolean>({
 export const errorState = atom<string>({
   key: "errorState",
   default: "",
+});
+
+export const togglerState = atom<boolean>({
+  key: "togglerState",
+  default: false,
 });
