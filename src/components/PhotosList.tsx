@@ -38,6 +38,7 @@ const PhotosList: React.FC = () => {
           ""
         )}
       </Row>
+
       <ToastContainer transition={Flip} />
     </main>
   );

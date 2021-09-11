@@ -27,3 +27,8 @@ export const togglerState = atom<boolean>({
   key: "togglerState",
   default: false,
 });
+
+export const imagePreviewerState = atom<string>({
+  key: "imagePreviewerState",
+  default: "",
+});

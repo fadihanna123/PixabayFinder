@@ -9,12 +9,13 @@ const SearchForm: React.FC = () => {
   const [, setLoading] = useRecoilState(loadingState);
   const [, setList] = useRecoilState(listState);
   const [searchForm, setSearchForm] = useRecoilState(searchFormState);
+  const { REACT_APP_PIXABAY_KEY } = process.env;
 
-  const GetImages = async (image: string): Promise<void> => {
+  const GetImages = async (imageVal: string): Promise<void> => {
     try {
       setLoading(true);
 
-      const endPoint = `?key=x&q=${image}&image_type=photo&pretty=true`;
+      const endPoint = `?key=${REACT_APP_PIXABAY_KEY}&q=${imageVal}&image_type=photo&pretty=true`;
 
       const { data } = await axios.get(endPoint);
       setList(data);
