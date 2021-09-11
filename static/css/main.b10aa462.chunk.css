@@ -1,0 +1,2 @@
+.modal{height:100%;color:#fff;-webkit-animation:inlightbox .8s forwards;animation:inlightbox .8s forwards;background:rgba(0,0,0,.1)!important}@-webkit-keyframes inlightbox{0%{-webkit-transform:scale(0);transform:scale(0)}to{height:100%;width:100%;top:0;left:0;-webkit-transform:scale(1);transform:scale(1)}}@keyframes inlightbox{0%{-webkit-transform:scale(0);transform:scale(0)}to{height:100%;width:100%;top:0;left:0;-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=main.b10aa462.chunk.css.map */
