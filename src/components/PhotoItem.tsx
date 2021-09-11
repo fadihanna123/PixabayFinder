@@ -1,19 +1,18 @@
 import styled from "@emotion/styled";
 import FsLightbox from "fslightbox-react";
-import { FC } from "react";
 import { useRecoilState } from "recoil";
 import sal from "sal.js";
 import { searchFormState, togglerState } from "states";
 import { border, layout, space } from "styled-system";
 
-const ImageItem: FC<{
+const ImageItem: React.FC<{
   item: { largeImageURL: string; webformatURL: string };
 }> = ({ item }: { item: { largeImageURL: string; webformatURL: string } }) => {
   const [toggler, setToggler] = useRecoilState(togglerState);
   const [searchForm] = useRecoilState(searchFormState);
   sal();
 
-  const toggleImagePreviewer = () => {
+  const toggleImagePreviewer = (): void => {
     setToggler(!toggler);
   };
 

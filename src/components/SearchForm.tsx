@@ -1,12 +1,11 @@
 import axios from "axios";
-import { FC } from "react";
 import { Flip, toast } from "react-toastify";
 import { useRecoilState } from "recoil";
 import { listState, loadingState, searchFormState } from "states";
 import { Col, Input, InputRow } from "styles";
 import { debounce } from "ts-debounce";
 
-const SearchForm: FC = () => {
+const SearchForm: React.FC = () => {
   const [, setLoading] = useRecoilState(loadingState);
   const [, setList] = useRecoilState(listState);
   const [searchForm, setSearchForm] = useRecoilState(searchFormState);
@@ -15,7 +14,7 @@ const SearchForm: FC = () => {
     try {
       setLoading(true);
 
-      const endPoint = `?key=x&q=${image}&image_type=photo&pretty=true`;
+      const endPoint = `?key=18269871-9984b5717c4bef14378a76910&q=${image}&image_type=photo&pretty=true`;
 
       const { data } = await axios.get(endPoint);
       setList(data);

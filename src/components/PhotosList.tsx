@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Flip, ToastContainer } from "react-toastify";
 import { useRecoilState } from "recoil";
 import { listState, loadingState, searchFormState } from "states";
@@ -6,7 +5,7 @@ import styled from "styled-components";
 
 import ImageItem from "./PhotoItem";
 
-const PhotosList: FC = () => {
+const PhotosList: React.FC = () => {
   const [searchForm] = useRecoilState(searchFormState);
   const [list] = useRecoilState(listState);
   const [loading] = useRecoilState(loadingState);

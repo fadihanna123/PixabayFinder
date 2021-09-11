@@ -2,15 +2,16 @@ import styled from "@emotion/styled";
 import axios from "axios";
 import PhotosList from "components/PhotosList";
 import SearchForm from "components/SearchForm";
-import Footer from "includes/Footer";
+import Footer from "inc/Footer";
 import { useEffect } from "react";
 import sal from "sal.js";
 import { space, typography } from "styled-system";
 
-axios.defaults.baseURL = "https://pixabay.com/api/";
+const { REACT_APP_PIXABAY_BASE_URL } = process.env;
+axios.defaults.baseURL = REACT_APP_PIXABAY_BASE_URL;
 axios.defaults.headers["Content-Type"] = "application/json";
 
-const App = () => {
+const App: React.FC = () => {
   useEffect(() => {
     sal();
   }, []);
