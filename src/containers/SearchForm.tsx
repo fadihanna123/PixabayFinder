@@ -4,23 +4,24 @@ import { useRecoilState } from "recoil";
 import { listState, loadingState, searchFormState } from "states";
 import { Col, Input, InputRow } from "styles";
 import { debounce } from "ts-debounce";
+import { IList } from "typings";
+import { PixabayKey } from "utils";
 
 const SearchForm: React.FC = () => {
   const [, setLoading] = useRecoilState(loadingState);
   const [, setList] = useRecoilState(listState);
   const [searchForm, setSearchForm] = useRecoilState(searchFormState);
-  const { REACT_APP_PIXABAY_KEY } = process.env;
 
   const GetImages = async (imageVal: string): Promise<void> => {
     try {
       setLoading(true);
 
-      const endPoint = `?key=${REACT_APP_PIXABAY_KEY}&q=${imageVal}&image_type=photo&pretty=true`;
+      const endPoint = `?key=${PixabayKey}&q=${imageVal}&image_type=photo&pretty=true`;
 
-      const { data } = await axios.get(endPoint);
+      const { data } = await axios.get<IList>(endPoint);
       setList(data);
     } catch (err) {
-      toast((err as Error).message, { transition: Flip, type: "error" });
+      toast.error((err as Error).message, { transition: Flip });
     } finally {
       setLoading(false);
     }

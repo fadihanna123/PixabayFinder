@@ -13,7 +13,7 @@ import {
   space,
 } from "styled-system";
 
-const ImageItem: React.FC<{
+const PhotoItem: React.FC<{
   item: { largeImageURL: string; webformatURL: string };
 }> = ({ item }: { item: { largeImageURL: string; webformatURL: string } }) => {
   const [toggler, setToggler] = useRecoilState(togglerState);
@@ -82,7 +82,7 @@ const ImageItem: React.FC<{
   );
 };
 
-export default ImageItem;
+export default PhotoItem;
 
 const ImageCol = styled("section")(layout, space, border);
 
