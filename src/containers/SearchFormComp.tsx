@@ -1,0 +1,61 @@
+import { typer } from "functions";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchType } from "redux/actions";
+import { Col, Input, InputRow } from "styles/globalStyles";
+import { SearchFormReducerTypes, SearchTypeReducerTypes } from "typings/redux";
+
+const SearchFormComp: React.FC = () => {
+  const searchForm = useSelector(
+    (state: SearchFormReducerTypes) => state.searchFormReducer
+  );
+
+  const searchType = useSelector(
+    (state: SearchTypeReducerTypes) => state.searchTypeReducer
+  );
+
+  const dispatch = useDispatch();
+
+  return (
+    <InputRow
+      data-sal="zoom-in"
+      display="grid"
+      width={["100%", "40%"]}
+      m="0 auto"
+    >
+      <Col
+        mt={30}
+        display={["grid", "auto"]}
+        width={["100%", "100%"]}
+        m={["margin 0 auto", "auto"]}
+      >
+        <Input
+          id="query"
+          name="query"
+          placeholder={searchType !== "" ? "Type here" : ""}
+          value={searchForm.query}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            typer(e, searchForm, dispatch)
+          }
+        />
+      </Col>
+      {/* <Col>
+        <input
+          type="radio"
+          name="searchType"
+          value={searchForm.type}
+          onChange={() => dispatch(setSearchType("Images"))}
+        />
+        Images
+        <input
+          type="radio"
+          name="searchType"
+          value={searchForm.type}
+          onChange={() => dispatch(setSearchType("Videos"))}
+        />
+        Videos
+      </Col> */}
+    </InputRow>
+  );
+};
+
+export default SearchFormComp;

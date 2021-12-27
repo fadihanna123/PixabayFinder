@@ -5,17 +5,18 @@ import "sal.js/dist/sal.css";
 import App from "containers/App";
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
-import { RecoilRoot } from "recoil";
-import GlobalStyles from "styles";
+import { store } from "redux/store";
+import GlobalStyles from "styles/globalStyles";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <GlobalStyles />
-      <RecoilRoot>
+      <Provider store={store}>
         <App />
-      </RecoilRoot>
+      </Provider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

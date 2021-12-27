@@ -1,72 +1,74 @@
+import { useSelector } from "react-redux";
 import { Flip, ToastContainer } from "react-toastify";
-import { useRecoilState } from "recoil";
-import { listState, loadingState, searchFormState } from "states";
-import styled from "styled-components";
+import { NoData, Row } from "styles/photoListStyles";
+import {
+  ImgListReducerTypes,
+  LoadingReducerTypes,
+  SearchFormReducerTypes,
+  SearchTypeReducerTypes,
+  VideoListReducerTypes,
+} from "typings";
 
-import ImageItem from "./PhotoItem";
+import PhotoItem from "./PhotoItem";
 
 const PhotosList: React.FC = () => {
-  const [searchForm] = useRecoilState(searchFormState);
-  const [list] = useRecoilState(listState);
-  const [loading] = useRecoilState(loadingState);
+  const searchForm = useSelector(
+    (state: SearchFormReducerTypes) => state.searchFormReducer
+  );
+
+  const imgList = useSelector(
+    (state: ImgListReducerTypes) => state.imgListReducer
+  );
+
+  const videoList = useSelector(
+    (state: VideoListReducerTypes) => state.VideoListReducer
+  );
+
+  const loading = useSelector(
+    (state: LoadingReducerTypes) => state.loadingReducer
+  );
+
+  const searchType = useSelector(
+    (state: SearchTypeReducerTypes) => state.searchTypeReducer
+  );
 
   return (
     <main>
-      {list?.hits.length === 0 ||
-      list?.hits.length === undefined ||
+      {imgList?.hits.length === 0 ||
+      imgList?.hits.length === undefined ||
       searchForm.query === "" ? (
         ""
       ) : (
         <>
-          <b data-sal="flip-left">Results found:</b> {list?.hits.length}
+          <b data-sal="flip-left">Results found:</b> {imgList?.hits.length}
         </>
       )}
       <Row>
-        {searchForm.query ? (
-          list && list.totalHits ? (
-            !loading ? (
-              list.hits.map((item: any, i: number) => (
-                <ImageItem key={i} item={item} />
-              ))
+        {searchType === "Images" ? (
+          searchForm.query ? (
+            imgList && imgList.totalHits ? (
+              !loading ? (
+                imgList.hits.map((item, i) => {
+                  return <PhotoItem key={i} item={item} />;
+                })
+              ) : (
+                <div className="spinner"></div>
+              )
             ) : (
-              <div className="spinner"></div>
+              <NoData>No images found! 😔</NoData>
             )
           ) : (
-            <NoData>No images found! 😔</NoData>
+            ""
           )
         ) : (
-          ""
+          videoList?.hits.map((item: any) => (
+            <video src={item.videos.small.url}></video>
+          ))
         )}
       </Row>
-
       <ToastContainer transition={Flip} />
     </main>
   );
 };
 
 export default PhotosList;
-
-const NoData = styled.div`
-  grid-column-start: 3;
-  grid-column-end: 5;
-  transition: 0.3s;
-
-  @media (max-width: 1900px) {
-    grid-column-start: 1;
-    grid-column-end: 5;
-  }
-`;
-
-const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  transition: 0.3s;
-
-  @media (max-width: 1900px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (max-width: 560px) {
-    grid-template-columns: 1fr;
-  }
-`;

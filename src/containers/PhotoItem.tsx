@@ -1,35 +1,32 @@
 import "styles/main.css";
 
-import styled from "@emotion/styled";
-import { useRecoilState } from "recoil";
+import { hideImagePreviewer, toggleImagePreviewer } from "functions";
+import { useDispatch, useSelector } from "react-redux";
 import sal from "sal.js";
-import { imagePreviewerState, searchFormState, togglerState } from "states";
+import { ImageCol, Img, Modal, ModalContent } from "styles";
 import {
-  background,
-  border,
-  flexbox,
-  layout,
-  position,
-  space,
-} from "styled-system";
+  HitsOfList,
+  ImageReducerTypes,
+  SearchFormReducerTypes,
+  TogglerReducerTypes,
+} from "typings";
 
 const PhotoItem: React.FC<{
-  item: { largeImageURL: string; webformatURL: string };
-}> = ({ item }: { item: { largeImageURL: string; webformatURL: string } }) => {
-  const [toggler, setToggler] = useRecoilState(togglerState);
-  const [searchForm] = useRecoilState(searchFormState);
-  const [image, setImage] = useRecoilState(imagePreviewerState);
+  item: HitsOfList;
+}> = ({ item }: { item: HitsOfList }) => {
+  const toggler = useSelector(
+    (state: TogglerReducerTypes) => state.togglerReducer
+  );
+
+  const searchForm = useSelector(
+    (state: SearchFormReducerTypes) => state.searchFormReducer
+  );
+
+  const image = useSelector((state: ImageReducerTypes) => state.imageReducer);
+
+  const dispatch = useDispatch();
 
   sal();
-
-  const toggleImagePreviewer = (imgUrl: string): void => {
-    setToggler(true);
-    setImage(imgUrl);
-  };
-
-  const hideImagePreviewer = (): void => {
-    setToggler(!toggler);
-  };
 
   return (
     <ImageCol
@@ -41,15 +38,20 @@ const PhotoItem: React.FC<{
       borderRadius="50%"
       m={10}
     >
-      <Img
-        aria-label={searchForm.query}
-        maxWidth="100%"
-        height="100%"
-        src={item.webformatURL}
-        alt={searchForm.query}
-        loading="lazy"
-        onClick={() => toggleImagePreviewer(item.webformatURL)}
-      />
+      {item.webformatURL ? (
+        <Img
+          aria-label={searchForm.query}
+          maxWidth="100%"
+          height="100%"
+          src={item.webformatURL}
+          alt={searchForm.query}
+          onClick={() => toggleImagePreviewer(item.webformatURL, dispatch)}
+          loading="lazy"
+        />
+      ) : (
+        <video src={image}></video>
+      )}
+
       {toggler && (
         <Modal
           position="fixed"
@@ -60,7 +62,7 @@ const PhotoItem: React.FC<{
           width={1}
           className="modal"
           color="white"
-          onClick={hideImagePreviewer}
+          onClick={() => hideImagePreviewer(toggler, dispatch)}
         >
           <ModalContent
             position="relative"
@@ -73,7 +75,11 @@ const PhotoItem: React.FC<{
             height="100%"
             maxWidth="1200px"
           >
-            <img src={image} alt={searchForm.query} />
+            {item.webformatURL ? (
+              <img src={image} alt={searchForm.query} />
+            ) : (
+              <video src={image}></video>
+            )}
           </ModalContent>
         </Modal>
       )}
@@ -83,17 +89,3 @@ const PhotoItem: React.FC<{
 };
 
 export default PhotoItem;
-
-const ImageCol = styled("section")(layout, space, border);
-
-const Img = styled("img")(layout, space);
-
-const Modal = styled("div")(position, space, layout);
-
-const ModalContent = styled("div")(
-  position,
-  space,
-  layout,
-  background,
-  flexbox
-);

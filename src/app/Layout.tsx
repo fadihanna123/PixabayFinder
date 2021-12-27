@@ -1,8 +1,7 @@
-import styled from "@emotion/styled";
 import PhotosList from "containers/PhotosList";
-import SearchForm from "containers/SearchForm";
+import SearchForm from "containers/SearchFormComp";
 import Footer from "inc/Footer";
-import { space, typography } from "styled-system";
+import { Container } from "styles";
 
 const Layout: React.FC = () => (
   <Container m={10} textAlign="center">
@@ -14,5 +13,3 @@ const Layout: React.FC = () => (
 );
 
 export default Layout;
-
-const Container = styled("section")(typography, space);
