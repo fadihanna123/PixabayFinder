@@ -1,9 +1,9 @@
-import { request } from "api";
-import { Flip, toast } from "react-toastify";
-import { Dispatch } from "redux";
-import { setLoading } from "redux/actions";
-import { IList } from "typings";
-import { PixabayKey } from "utils/envs";
+import { request } from 'api';
+import { Flip, toast } from 'react-toastify';
+import { Dispatch } from 'redux';
+import { setLoading } from 'redux/actions';
+import { IList } from 'typings';
+import { PixabayKey } from 'utils/envs';
 
 export const getImages = async (
   imageVal: string,
