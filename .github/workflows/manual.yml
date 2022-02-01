@@ -31,4 +31,3 @@ jobs:
         npm install
         npm run build --if-present
       shell: bash
-      working-directory: ${{env.working-directory}}
