@@ -28,7 +28,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: |
-        cd ..
         npm install
         npm run build --if-present
       shell: bash
