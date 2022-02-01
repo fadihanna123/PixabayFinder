@@ -31,4 +31,4 @@ jobs:
         ls
         npm install
         npm run build --if-present
-      working-directory: PixabayFinder
+      working-directory: ..
