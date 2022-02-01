@@ -1,4 +1,4 @@
-import purgecss from "@fullhuman/postcss-purgecss";
+import purgecss from '@fullhuman/postcss-purgecss';
 
 module.exports = {
   style: {
