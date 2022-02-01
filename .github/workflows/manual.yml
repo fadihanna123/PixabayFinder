@@ -15,5 +15,5 @@ jobs:
         run: |
           npm install
           npm run build
-          git push origin publish
+          git push
         working-directory: ${{ github.workspace }}
