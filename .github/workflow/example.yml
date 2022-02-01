@@ -15,6 +15,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           build_directory: docs
-          pr_branch: prod
+          pr_branch: publish
           package_manager: npm
           build_command: npm run build
