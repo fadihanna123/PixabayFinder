@@ -1,12 +1,13 @@
-import Layout from "app/Layout";
-import axios from "axios";
-import { getImages, getVideos } from "functions";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import sal from "sal.js";
-import { SearchFormReducerTypes } from "typings";
-import { PixabayBaseURL } from "utils/envs";
-import { setImgList, setVideoList } from "redux/actions";
+import Layout from 'app/Layout';
+import axios from 'axios';
+import { getImages, getVideos } from 'functions';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Flip, toast } from 'react-toastify';
+import { setImgList, setLoading, setVideoList } from 'redux/actions';
+import sal from 'sal.js';
+import { IList, SearchFormReducerTypes } from 'typings';
+import { PixabayBaseURL } from 'utils/envs';
 
 const globalHeader: string = "application/json";
 
@@ -23,13 +24,21 @@ const App: React.FC = () => {
   useEffect(() => {
     sal();
 
-    getImages(searchForm.query, dispatch).then((data) =>
-      dispatch(setImgList(data))
-    );
+    getImages(searchForm.query)
+      .then((data: Promise<void | IList[]>) => {
+        dispatch(setLoading(true));
+        dispatch(setImgList(data));
+      })
+      .catch((err) => toast.error((err as Error).message, { transition: Flip }))
+      .finally(() => dispatch(setLoading(false)));
 
-    getVideos(searchForm.query, dispatch).then((data) =>
-      dispatch(setVideoList(data))
-    );
+    getVideos(searchForm.query)
+      .then((data: Promise<void | IList[]>) => {
+        dispatch(setLoading(true));
+        dispatch(setVideoList(data));
+      })
+      .catch((err) => toast.error((err as Error).message, { transition: Flip }))
+      .finally(() => dispatch(setLoading(false)));
   }, [dispatch, searchForm.query]);
 
   return <Layout />;

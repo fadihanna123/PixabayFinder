@@ -1,5 +1,4 @@
-export * from "./getImages";
-export * from "./getVideos";
+export * from "./apiStore";
 export * from "./hideImagePreviewer";
 export * from "./toggleImagePreviewer";
 export * from "./typer";
