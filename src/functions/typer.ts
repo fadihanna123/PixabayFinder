@@ -6,7 +6,7 @@ export const typer = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   searchForm: SearchForm,
   dispatch: Dispatch<any>
-): void => {
+) => {
   dispatch(
     setSearchForm &&
       setSearchForm({

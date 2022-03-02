@@ -1,7 +1,8 @@
 import 'styles/main.css';
 
 import { hideImagePreviewer, toggleImagePreviewer } from 'functions';
-import { HitsOfList, ImageReducerTypes, SearchFormReducerTypes, TogglerReducerTypes } from 'models';
+import { HitsOfList, SearchFormReducerTypes, TogglerReducerTypes, VideoReducerTypes } from 'models';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import sal from 'sal.js';
 import { ImageCol, Img, Modal, ModalContent } from 'styles';
@@ -17,11 +18,12 @@ const PhotoItem: React.FC<{
     (state: SearchFormReducerTypes) => state.searchFormReducer
   );
 
-  const image = useSelector((state: ImageReducerTypes) => state.imageReducer);
+  const video = useSelector((state: VideoReducerTypes) => state.VideoReducer);
 
   const dispatch = useDispatch();
-
-  sal();
+  useEffect(() => {
+    sal();
+  }, []);
 
   return (
     <ImageCol
@@ -33,18 +35,18 @@ const PhotoItem: React.FC<{
       borderRadius="50%"
       m={10}
     >
-      {item.webformatURL ? (
-        <Img
-          aria-label={searchForm.query}
-          maxWidth="100%"
-          height="100%"
-          src={item.webformatURL}
-          alt={searchForm.query}
-          onClick={() => toggleImagePreviewer(item.webformatURL, dispatch)}
-          loading="lazy"
-        />
-      ) : (
-        <video src={image}></video>
+      {item.webformatURL && (
+        <>
+          <Img
+            aria-label={searchForm.query}
+            maxWidth="100%"
+            height="100%"
+            src={item.webformatURL}
+            alt={searchForm.query}
+            onClick={() => toggleImagePreviewer(item.webformatURL, dispatch)}
+            loading="lazy"
+          />
+        </>
       )}
 
       {toggler && (
@@ -70,10 +72,8 @@ const PhotoItem: React.FC<{
             height="100%"
             maxWidth="1200px"
           >
-            {item.webformatURL ? (
-              <img src={image} alt={searchForm.query} />
-            ) : (
-              <video src={image}></video>
+            {item.webformatURL && (
+              <img src={item.webformatURL} alt={searchForm.query} />
             )}
           </ModalContent>
         </Modal>

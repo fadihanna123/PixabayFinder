@@ -1,5 +1,5 @@
-import { Dispatch } from "redux";
-import { setToggler } from "redux/actions";
+import { Dispatch } from 'redux';
+import { setToggler } from 'redux/actions';
 
 export const hideImagePreviewer = (
   toggler: boolean,

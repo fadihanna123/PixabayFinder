@@ -14,8 +14,8 @@ export class SearchFormReducerTypes {
   constructor(public searchFormReducer: SearchForm) {}
 }
 
-export class ImageReducerTypes {
-  constructor(public imageReducer: string) {}
+export class VideoReducerTypes {
+  constructor(public VideoReducer: string) {}
 }
 
 export class LoadingReducerTypes {

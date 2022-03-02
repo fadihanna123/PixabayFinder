@@ -1,7 +1,7 @@
 import Layout from 'app/Layout';
 import axios from 'axios';
 import { getImages, getVideos } from 'functions';
-import { IList, SearchFormReducerTypes } from 'models';
+import { IList, SearchFormReducerTypes, VideoListReducerTypes } from 'models';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Flip, toast } from 'react-toastify';
@@ -20,6 +20,10 @@ const App: React.FC = () => {
   );
 
   const dispatch = useDispatch();
+
+  const videoList: IList = useSelector(
+    (state: VideoListReducerTypes) => state.VideoListReducer
+  );
 
   useEffect(() => {
     sal();

@@ -1,7 +1,7 @@
 import { typer } from 'functions';
 import { SearchFormReducerTypes, SearchTypeReducerTypes } from 'models/redux';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearchType } from 'redux/actions';
+import { setSearchForm, setSearchType } from 'redux/actions';
 import { Col, Input, InputRow } from 'styles/globalStyles';
 
 const SearchFormComp: React.FC = () => {
@@ -33,9 +33,9 @@ const SearchFormComp: React.FC = () => {
           name="query"
           placeholder={searchType !== "" ? "Type here" : ""}
           value={searchForm.query}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            typer(e, searchForm, dispatch)
-          }
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            typer(e, searchForm, dispatch);
+          }}
         />
       </Col>
       <Col>
@@ -43,14 +43,20 @@ const SearchFormComp: React.FC = () => {
           type="radio"
           name="searchType"
           value={searchForm.type}
-          onChange={() => dispatch(setSearchType("Images"))}
+          onChange={() => {
+            dispatch(setSearchType("Images"));
+            dispatch(setSearchForm({ ...searchForm, type: "Images" }));
+          }}
         />
         Images
         <input
           type="radio"
           name="searchType"
           value={searchForm.type}
-          onChange={() => dispatch(setSearchType("Videos"))}
+          onChange={() => {
+            dispatch(setSearchType("Videos"));
+            dispatch(setSearchForm({ ...searchForm, type: "Videos" }));
+          }}
         />
         Videos
       </Col>

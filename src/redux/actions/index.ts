@@ -17,22 +17,22 @@ export const setSearchForm = (payload: SearchForm): Object => {
   return { type: SET_SEARCH_FORM, payload };
 };
 
-export const setImage = (payload: string): Object => {
+export const setImage = (payload: string) => {
   return { type: SET_IMAGE, payload };
 };
 
-export const setLoading = (payload: boolean): Object => {
+export const setLoading = (payload: boolean) => {
   return { type: SET_LOADING, payload };
 };
 
-export const setImgList = (payload: Promise<void | IList[]>): Object => {
+export const setImgList = (payload: Promise<void | IList[]>) => {
   return { type: SET_IMG_LIST, payload };
 };
 
-export const setVideoList = (payload: Promise<void | IList[]>): Object => {
+export const setVideoList = (payload: Promise<void | IList[]>) => {
   return { type: SET_VIDEO_LIST, payload };
 };
 
-export const setSearchType = (payload: string): Object => {
+export const setSearchType = (payload: string) => {
   return { type: SET_SEARCH_TYPE, payload };
 };

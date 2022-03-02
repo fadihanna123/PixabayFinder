@@ -2,7 +2,7 @@ import { SearchForm } from 'models';
 import { ActionTypes } from 'models/redux';
 import { SET_SEARCH_FORM } from 'utils/constants';
 
-const initialState: SearchForm = { query: "", type: "" };
+const initialState: SearchForm = { query: "", type: "Images" };
 
 export const searchFormReducer = (
   state = initialState,

@@ -8,8 +8,10 @@ import {
 import { useSelector } from 'react-redux';
 import { Flip, ToastContainer } from 'react-toastify';
 import { NoData, Row } from 'styles/photoListStyles';
+import Loader from 'ui/Loader';
 
 import PhotoItem from './PhotoItem';
+import VideoItem from './VideoItem';
 
 const PhotosList: React.FC = () => {
   const searchForm = useSelector(
@@ -52,7 +54,7 @@ const PhotosList: React.FC = () => {
                   return <PhotoItem key={i} item={item} />;
                 })
               ) : (
-                <div className="spinner"></div>
+                <Loader className={["spinner"]} />
               )
             ) : (
               <NoData>No images found! 😔</NoData>
@@ -62,9 +64,13 @@ const PhotosList: React.FC = () => {
           )
         ) : (
           videoList?.hits.map((item: any) => {
-            <video src={item.videos.small.url}></video>;
+            <VideoItem location={item.videos.small.url} />;
           })
         )}
+        {searchType === "Videos" &&
+          videoList?.hits.map((item: any) => {
+            <VideoItem location={item.videos.small.url} />;
+          })}
       </Row>
       <ToastContainer transition={Flip} />
     </main>
