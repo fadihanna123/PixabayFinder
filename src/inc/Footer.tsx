@@ -1,7 +1,9 @@
+import MainFooter from 'ui/MainFooter';
+
 const Footer: React.FC = () => (
-  <footer data-sal="fade">
+  <MainFooter dataSal="fade">
     <i>Created by Fadi Hanna.</i>
-  </footer>
+  </MainFooter>
 );
 
 export default Footer;

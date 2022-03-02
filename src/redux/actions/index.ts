@@ -1,12 +1,13 @@
-import { IList, SearchForm } from "typings";
+import { IList, SearchForm } from 'models';
 import {
   SET_IMAGE,
   SET_IMG_LIST,
+  SET_LOADING,
   SET_SEARCH_FORM,
   SET_SEARCH_TYPE,
   SET_TOGGLER,
   SET_VIDEO_LIST,
-} from "utils/constants";
+} from 'utils/constants';
 
 export const setToggler = (payload: boolean): Object => {
   return { type: SET_TOGGLER, payload };
@@ -21,7 +22,7 @@ export const setImage = (payload: string): Object => {
 };
 
 export const setLoading = (payload: boolean): Object => {
-  return { type: SET_IMAGE, payload };
+  return { type: SET_LOADING, payload };
 };
 
 export const setImgList = (payload: Promise<void | IList[]>): Object => {

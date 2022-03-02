@@ -1,5 +1,5 @@
-import { ActionTypes } from "typings/redux";
-import { SET_LOADING } from "utils/constants";
+import { ActionTypes } from 'models/redux';
+import { SET_LOADING } from 'utils/constants';
 
 const initialState: boolean = false;
 

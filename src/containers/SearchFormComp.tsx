@@ -1,8 +1,8 @@
-import { typer } from "functions";
-import { useDispatch, useSelector } from "react-redux";
-import { setSearchType } from "redux/actions";
-import { Col, Input, InputRow } from "styles/globalStyles";
-import { SearchFormReducerTypes, SearchTypeReducerTypes } from "typings/redux";
+import { typer } from 'functions';
+import { SearchFormReducerTypes, SearchTypeReducerTypes } from 'models/redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearchType } from 'redux/actions';
+import { Col, Input, InputRow } from 'styles/globalStyles';
 
 const SearchFormComp: React.FC = () => {
   const searchForm = useSelector(
@@ -38,7 +38,7 @@ const SearchFormComp: React.FC = () => {
           }
         />
       </Col>
-      {/* <Col>
+      <Col>
         <input
           type="radio"
           name="searchType"
@@ -53,7 +53,7 @@ const SearchFormComp: React.FC = () => {
           onChange={() => dispatch(setSearchType("Videos"))}
         />
         Videos
-      </Col> */}
+      </Col>
     </InputRow>
   );
 };

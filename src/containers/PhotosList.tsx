@@ -1,15 +1,15 @@
-import { useSelector } from "react-redux";
-import { Flip, ToastContainer } from "react-toastify";
-import { NoData, Row } from "styles/photoListStyles";
 import {
   ImgListReducerTypes,
   LoadingReducerTypes,
   SearchFormReducerTypes,
   SearchTypeReducerTypes,
   VideoListReducerTypes,
-} from "typings";
+} from 'models';
+import { useSelector } from 'react-redux';
+import { Flip, ToastContainer } from 'react-toastify';
+import { NoData, Row } from 'styles/photoListStyles';
 
-import PhotoItem from "./PhotoItem";
+import PhotoItem from './PhotoItem';
 
 const PhotosList: React.FC = () => {
   const searchForm = useSelector(
@@ -61,9 +61,9 @@ const PhotosList: React.FC = () => {
             ""
           )
         ) : (
-          videoList?.hits.map((item: any) => (
-            <video src={item.videos.small.url}></video>
-          ))
+          videoList?.hits.map((item: any) => {
+            <video src={item.videos.small.url}></video>;
+          })
         )}
       </Row>
       <ToastContainer transition={Flip} />

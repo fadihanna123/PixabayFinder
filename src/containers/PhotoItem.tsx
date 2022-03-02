@@ -1,15 +1,10 @@
-import "styles/main.css";
+import 'styles/main.css';
 
-import { hideImagePreviewer, toggleImagePreviewer } from "functions";
-import { useDispatch, useSelector } from "react-redux";
-import sal from "sal.js";
-import { ImageCol, Img, Modal, ModalContent } from "styles";
-import {
-  HitsOfList,
-  ImageReducerTypes,
-  SearchFormReducerTypes,
-  TogglerReducerTypes,
-} from "typings";
+import { hideImagePreviewer, toggleImagePreviewer } from 'functions';
+import { HitsOfList, ImageReducerTypes, SearchFormReducerTypes, TogglerReducerTypes } from 'models';
+import { useDispatch, useSelector } from 'react-redux';
+import sal from 'sal.js';
+import { ImageCol, Img, Modal, ModalContent } from 'styles';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;

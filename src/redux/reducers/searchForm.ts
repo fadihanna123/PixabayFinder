@@ -1,6 +1,6 @@
-import { SearchForm } from "typings";
-import { ActionTypes } from "typings/redux";
-import { SET_SEARCH_FORM } from "utils/constants";
+import { SearchForm } from 'models';
+import { ActionTypes } from 'models/redux';
+import { SET_SEARCH_FORM } from 'utils/constants';
 
 const initialState: SearchForm = { query: "", type: "" };
 

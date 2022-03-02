@@ -1,5 +1,5 @@
-import { ActionTypes } from "typings/redux";
-import { SET_SEARCH_TYPE } from "utils/constants";
+import { ActionTypes } from 'models/redux';
+import { SET_SEARCH_TYPE } from 'utils/constants';
 
 const initialState: string = "Images";
 

@@ -1,6 +1,6 @@
-import { IList } from "typings";
-import { ActionTypes } from "typings/redux";
-import { SET_IMG_LIST } from "utils/constants";
+import { IList } from 'models';
+import { ActionTypes } from 'models/redux';
+import { SET_IMG_LIST } from 'utils/constants';
 
 const initialState: IList[] | null = null;
 

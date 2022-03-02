@@ -1,5 +1,5 @@
 import { request } from 'api';
-import { IList } from 'typings';
+import { IList } from 'models';
 import { PixabayKey } from 'utils/envs';
 
 export const getImages = async (imageVal: string): Promise<any> => {
