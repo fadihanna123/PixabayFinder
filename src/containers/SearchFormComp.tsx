@@ -43,7 +43,7 @@ const SearchFormComp: React.FC = () => {
           type="radio"
           name="searchType"
           value={searchForm.type}
-          style="margin: 10px"
+          style={{ margin: "10px" }}
           onChange={() => {
             dispatch(setSearchType("Images"));
             dispatch(setSearchForm({ ...searchForm, type: "Images" }));
@@ -54,7 +54,7 @@ const SearchFormComp: React.FC = () => {
           type="radio"
           name="searchType"
           value={searchForm.type}
-          style="margin: 10px"
+          style={{ margin: "10px" }}
           onChange={() => {
             dispatch(setSearchType("Videos"));
             dispatch(setSearchForm({ ...searchForm, type: "Videos" }));
