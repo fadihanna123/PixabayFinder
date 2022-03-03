@@ -38,11 +38,12 @@ const SearchFormComp: React.FC = () => {
           }}
         />
       </Col>
-      <Col m={10}>
+      <Col>
         <input
           type="radio"
           name="searchType"
           value={searchForm.type}
+          className="m-2"
           onChange={() => {
             dispatch(setSearchType("Images"));
             dispatch(setSearchForm({ ...searchForm, type: "Images" }));
@@ -53,6 +54,7 @@ const SearchFormComp: React.FC = () => {
           type="radio"
           name="searchType"
           value={searchForm.type}
+          className="m-2"
           onChange={() => {
             dispatch(setSearchType("Videos"));
             dispatch(setSearchForm({ ...searchForm, type: "Videos" }));
