@@ -1,8 +1,8 @@
-import { typer } from 'functions';
-import { SearchFormReducerTypes, SearchTypeReducerTypes } from 'models/redux';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSearchForm, setSearchType } from 'redux/actions';
-import { Col, Input, InputRow } from 'styles/globalStyles';
+import { typer } from "functions";
+import { SearchFormReducerTypes, SearchTypeReducerTypes } from "models/redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchForm, setSearchType } from "redux/actions";
+import { Col, Input, InputRow } from "styles/globalStyles";
 
 const SearchFormComp: React.FC = () => {
   const searchForm = useSelector(
@@ -38,7 +38,7 @@ const SearchFormComp: React.FC = () => {
           }}
         />
       </Col>
-      <Col>
+      <Col m={10}>
         <input
           type="radio"
           name="searchType"
