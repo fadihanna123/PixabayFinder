@@ -3,6 +3,7 @@
   "version": "0.1.7",
   "author": "Fadi Hanna",
   "license": "MIT",
+  "homepage": ".",
   "dependencies": {
     "@babel/plugin-syntax-class-properties": "^7.8.3",
     "@emotion/react": "^11.7.1",

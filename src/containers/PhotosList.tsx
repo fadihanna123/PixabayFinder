@@ -1,15 +1,17 @@
-import { useSelector } from "react-redux";
-import { Flip, ToastContainer } from "react-toastify";
-import { NoData, Row } from "styles/photoListStyles";
 import {
   ImgListReducerTypes,
   LoadingReducerTypes,
   SearchFormReducerTypes,
   SearchTypeReducerTypes,
   VideoListReducerTypes,
-} from "typings";
+} from 'models';
+import { useSelector } from 'react-redux';
+import { Flip, ToastContainer } from 'react-toastify';
+import { NoData, Row } from 'styles/photoListStyles';
+import Loader from 'ui/Loader';
 
-import PhotoItem from "./PhotoItem";
+import PhotoItem from './PhotoItem';
+import VideoItem from './VideoItem';
 
 const PhotosList: React.FC = () => {
   const searchForm = useSelector(
@@ -44,27 +46,27 @@ const PhotosList: React.FC = () => {
         </>
       )}
       <Row>
-        {searchType === "Images" ? (
-          searchForm.query ? (
+        {searchType === "Images" &&
+          (searchForm.query ? (
             imgList && imgList.totalHits ? (
               !loading ? (
                 imgList.hits.map((item, i) => {
                   return <PhotoItem key={i} item={item} />;
                 })
               ) : (
-                <div className="spinner"></div>
+                <Loader className={["spinner"]} />
               )
             ) : (
               <NoData>No images found! 😔</NoData>
             )
           ) : (
             ""
-          )
-        ) : (
-          videoList?.hits.map((item: any) => (
-            <video src={item.videos.small.url}></video>
-          ))
-        )}
+          ))}
+        ;
+        {searchType === "Videos" &&
+          videoList?.hits.map((item: any) => {
+            <VideoItem location={item.videos.small.url} />;
+          })}
       </Row>
       <ToastContainer transition={Flip} />
     </main>

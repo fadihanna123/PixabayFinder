@@ -1,8 +1,8 @@
-import { IList } from "typings";
-import { ActionTypes } from "typings/redux";
-import { SET_VIDEO_LIST } from "utils/constants";
+import { IList } from 'models';
+import { ActionTypes } from 'models/redux';
+import { SET_VIDEO_LIST } from 'utils/constants';
 
-const initialState: IList[] | null = null;
+const initialState: IList | null = null;
 
 export const videoListReducer = (
   state = initialState,

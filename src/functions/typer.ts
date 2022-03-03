@@ -1,12 +1,12 @@
-import { Dispatch } from "redux";
-import { setSearchForm } from "redux/actions";
-import { SearchForm } from "typings";
+import { SearchForm } from 'models';
+import { Dispatch } from 'redux';
+import { setSearchForm } from 'redux/actions';
 
 export const typer = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   searchForm: SearchForm,
   dispatch: Dispatch<any>
-): void => {
+) => {
   dispatch(
     setSearchForm &&
       setSearchForm({
