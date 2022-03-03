@@ -46,8 +46,8 @@ const PhotosList: React.FC = () => {
         </>
       )}
       <Row>
-        {searchType === "Images" ? (
-          searchForm.query ? (
+        {searchType === "Images" &&
+          (searchForm.query ? (
             imgList && imgList.totalHits ? (
               !loading ? (
                 imgList.hits.map((item, i) => {
@@ -61,12 +61,8 @@ const PhotosList: React.FC = () => {
             )
           ) : (
             ""
-          )
-        ) : (
-          videoList?.hits.map((item: any) => {
-            <VideoItem location={item.videos.small.url} />;
-          })
-        )}
+          ))}
+        ;
         {searchType === "Videos" &&
           videoList?.hits.map((item: any) => {
             <VideoItem location={item.videos.small.url} />;
