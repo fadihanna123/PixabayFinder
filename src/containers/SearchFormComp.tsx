@@ -1,8 +1,8 @@
-import { typer } from 'functions';
-import { SearchFormReducerTypes, SearchTypeReducerTypes } from 'models/redux';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSearchForm, setSearchType } from 'redux/actions';
-import { Col, Input, InputRow } from 'styles/globalStyles';
+import { typer } from "functions";
+import { SearchFormReducerTypes, SearchTypeReducerTypes } from "models/redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchForm, setSearchType } from "redux/actions";
+import { Col, Input, InputRow } from "styles/globalStyles";
 
 const SearchFormComp: React.FC = () => {
   const searchForm = useSelector(
@@ -41,6 +41,7 @@ const SearchFormComp: React.FC = () => {
       <Col>
         <input
           type="radio"
+          className="m-2"
           name="searchType"
           value={searchForm.type}
           onChange={() => {
@@ -51,6 +52,7 @@ const SearchFormComp: React.FC = () => {
         Images
         <input
           type="radio"
+          className="m-2"
           name="searchType"
           value={searchForm.type}
           onChange={() => {
@@ -58,7 +60,7 @@ const SearchFormComp: React.FC = () => {
             dispatch(setSearchForm({ ...searchForm, type: "Videos" }));
           }}
         />
-        Videos
+        Videos(soon)
       </Col>
     </InputRow>
   );
