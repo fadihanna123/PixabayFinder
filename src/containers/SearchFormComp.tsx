@@ -60,7 +60,7 @@ const SearchFormComp: React.FC = () => {
             dispatch(setSearchForm({ ...searchForm, type: "Videos" }));
           }}
         />
-        Videos
+        Videos(soon)
       </Col>
     </InputRow>
   );
