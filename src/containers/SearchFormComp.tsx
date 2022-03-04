@@ -41,6 +41,7 @@ const SearchFormComp: React.FC = () => {
       <Col>
         <input
           type="radio"
+          className="m-2"
           name="searchType"
           value={searchForm.type}
           style={{ margin: "10px" }}
@@ -52,6 +53,7 @@ const SearchFormComp: React.FC = () => {
         Images
         <input
           type="radio"
+          className="m-2"
           name="searchType"
           value={searchForm.type}
           style={{ margin: "10px" }}

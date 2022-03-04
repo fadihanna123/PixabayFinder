@@ -40,6 +40,10 @@ export default createGlobalStyle`
     }
   }
 
+  .m-2{
+    margin: 10px;
+  }
+
 
   img
   {
