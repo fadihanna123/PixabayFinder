@@ -1,6 +1,6 @@
 {
   "name": "pixabayfinder",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Fadi Hanna",
   "license": "MIT",
   "homepage": ".",
@@ -8,8 +8,8 @@
     "@babel/plugin-syntax-class-properties": "^7.8.3",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
-    "@types/react": "^17.0.40",
-    "@types/react-dom": "^17.0.13",
+    "@types/react": "^17.0.41",
+    "@types/react-dom": "^17.0.14",
     "axios": "^0.26.1",
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
