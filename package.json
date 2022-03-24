@@ -21,7 +21,7 @@
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "sal.js": "^0.8.5",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.5",
     "styled-system": "^5.1.5",
     "ts-debounce": "^4.0.0"
   },
