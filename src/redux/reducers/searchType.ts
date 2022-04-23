@@ -1,4 +1,4 @@
-import { ActionTypes } from 'models/redux';
+import { ActionTypes } from 'models/redux.model';
 import { SET_SEARCH_TYPE } from 'utils/constants';
 
 const initialState: string = "Images";

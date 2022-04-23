@@ -1,5 +1,5 @@
 import { SearchForm } from 'models';
-import { ActionTypes } from 'models/redux';
+import { ActionTypes } from 'models/redux.model';
 import { SET_SEARCH_FORM } from 'utils/constants';
 
 const initialState: SearchForm = { query: "", type: "Images" };

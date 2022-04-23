@@ -1,4 +1,4 @@
-import { ActionTypes } from 'models/redux';
+import { ActionTypes } from 'models/redux.model';
 import { SET_LOADING } from 'utils/constants';
 
 const initialState: boolean = false;

@@ -1,4 +1,5 @@
 import { IList, SearchForm } from 'models';
+import { AnyAction } from 'redux';
 import {
   SET_IMAGE,
   SET_IMG_LIST,
@@ -9,11 +10,11 @@ import {
   SET_VIDEO_LIST,
 } from 'utils/constants';
 
-export const setToggler = (payload: boolean): Object => {
+export const setToggler = (payload: boolean): object => {
   return { type: SET_TOGGLER, payload };
 };
 
-export const setSearchForm = (payload: SearchForm): Object => {
+export const setSearchForm = (payload: SearchForm): AnyAction => {
   return { type: SET_SEARCH_FORM, payload };
 };
 
