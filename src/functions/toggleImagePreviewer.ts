@@ -1,10 +1,9 @@
 import { Dispatch } from 'react';
-import { setImage, setToggler } from 'redux/actions';
+import { setToggler } from 'redux/actions';
 
-export const toggleImagePreviewer = (
-  imgUrl: string,
-  dispatch: Dispatch<any>
-) => {
+export const toggleImagePreviewer = (item: any, dispatch: Dispatch<any>) => {
+  // eslint-disable-next-line no-console
+  console.log(item);
   dispatch(setToggler(true));
-  dispatch(setImage(imgUrl));
+  // dispatch(setImage(imgUrl));
 };

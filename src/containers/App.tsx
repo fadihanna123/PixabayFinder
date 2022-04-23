@@ -1,7 +1,7 @@
 import Layout from 'app/Layout';
 import axios from 'axios';
 import { getImages, getVideos } from 'functions';
-import { IList, SearchFormReducerTypes, VideoListReducerTypes } from 'models';
+import { IList, SearchFormReducerTypes } from 'models';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Flip, toast } from 'react-toastify';
@@ -15,37 +15,37 @@ axios.defaults.baseURL = PixabayBaseURL;
 axios.defaults.headers.common["Content-Type"] = globalHeader;
 
 const App: React.FC = () => {
-  const searchForm = useSelector(
-    (state: SearchFormReducerTypes) => state.searchFormReducer
-  );
+    const searchForm = useSelector(
+        (state: SearchFormReducerTypes) => state.searchFormReducer
+    );
 
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  const videoList: IList = useSelector(
-    (state: VideoListReducerTypes) => state.VideoListReducer
-  );
+    useEffect(() => {
+        sal();
 
-  useEffect(() => {
-    sal();
+        getImages(searchForm.query)
+            .then((data: Promise<void | IList[]>) => {
+                dispatch(setLoading(true));
+                dispatch(setImgList(data));
+            })
+            .catch((err) =>
+                toast.error((err as Error).message, { transition: Flip })
+            )
+            .finally(() => dispatch(setLoading(false)));
 
-    getImages(searchForm.query)
-      .then((data: Promise<void | IList[]>) => {
-        dispatch(setLoading(true));
-        dispatch(setImgList(data));
-      })
-      .catch((err) => toast.error((err as Error).message, { transition: Flip }))
-      .finally(() => dispatch(setLoading(false)));
+        getVideos(searchForm.query)
+            .then((data: Promise<void | IList[]>) => {
+                dispatch(setLoading(true));
+                dispatch(setVideoList(data));
+            })
+            .catch((err) =>
+                toast.error((err as Error).message, { transition: Flip })
+            )
+            .finally(() => dispatch(setLoading(false)));
+    }, [dispatch, searchForm.query]);
 
-    getVideos(searchForm.query)
-      .then((data: Promise<void | IList[]>) => {
-        dispatch(setLoading(true));
-        dispatch(setVideoList(data));
-      })
-      .catch((err) => toast.error((err as Error).message, { transition: Flip }))
-      .finally(() => dispatch(setLoading(false)));
-  }, [dispatch, searchForm.query]);
-
-  return <Layout />;
+    return <Layout />;
 };
 
 export default App;
