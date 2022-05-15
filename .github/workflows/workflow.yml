@@ -4,6 +4,9 @@ on:
     push:
         branches:
             - "master"
+env: # Or as an environment variable
+    REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_BASE_URL }}
+    REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
 
 jobs:
     build:
@@ -25,6 +28,3 @@ jobs:
               with:
                   branch: publish # The branch the action should deploy to.
                   folder: build # The folder the action should deploy.
-              env: # Or as an environment variable
-                  REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_BASE_URL }}
-                  REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
