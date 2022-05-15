@@ -1,27 +1,30 @@
 name: Github Pages Deploy
 
 on:
-  push:
-    branches:
-      - "master"
+    push:
+        branches:
+            - "master"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [17.x]
+        strategy:
+            matrix:
+                node-version: [17.x]
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v1
 
-      - name: Install and build
-        run: npm install && npm run build
+            - name: Install and build
+              run: npm install && npm run build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: publish # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@4.1.1
+              with:
+                  branch: publish # The branch the action should deploy to.
+                  folder: build # The folder the action should deploy.
+              env: # Or as an environment variable
+                  REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_BASE_URL }}
+                  REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
