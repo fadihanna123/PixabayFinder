@@ -1,8 +1,8 @@
-import { typer } from 'functions';
-import { SearchFormReducerTypes, SearchTypeReducerTypes } from 'models/redux.model';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSearchForm, setSearchType } from 'redux/actions';
-import { Col, Input, InputRow } from 'styles/globalStyles';
+import { typer } from "functions";
+import { SearchFormReducerTypes, SearchTypeReducerTypes } from "models/redux.model";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchForm, setSearchType } from "redux/actions";
+import { Col, Input, InputRow } from "styles/globalStyles";
 
 const SearchFormComp: React.FC = () => {
     const searchForm = useSelector(
