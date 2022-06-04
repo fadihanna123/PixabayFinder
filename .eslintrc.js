@@ -77,7 +77,6 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": "error",
         "@typescript-eslint/dot-notation": "error",
         "@typescript-eslint/member-ordering": "off",
-        "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/no-empty-function": [
             "error",
             {
@@ -150,7 +149,6 @@ module.exports = {
         "@typescript-eslint/no-inferrable-types": "off",
         "no-invalid-this": "off",
         "no-new-wrappers": "error",
-        "no-shadow": "off",
         "no-throw-literal": "error",
         "no-trailing-spaces": "error",
         "no-undef-init": "error",
@@ -166,6 +164,7 @@ module.exports = {
         "one-var": ["error", "never"],
         "prefer-arrow/prefer-arrow-functions": "error",
         "prefer-const": "error",
+        quotes: ["warn", "double"],
         radix: "error",
         semi: "error",
         "spaced-comment": [

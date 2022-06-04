@@ -4,14 +4,14 @@ import {
     SearchFormReducerTypes,
     SearchTypeReducerTypes,
     VideoListReducerTypes,
-} from 'models';
-import { useSelector } from 'react-redux';
-import { Flip, ToastContainer } from 'react-toastify';
-import { NoData, Row } from 'styles/photoListStyles';
-import Loader from 'ui/Loader';
+} from "models";
+import { useSelector } from "react-redux";
+import { Flip, ToastContainer } from "react-toastify";
+import { NoData, Row } from "styles/photoListStyles";
+import Loader from "ui/Loader";
 
-import PhotoItem from './PhotoItem';
-import VideoItem from './VideoItem';
+import PhotoItem from "./PhotoItem";
+import VideoItem from "./VideoItem";
 
 const PhotosList: React.FC = () => {
     const searchForm = useSelector(

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NoData = styled.div`
     grid-column-start: 3;

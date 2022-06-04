@@ -1,6 +1,6 @@
-import { request } from 'api';
-import { IList } from 'models';
-import { PixabayKey } from 'utils/envs';
+import { request } from "api";
+import { IList } from "models";
+import { PixabayKey } from "utils/envs";
 
 export const getImages = async (imageVal: string): Promise<any> => {
     const endPoint: string = `?key=${PixabayKey}&q=${imageVal}`;

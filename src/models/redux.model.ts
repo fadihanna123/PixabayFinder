@@ -1,6 +1,6 @@
-import { SearchForm } from 'models';
+import { SearchForm } from "models";
 
-import { IList } from './list.model';
+import { IList } from "./list.model";
 
 export class ActionTypes {
     constructor(public type: string, public payload: void) {}
