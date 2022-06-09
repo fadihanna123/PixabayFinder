@@ -17,6 +17,6 @@ bower_components
 psd
 thumb
 sketch
-.env
+.vscode
 
 # End of https://www.toptal.com/developers/gitignore/api/react
