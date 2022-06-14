@@ -6,7 +6,7 @@
     "homepage": ".",
     "dependencies": {
         "@babel/plugin-syntax-class-properties": "^7.8.3",
-        "@emotion/react": "^11.9.0",
+        "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
         "@types/react": "^18.0.12",
         "@types/react-dom": "^18.0.5",
