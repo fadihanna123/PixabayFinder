@@ -1,14 +1,17 @@
 {
     "name": "pixabayfinder",
-    "version": "0.1.9",
-    "author": "Fadi Hanna",
+    "version": "0.1.10",
+    "author": {
+        "name": "Fadi Hanna",
+        "email": "fhanna181@gmail.com"
+    },
     "license": "MIT",
     "homepage": ".",
     "dependencies": {
         "@babel/plugin-syntax-class-properties": "^7.8.3",
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
-        "@types/react": "^18.0.12",
+        "@types/react": "^18.0.14",
         "@types/react-dom": "^18.0.5",
         "axios": "^0.27.2",
         "normalize.css": "^8.0.1",
@@ -16,7 +19,7 @@
         "react-dom": "^18.0.0",
         "react-redux": "^8.0.2",
         "react-scripts": "5.0.1",
-        "react-toastify": "^9.0.4",
+        "react-toastify": "^9.0.5",
         "redux": "^4.2.0",
         "redux-devtools-extension": "^2.13.9",
         "sal.js": "^0.8.5",
@@ -54,7 +57,10 @@
         "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-jsdoc": "^39.3.2",
         "eslint-plugin-prefer-arrow": "^1.2.3",
-        "prettier": "^2.7.0",
+        "prettier": "^2.7.1",
         "typescript": "^4.7.4"
+    },"engines": {
+        "node": ">=14.17.0",
+        "npm": ">=6.0.0"
     }
 }
