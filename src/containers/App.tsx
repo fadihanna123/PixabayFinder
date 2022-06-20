@@ -22,27 +22,45 @@ const App: React.FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        let isSubscribed: boolean = true;
+
         sal();
 
         getImages(searchForm.query)
             .then((data: Promise<void | IList[]>) => {
-                dispatch(setLoading(true));
-                dispatch(setImgList(data));
+                if (isSubscribed) {
+                    dispatch(setLoading(true));
+                    dispatch(setImgList(data));
+                } else {
+                    return null;
+                }
             })
-            .catch((err) =>
-                toast.error((err as Error).message, { transition: Flip })
+            .catch((err: Error) =>
+                isSubscribed
+                    ? toast.error((err as Error).message, { transition: Flip })
+                    : null
             )
-            .finally(() => dispatch(setLoading(false)));
+            .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
 
         getVideos(searchForm.query)
             .then((data: Promise<void | IList[]>) => {
-                dispatch(setLoading(true));
-                dispatch(setVideoList(data));
+                if (isSubscribed) {
+                    dispatch(setLoading(true));
+                    dispatch(setVideoList(data));
+                } else {
+                    return null;
+                }
             })
-            .catch((err) =>
-                toast.error((err as Error).message, { transition: Flip })
+            .catch((err: Error) =>
+                isSubscribed
+                    ? toast.error((err as Error).message, { transition: Flip })
+                    : null
             )
-            .finally(() => dispatch(setLoading(false)));
+            .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
+
+        return () => {
+            isSubscribed = false;
+        };
     }, [dispatch, searchForm.query]);
 
     return <Layout />;

@@ -9,6 +9,10 @@ import { Provider } from "react-redux";
 import { store } from "redux/store";
 import GlobalStyles from "styles/globalStyles";
 
+if (process.env.NODE_ENV === "development") {
+    console.log("It's looks like we are in a development mode!");
+}
+
 const root: ReactDOM.Root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLDivElement
 );
