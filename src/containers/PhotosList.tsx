@@ -1,6 +1,9 @@
 import {
+    HitsOfList,
+    IList,
     ImgListReducerTypes,
     LoadingReducerTypes,
+    SearchForm,
     SearchFormReducerTypes,
     SearchTypeReducerTypes,
     VideoListReducerTypes,
@@ -14,11 +17,11 @@ import PhotoItem from "./PhotoItem";
 import VideoItem from "./VideoItem";
 
 const PhotosList: React.FC = () => {
-    const searchForm = useSelector(
+    const searchForm: SearchForm = useSelector(
         (state: SearchFormReducerTypes) => state.searchFormReducer
     );
 
-    const imgList = useSelector(
+    const imgList: IList = useSelector(
         (state: ImgListReducerTypes) => state.imgListReducer
     );
 
@@ -26,11 +29,11 @@ const PhotosList: React.FC = () => {
         (state: VideoListReducerTypes) => state.VideoListReducer
     );
 
-    const loading = useSelector(
+    const loading: boolean = useSelector(
         (state: LoadingReducerTypes) => state.loadingReducer
     );
 
-    const searchType = useSelector(
+    const searchType: string = useSelector(
         (state: SearchTypeReducerTypes) => state.searchTypeReducer
     );
 
@@ -51,9 +54,13 @@ const PhotosList: React.FC = () => {
                     (searchForm.query ? (
                         imgList && imgList.totalHits ? (
                             !loading ? (
-                                imgList.hits.map((item, i) => {
-                                    return <PhotoItem key={i} item={item} />;
-                                })
+                                imgList.hits.map(
+                                    (item: HitsOfList, i: number) => {
+                                        return (
+                                            <PhotoItem key={i} item={item} />
+                                        );
+                                    }
+                                )
                             ) : (
                                 <Loader className={["spinner"]} />
                             )

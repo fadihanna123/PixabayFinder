@@ -1,7 +1,7 @@
 import "styles/main.css";
 
 import { hideImagePreviewer, toggleImagePreviewer } from "functions";
-import { HitsOfList, SearchFormReducerTypes, TogglerReducerTypes } from "models";
+import { HitsOfList, ImageReducerTypes, SearchForm, SearchFormReducerTypes, TogglerReducerTypes } from "models";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import sal from "sal.js";
@@ -10,15 +10,20 @@ import { ImageCol, Img, Modal, ModalContent } from "styles";
 const PhotoItem: React.FC<{
     item: HitsOfList;
 }> = ({ item }: { item: HitsOfList }) => {
-    const toggler = useSelector(
+    const toggler: boolean = useSelector(
         (state: TogglerReducerTypes) => state.togglerReducer
     );
 
-    const searchForm = useSelector(
+    const searchForm: SearchForm = useSelector(
         (state: SearchFormReducerTypes) => state.searchFormReducer
     );
 
+    const image: string = useSelector(
+        (state: ImageReducerTypes) => state.imageReducer
+    );
+
     const dispatch = useDispatch();
+
     useEffect(() => {
         sal();
     }, []);
@@ -69,7 +74,7 @@ const PhotoItem: React.FC<{
                         height="100%"
                         maxWidth="1200px"
                     >
-                        {item.webformatURL && <img src={item.webformatURL} />}
+                        {image && <img src={image} />}
                     </ModalContent>
                 </Modal>
             )}

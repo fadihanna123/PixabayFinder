@@ -33,3 +33,7 @@ export class ImgListReducerTypes {
 export class VideoListReducerTypes {
     constructor(public VideoListReducer: any) {}
 }
+
+export class ImageReducerTypes {
+    constructor(public imageReducer: string) {}
+}

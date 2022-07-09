@@ -1,7 +1,11 @@
+import { HitsOfList } from "models";
 import { Dispatch } from "react";
-import { setToggler } from "redux/actions";
+import { setImage, setToggler } from "redux/actions";
 
-export const toggleImagePreviewer = (item: any, dispatch: Dispatch<any>) => {
+export const toggleImagePreviewer = (
+    item: HitsOfList,
+    dispatch: Dispatch<any>
+) => {
     dispatch(setToggler(true));
-    // dispatch(setImage(imgUrl));
+    dispatch(setImage(item.webformatURL));
 };

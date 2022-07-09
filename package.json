@@ -1,6 +1,7 @@
 {
     "name": "pixabayfinder",
-    "version": "0.1.10",
+    "version": "0.1.11",
+    "lastUpgrade": "20220703",
     "private": "true",
     "author": {
         "name": "Fadi Hanna",
@@ -52,9 +53,9 @@
         "@types/react-router-dom": "^5.3.3",
         "@types/styled-components": "^5.1.25",
         "@types/styled-system": "^5.1.15",
-        "@typescript-eslint/eslint-plugin": "^5.28.0",
-        "@typescript-eslint/parser": "^5.27.1",
-        "eslint": "^8.17.0",
+        "@typescript-eslint/eslint-plugin": "^5.30.4",
+        "@typescript-eslint/parser": "^5.30.4",
+        "eslint": "^8.19.0",
         "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-jsdoc": "^39.3.2",
         "eslint-plugin-prefer-arrow": "^1.2.3",
