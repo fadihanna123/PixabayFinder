@@ -1,20 +1,20 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import {
-  layout,
-  space,
-  border,
-  position,
   background,
+  border,
   flexbox,
-} from "styled-system";
+  layout,
+  position,
+  space,
+} from 'styled-system';
 
-export const ImageCol = styled("section")(layout, space, border);
+export const ImageCol = styled('section')(layout, space, border);
 
-export const Img = styled("img")(layout, space);
+export const Img = styled('img')(layout, space);
 
-export const Modal = styled("div")(position, space, layout);
+export const Modal = styled('div')(position, space, layout);
 
-export const ModalContent = styled("div")(
+export const ModalContent = styled('div')(
   position,
   space,
   layout,

@@ -1,17 +1,17 @@
-import { ActionTypes } from "models/redux.model";
-import { SET_TOGGLER } from "utils/constants";
+import { ActionTypes } from 'models/redux.model';
+import { SET_TOGGLER } from 'utils/constants';
 
 const initialState: boolean = false;
 
 export const togglerReducer = (
-    state = initialState,
-    { type, payload }: ActionTypes
+  state = initialState,
+  { type, payload }: ActionTypes
 ) => {
-    switch (type) {
-        case SET_TOGGLER:
-            return payload;
+  switch (type) {
+    case SET_TOGGLER:
+      return payload;
 
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 };

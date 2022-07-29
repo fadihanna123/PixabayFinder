@@ -163,7 +163,7 @@ module.exports = {
     'one-var': ['error', 'never'],
     'prefer-arrow/prefer-arrow-functions': 'error',
     'prefer-const': 'error',
-    quotes: ['warn', 'single'],
+    quotes: [0, 'single'],
     radix: 'error',
     semi: 'error',
     'spaced-comment': [
