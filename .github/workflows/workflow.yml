@@ -23,7 +23,7 @@ jobs:
 
 
             - name: test
-              run: echo #REACT_APP_PIXABAY_KEY
+              run: echo "$REACT_APP_PIXABAY_KEY"
 
             - name: Install and build
               run: echo REACT_APP_PIXABAY_BASE_URL && npm install && npm run build
