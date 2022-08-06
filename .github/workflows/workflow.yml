@@ -12,11 +12,11 @@ env:
 jobs:
     build:
         runs-on: ubuntu-latest
-        environment: myenvironment
 
         strategy:
             matrix:
                 node-version: [17.x]
+        environment: myenvironment
 
         steps:
             - name: Checkout
