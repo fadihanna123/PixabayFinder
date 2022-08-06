@@ -4,6 +4,7 @@ on:
     push:
         branches:
             - "master"
+            
 env: 
     CI: true
     REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_KEY }}
