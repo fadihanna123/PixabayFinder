@@ -21,6 +21,12 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v1
 
+
+            - name: test
+              run: |
+                    echo ${#REACT_APP_PIXABAY_KEY}
+                    echo ${#REACT_APP_PIXABAY_KEY}
+
             - name: Install and build
               run: echo REACT_APP_PIXABAY_BASE_URL && npm install && npm run build
 
