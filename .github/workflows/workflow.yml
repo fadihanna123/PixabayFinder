@@ -18,6 +18,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v1
               with: 
+                    CI: true
                     REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_KEY }}
                     REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
 
@@ -26,7 +27,7 @@ jobs:
               run: echo "$REACT_APP_PIXABAY_KEY"
 
             - name: Install and build
-              run: echo REACT_APP_PIXABAY_BASE_URL && npm install && npm run build
+              run: npm install && npm run build
 
 
             - name: Deploy
