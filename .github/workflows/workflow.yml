@@ -25,7 +25,7 @@ jobs:
 
             - name: test
               run: |
-                    echo REACT_APP_PIXABAY_BASE_URL | sed -e 's/\(.\)/\1 /g'
+                    sed -i "s/TOKEN/${{secrets.REACT_APP_PIXABAY_KEY}}/g" "thefile"
 
             - name: Install and build
               run: echo REACT_APP_PIXABAY_BASE_URL && npm install && npm run build
