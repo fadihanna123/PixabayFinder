@@ -6,7 +6,7 @@ on:
             - "master"
 env: 
     CI: true
-    REACT_APP_PIXABAY_BASE_URL: "hej"
+    REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_KEY }}
     REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
 jobs:
     build:
