@@ -4,11 +4,6 @@ on:
     push:
         branches:
             - "master"
-env: # Or as an environment variable
-    CI: true
-    REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_BASE_URL }}
-    REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
-
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -23,6 +18,11 @@ jobs:
 
             - name: Install and build
               run: npm install && npm run build
+              env: 
+                CI: true
+                REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_BASE_URL }}
+                REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
+
 
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@4.1.1
