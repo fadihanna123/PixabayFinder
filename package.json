@@ -1,7 +1,12 @@
 {
   "name": "pixabayfinder",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "lastUpgrade": "20220801",
+  "bugs": "https://github.com/fadihanna123/PixabayFinder/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fadihanna123/PixabayFinder"
+  },
   "private": "true",
   "author": {
     "name": "Fadi Hanna",
