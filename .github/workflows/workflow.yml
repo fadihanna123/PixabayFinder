@@ -1,37 +1,35 @@
 name: Github Pages Deploy
 
 on:
-    push:
-        branches:
-            - "master"
-            
+  push:
+    branches:
+      - 'master'
+
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [17.x]
-        environment: myenvironment
+    strategy:
+      matrix:
+        node-version: [17.x]
+    environment: myenvironment
 
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v1
-              with: 
-                    CI: true
-                    REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_KEY }}
-                    REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          CI: true
+          REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_KEY }}
+          REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
 
+      - name: test
+        run: echo "$REACT_APP_PIXABAY_KEY"
 
-            - name: test
-              run: echo "$REACT_APP_PIXABAY_KEY"
+      - name: Install and build
+        run: npm install && npm run build
 
-            - name: Install and build
-              run: npm install && npm run build
-
-
-            - name: Deploy
-              uses: JamesIves/github-pages-deploy-action@4.1.1
-              with:
-                  branch: publish # The branch the action should deploy to.
-                  folder: build # The folder the action should deploy.
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: publish # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
