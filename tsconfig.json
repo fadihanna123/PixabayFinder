@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "baseUrl": "src",
+    "baseUrl": "src/",
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,7 +15,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@core/*": ["src/*"],
+      "@assets/*": ["public/assets/*"]
+    }
   },
   "include": ["src", "index.d.ts"],
   "exclude": ["node_modules"]
