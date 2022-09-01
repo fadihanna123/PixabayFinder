@@ -7,11 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Flip, toast } from 'react-toastify';
 import { setImgList, setLoading, setVideoList } from 'redux/actions';
 import sal from 'sal.js';
-import { PixabayBaseURL } from 'utils/envs';
 
 const globalHeader: string = 'application/json';
 
-axios.defaults.baseURL = PixabayBaseURL;
 axios.defaults.headers.common['Content-Type'] = globalHeader;
 
 const App: React.FC = () => {
@@ -40,9 +38,7 @@ const App: React.FC = () => {
           ? toast.error((err as Error).message, { transition: Flip })
           : null
       )
-      .finally(() =>
-        isSubscribed ? dispatch(setLoading(false)) : null
-      );
+      .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
 
     getVideos(searchForm.query)
       .then((data: Promise<void | IList[]>) => {
@@ -58,9 +54,7 @@ const App: React.FC = () => {
           ? toast.error((err as Error).message, { transition: Flip })
           : null
       )
-      .finally(() =>
-        isSubscribed ? dispatch(setLoading(false)) : null
-      );
+      .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
 
     return () => {
       isSubscribed = false;

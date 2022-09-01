@@ -1,11 +1,12 @@
 import axios from 'axios';
+import { PixabayBaseURL } from 'utils/envs';
 
 export const request = {
   get: async <T>(
     url: string,
     headers?: Record<string, never>
   ): Promise<T | void> => {
-    const { data } = await axios.get<T>(url, headers);
+    const { data } = await axios.get<T>(`${PixabayBaseURL}${url}`, headers);
     return data;
   },
 
@@ -14,7 +15,11 @@ export const request = {
     redata: any,
     headers?: { headers: Record<string, never> }
   ): Promise<T | void> => {
-    const { data } = await axios.post<T>(url, redata, headers);
+    const { data } = await axios.post<T>(
+      `${PixabayBaseURL}${url}`,
+      redata,
+      headers
+    );
     return data;
   },
 
@@ -23,13 +28,13 @@ export const request = {
     redata: any,
     headers?: { headers: Record<string, never> }
   ): Promise<T | void> => {
-    await axios.put<T>(url, redata, headers);
+    await axios.put<T>(`${PixabayBaseURL}${url}`, redata, headers);
   },
 
   delete: async <T>(
     url: string,
     headers?: { headers: Record<string, never> }
   ): Promise<T | void> => {
-    await axios.delete<T>(url, headers);
+    await axios.delete<T>(`${PixabayBaseURL}${url}`, headers);
   },
 };
