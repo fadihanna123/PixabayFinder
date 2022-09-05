@@ -2,8 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 pnpm i
-npx --no -- commitlint --edit "\${1}"
-EEE
 pnpm manypkg check
 eslint .
 npx pretty-quick --staged
