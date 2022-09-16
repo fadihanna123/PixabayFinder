@@ -3,6 +3,8 @@
 
 pnpm i
 pnpm manypkg check
+htmlhint
+npx stylelint "**/*.css"
 eslint .
 npx pretty-quick --staged
 rimraf node_modules
