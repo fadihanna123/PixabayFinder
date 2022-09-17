@@ -17,7 +17,6 @@
 
 > PixabayFind gets images from Pixabay
 
-### 🏠 [Homepage](.)
 
 ## Prerequisites
 
