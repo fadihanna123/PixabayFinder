@@ -1,3 +1,6 @@
-node_modules/
+node_modules/*
+build/*
 README.md
 AUTHORS
+.vscode/*
+pnpm-lock.yaml
