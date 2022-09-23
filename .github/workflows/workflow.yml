@@ -23,7 +23,7 @@ jobs:
           REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
 
       - name: test
-        run: echo "REACT_APP_PIXABAY_KEY"
+        run: echo ${{ secrets.REACT_APP_PIXABAY_KEY }}
 
       - name: Install and build
         run: npm install && npm run build
