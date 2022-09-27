@@ -1,6 +1,6 @@
 import { SearchForm } from 'models';
 import { Dispatch } from 'redux';
-import { setSearchForm } from 'redux/actions';
+import { setSearchForm } from 'redux/reducers/searchForm';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -21,10 +21,9 @@ export const typer = (
   dispatch: Dispatch<any>
 ) => {
   dispatch(
-    setSearchForm &&
-      setSearchForm({
-        ...searchForm,
-        [e.target.name]: e.target.value,
-      })
+    setSearchForm({
+      ...searchForm,
+      [e.target.name]: e.target.value,
+    })
   );
 };

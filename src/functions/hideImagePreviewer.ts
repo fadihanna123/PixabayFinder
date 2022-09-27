@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { setToggler } from 'redux/actions';
+import { setToggler } from 'redux/reducers/toggler';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>

@@ -1,20 +1,12 @@
-import { typer } from 'functions';
-import {
-  SearchFormReducerTypes,
-  SearchTypeReducerTypes,
-} from 'models/redux.model';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearchForm, setSearchType } from 'redux/actions';
+import { getSearchForm, setSearchForm } from 'redux/reducers/searchForm';
+import { getSearchType, setSearchType } from 'redux/reducers/searchType';
 import { Col, Input, InputRow } from 'styles/globalStyles';
 
 const SearchFormComp: React.FC = () => {
-  const searchForm = useSelector(
-    (state: SearchFormReducerTypes) => state.searchFormReducer
-  );
+  const searchForm = useSelector(getSearchForm);
 
-  const searchType = useSelector(
-    (state: SearchTypeReducerTypes) => state.searchTypeReducer
-  );
+  const searchType = useSelector(getSearchType);
 
   const dispatch = useDispatch();
 
@@ -37,7 +29,12 @@ const SearchFormComp: React.FC = () => {
           placeholder={searchType !== '' ? 'Type here' : ''}
           value={searchForm.query}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-            typer(e, searchForm, dispatch);
+            dispatch(
+              setSearchForm({
+                ...searchForm,
+                [e.target.name]: e.target.value,
+              })
+            );
           }}
         />
       </Col>
@@ -49,9 +46,7 @@ const SearchFormComp: React.FC = () => {
           value={searchForm.type}
           onChange={() => {
             dispatch(setSearchType('Images'));
-            dispatch(
-              setSearchForm({ ...searchForm, type: 'Images' })
-            );
+            dispatch(setSearchForm({ ...searchForm, type: 'Images' }));
           }}
           checked
         />
@@ -63,9 +58,7 @@ const SearchFormComp: React.FC = () => {
           value={searchForm.type}
           onChange={() => {
             dispatch(setSearchType('Videos'));
-            dispatch(
-              setSearchForm({ ...searchForm, type: 'Videos' })
-            );
+            dispatch(setSearchForm({ ...searchForm, type: 'Videos' }));
           }}
         />
         Videos(soon)

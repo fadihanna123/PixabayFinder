@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { PixabayBaseURL } from 'utils/envs';
+import { PixabayBaseURL } from 'utils';
 
 export const request = {
   get: async <T>(

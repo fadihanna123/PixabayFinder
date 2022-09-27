@@ -1,5 +1,5 @@
-import { ActionTypes } from 'models/redux.model';
-import { SET_SEARCH_TYPE } from 'utils/constants';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from 'redux/store';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -7,23 +7,17 @@ import { SET_SEARCH_TYPE } from 'utils/constants';
 
 const initialState: string = 'Images';
 
-/**
- * SearchType reducer.
- *
- * @param state - String
- * @param Actiontypes
- * @returns String | void
- */
+export const searchTypeSlice = createSlice({
+  name: 'searchType',
+  initialState,
+  reducers: {
+    setSearchType: (state, action: PayloadAction<string>) => {
+      return (state = action.payload);
+    },
+  },
+});
 
-export const searchTypeReducer = (
-  state = initialState,
-  { type, payload }: ActionTypes
-) => {
-  switch (type) {
-    case SET_SEARCH_TYPE:
-      return payload;
+export const { setSearchType } = searchTypeSlice.actions;
 
-    default:
-      return state;
-  }
-};
+export default searchTypeSlice.reducer;
+export const getSearchType = (state: RootState) => state.searchType;

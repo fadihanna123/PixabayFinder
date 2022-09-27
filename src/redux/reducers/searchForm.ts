@@ -1,6 +1,6 @@
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SearchForm } from 'models';
-import { ActionTypes } from 'models/redux.model';
-import { SET_SEARCH_FORM } from 'utils/constants';
+import { RootState } from 'redux/store';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -8,23 +8,17 @@ import { SET_SEARCH_FORM } from 'utils/constants';
 
 const initialState: SearchForm = { query: '', type: 'Images' };
 
-/**
- * Search-form reducer.
- *
- * @param state - Search-form object
- * @param Actiontypes
- * @returns Search-form values | void
- */
+export const searchFormSlice = createSlice({
+  name: 'searchForm',
+  initialState,
+  reducers: {
+    setSearchForm: (state, action: PayloadAction<SearchForm>) => {
+      return (state = action.payload);
+    },
+  },
+});
 
-export const searchFormReducer = (
-  state = initialState,
-  { type, payload }: ActionTypes
-) => {
-  switch (type) {
-    case SET_SEARCH_FORM:
-      return payload;
+export const { setSearchForm } = searchFormSlice.actions;
 
-    default:
-      return state;
-  }
-};
+export default searchFormSlice.reducer;
+export const getSearchForm = (state: RootState) => state.searchForm;

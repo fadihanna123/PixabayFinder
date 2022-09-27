@@ -1,30 +1,24 @@
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IList } from 'models';
-import { ActionTypes } from 'models/redux.model';
-import { SET_VIDEO_LIST } from 'utils/constants';
+import { RootState } from 'redux/store';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
  */
 
-const initialState: IList | null = null;
+const initialState: IList | null = { total: 0, totalHits: 0, hits: [] };
 
-/**
- * Videolist reducer.
- *
- * @param state - Videolist object | null
- * @param Actiontypes
- * @returns Void | null
- */
+export const videoListSlice = createSlice({
+  name: 'videoList',
+  initialState,
+  reducers: {
+    setVideoList: (state, action: PayloadAction<IList>) => {
+      return (state = action.payload);
+    },
+  },
+});
 
-export const videoListReducer = (
-  state = initialState,
-  { type, payload }: ActionTypes
-) => {
-  switch (type) {
-    case SET_VIDEO_LIST:
-      return payload;
+export const { setVideoList } = videoListSlice.actions;
 
-    default:
-      return state;
-  }
-};
+export default videoListSlice.reducer;
+export const getVideoList = (state: RootState) => state.videoList;

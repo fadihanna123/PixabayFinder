@@ -1,5 +1,5 @@
-import { ActionTypes } from 'models/redux.model';
-import { SET_IMAGE } from 'utils/constants';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from 'redux/store';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -7,23 +7,17 @@ import { SET_IMAGE } from 'utils/constants';
 
 const initialState: string = '';
 
-/**
- * Image reducer.
- *
- * @param state - String
- * @param Actiontypes
- * @returns String | void
- */
+export const imageSlice = createSlice({
+  name: 'image',
+  initialState,
+  reducers: {
+    setImage: (state, action: PayloadAction<string>) => {
+      return (state = action.payload);
+    },
+  },
+});
 
-export const imageReducer = (
-  state = initialState,
-  { type, payload }: ActionTypes
-) => {
-  switch (type) {
-    case SET_IMAGE:
-      return payload;
+export const { setImage } = imageSlice.actions;
 
-    default:
-      return state;
-  }
-};
+export default imageSlice.reducer;
+export const getImage = (state: RootState) => state.image;

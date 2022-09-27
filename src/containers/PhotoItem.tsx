@@ -1,32 +1,23 @@
 import 'styles/main.css';
 
 import { hideImagePreviewer, toggleImagePreviewer } from 'functions';
-import {
-  HitsOfList,
-  ImageReducerTypes,
-  SearchForm,
-  SearchFormReducerTypes,
-  TogglerReducerTypes,
-} from 'models';
+import { HitsOfList, SearchForm } from 'models';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { getImage } from 'redux/reducers/image';
+import { getSearchForm } from 'redux/reducers/searchForm';
+import { getToggler } from 'redux/reducers/toggler';
 import sal from 'sal.js';
 import { ImageCol, Img, Modal, ModalContent } from 'styles';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;
 }> = ({ item }: { item: HitsOfList }) => {
-  const toggler: boolean = useSelector(
-    (state: TogglerReducerTypes) => state.togglerReducer
-  );
+  const toggler: boolean = useSelector(getToggler);
 
-  const searchForm: SearchForm = useSelector(
-    (state: SearchFormReducerTypes) => state.searchFormReducer
-  );
+  const searchForm: SearchForm = useSelector(getSearchForm);
 
-  const image: string = useSelector(
-    (state: ImageReducerTypes) => state.imageReducer
-  );
+  const image: string = useSelector(getImage);
 
   const dispatch = useDispatch();
 

@@ -11,7 +11,7 @@ export const NoData = styled.div`
   }
 `;
 
-export const Row = styled.div`
+export const Row = styled.div<any>`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   transition: 0.3s;

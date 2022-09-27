@@ -1,5 +1,5 @@
-import { ActionTypes } from 'models/redux.model';
-import { SET_LOADING } from 'utils/constants';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from 'redux/store';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -7,23 +7,17 @@ import { SET_LOADING } from 'utils/constants';
 
 const initialState: boolean = false;
 
-/**
- * Loading reducer.
- *
- * @param state - Boolean
- * @param Actiontypes
- * @returns Boolean | void
- */
+export const loadingSlice = createSlice({
+  name: 'loading',
+  initialState,
+  reducers: {
+    setLoading: (state, action: PayloadAction<boolean>) => {
+      return (state = action.payload);
+    },
+  },
+});
 
-export const loadingReducer = (
-  state = initialState,
-  { type, payload }: ActionTypes
-) => {
-  switch (type) {
-    case SET_LOADING:
-      return payload;
+export const { setLoading } = loadingSlice.actions;
 
-    default:
-      return state;
-  }
-};
+export default loadingSlice.reducer;
+export const getLoading = (state: RootState) => state.loading;

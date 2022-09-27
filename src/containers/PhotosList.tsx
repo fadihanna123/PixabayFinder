@@ -1,15 +1,11 @@
-import {
-  HitsOfList,
-  IList,
-  ImgListReducerTypes,
-  LoadingReducerTypes,
-  SearchForm,
-  SearchFormReducerTypes,
-  SearchTypeReducerTypes,
-  VideoListReducerTypes,
-} from 'models';
+import { HitsOfList, IList, SearchForm } from 'models';
 import { useSelector } from 'react-redux';
 import { Flip, ToastContainer } from 'react-toastify';
+import { getImgList } from 'redux/reducers/imgList';
+import { getLoading } from 'redux/reducers/loading';
+import { getSearchForm } from 'redux/reducers/searchForm';
+import { getSearchType } from 'redux/reducers/searchType';
+import { getVideoList } from 'redux/reducers/videoList';
 import { NoData, Row } from 'styles/photoListStyles';
 import Loader from 'ui/Loader';
 
@@ -17,25 +13,15 @@ import PhotoItem from './PhotoItem';
 import VideoItem from './VideoItem';
 
 const PhotosList: React.FC = () => {
-  const searchForm: SearchForm = useSelector(
-    (state: SearchFormReducerTypes) => state.searchFormReducer
-  );
+  const searchForm: SearchForm = useSelector(getSearchForm);
 
-  const imgList: IList = useSelector(
-    (state: ImgListReducerTypes) => state.imgListReducer
-  );
+  const imgList: IList = useSelector(getImgList);
 
-  const videoList = useSelector(
-    (state: VideoListReducerTypes) => state.VideoListReducer
-  );
+  const videoList = useSelector(getVideoList);
 
-  const loading: boolean = useSelector(
-    (state: LoadingReducerTypes) => state.loadingReducer
-  );
+  const loading: boolean = useSelector(getLoading);
 
-  const searchType: string = useSelector(
-    (state: SearchTypeReducerTypes) => state.searchTypeReducer
-  );
+  const searchType: string = useSelector(getSearchType);
 
   return (
     <main>
@@ -45,8 +31,7 @@ const PhotosList: React.FC = () => {
         ''
       ) : (
         <>
-          <b data-sal='flip-left'>Results found:</b>{' '}
-          {imgList?.hits.length}
+          <b data-sal='flip-left'>Results found:</b> {imgList?.hits.length}
         </>
       )}
       <Row>

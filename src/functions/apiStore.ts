@@ -1,6 +1,6 @@
 import { request } from 'api';
 import { IList } from 'models';
-import { PixabayKey } from 'utils/envs';
+import { PixabayKey } from 'utils';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>

@@ -1,6 +1,7 @@
 import { HitsOfList } from 'models';
 import { Dispatch } from 'react';
-import { setImage, setToggler } from 'redux/actions';
+import { setImage } from 'redux/reducers/image';
+import { setToggler } from 'redux/reducers/toggler';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>

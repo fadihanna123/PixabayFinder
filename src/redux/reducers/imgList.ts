@@ -1,30 +1,24 @@
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IList } from 'models';
-import { ActionTypes } from 'models/redux.model';
-import { SET_IMG_LIST } from 'utils/constants';
+import { RootState } from 'redux/store';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
  */
 
-const initialState: IList[] | null = null;
+const initialState: IList = { hits: [], totalHits: 0, total: 0 };
 
-/**
- * Imagelist reducer.
- *
- * @param state - Imagelist array | null
- * @param Actiontypes
- * @returns Void | null
- */
+export const imgListSlice = createSlice({
+  name: 'imgList',
+  initialState,
+  reducers: {
+    setImgList: (state, action: PayloadAction<IList>) => {
+      return (state = action.payload);
+    },
+  },
+});
 
-export const imgListReducer = (
-  state = initialState,
-  { type, payload }: ActionTypes
-) => {
-  switch (type) {
-    case SET_IMG_LIST:
-      return payload;
+export const { setImgList } = imgListSlice.actions;
 
-    default:
-      return state;
-  }
-};
+export default imgListSlice.reducer;
+export const getImgList = (state: RootState) => state.imgList;
