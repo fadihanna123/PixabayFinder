@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SearchForm } from 'models';
-import { RootState } from 'redux/store';
+import { RootState } from 'redux/app';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -12,9 +12,8 @@ export const searchFormSlice = createSlice({
   name: 'searchForm',
   initialState,
   reducers: {
-    setSearchForm: (state, action: PayloadAction<SearchForm>) => {
-      return (state = action.payload);
-    },
+    setSearchForm: (state, action: PayloadAction<SearchForm>) =>
+      (state = action.payload),
   },
 });
 

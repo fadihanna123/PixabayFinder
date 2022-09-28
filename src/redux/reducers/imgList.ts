@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IList } from 'models';
-import { RootState } from 'redux/store';
+import { RootState } from 'redux/app';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -12,9 +12,8 @@ export const imgListSlice = createSlice({
   name: 'imgList',
   initialState,
   reducers: {
-    setImgList: (state, action: PayloadAction<IList>) => {
-      return (state = action.payload);
-    },
+    setImgList: (state, action: PayloadAction<IList>) =>
+      (state = action.payload),
   },
 });
 

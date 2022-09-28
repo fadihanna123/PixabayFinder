@@ -3,8 +3,8 @@ import axios from 'axios';
 import { getImages, getVideos } from 'functions';
 import { IList } from 'models';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Flip, toast } from 'react-toastify';
+import { useAppDispatch, useAppSelector } from 'redux/app';
 import { setImgList } from 'redux/reducers/imgList';
 import { setLoading } from 'redux/reducers/loading';
 import { getSearchForm } from 'redux/reducers/searchForm';
@@ -16,9 +16,9 @@ const globalHeader: string = 'application/json';
 axios.defaults.headers.common['Content-Type'] = globalHeader;
 
 const App: React.FC = () => {
-  const searchForm = useSelector(getSearchForm);
+  const searchForm = useAppSelector(getSearchForm);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     let isSubscribed: boolean = true;

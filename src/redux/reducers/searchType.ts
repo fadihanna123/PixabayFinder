@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from 'redux/store';
+import { RootState } from 'redux/app';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -11,9 +11,8 @@ export const searchTypeSlice = createSlice({
   name: 'searchType',
   initialState,
   reducers: {
-    setSearchType: (state, action: PayloadAction<string>) => {
-      return (state = action.payload);
-    },
+    setSearchType: (state, action: PayloadAction<string>) =>
+      (state = action.payload),
   },
 });
 

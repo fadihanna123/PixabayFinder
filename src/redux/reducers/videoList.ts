@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IList } from 'models';
-import { RootState } from 'redux/store';
+import { RootState } from 'redux/app';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -12,9 +12,8 @@ export const videoListSlice = createSlice({
   name: 'videoList',
   initialState,
   reducers: {
-    setVideoList: (state, action: PayloadAction<IList>) => {
-      return (state = action.payload);
-    },
+    setVideoList: (state, action: PayloadAction<IList>) =>
+      (state = action.payload),
   },
 });
 

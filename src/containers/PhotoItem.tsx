@@ -3,7 +3,7 @@ import 'styles/main.css';
 import { hideImagePreviewer, toggleImagePreviewer } from 'functions';
 import { HitsOfList, SearchForm } from 'models';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch, useAppSelector } from 'redux/app';
 import { getImage } from 'redux/reducers/image';
 import { getSearchForm } from 'redux/reducers/searchForm';
 import { getToggler } from 'redux/reducers/toggler';
@@ -13,13 +13,13 @@ import { ImageCol, Img, Modal, ModalContent } from 'styles';
 const PhotoItem: React.FC<{
   item: HitsOfList;
 }> = ({ item }: { item: HitsOfList }) => {
-  const toggler: boolean = useSelector(getToggler);
+  const toggler: boolean = useAppSelector(getToggler);
 
-  const searchForm: SearchForm = useSelector(getSearchForm);
+  const searchForm: SearchForm = useAppSelector(getSearchForm);
 
-  const image: string = useSelector(getImage);
+  const image: string = useAppSelector(getImage);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     sal();

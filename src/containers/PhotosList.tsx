@@ -1,6 +1,6 @@
 import { HitsOfList, IList, SearchForm } from 'models';
-import { useSelector } from 'react-redux';
 import { Flip, ToastContainer } from 'react-toastify';
+import { useAppSelector } from 'redux/app';
 import { getImgList } from 'redux/reducers/imgList';
 import { getLoading } from 'redux/reducers/loading';
 import { getSearchForm } from 'redux/reducers/searchForm';
@@ -13,15 +13,15 @@ import PhotoItem from './PhotoItem';
 import VideoItem from './VideoItem';
 
 const PhotosList: React.FC = () => {
-  const searchForm: SearchForm = useSelector(getSearchForm);
+  const searchForm: SearchForm = useAppSelector(getSearchForm);
 
-  const imgList: IList = useSelector(getImgList);
+  const imgList: IList = useAppSelector(getImgList);
 
-  const videoList = useSelector(getVideoList);
+  const videoList = useAppSelector(getVideoList);
 
-  const loading: boolean = useSelector(getLoading);
+  const loading: boolean = useAppSelector(getLoading);
 
-  const searchType: string = useSelector(getSearchType);
+  const searchType: string = useAppSelector(getSearchType);
 
   return (
     <main>

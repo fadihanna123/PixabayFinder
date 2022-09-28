@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from 'redux/store';
+import { RootState } from 'redux/app';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -11,9 +11,8 @@ export const togglerSlice = createSlice({
   name: 'toggler',
   initialState,
   reducers: {
-    setToggler: (state, action: PayloadAction<boolean>) => {
-      return (state = action.payload);
-    },
+    setToggler: (state, action: PayloadAction<boolean>) =>
+      (state = action.payload),
   },
 });
 
