@@ -1,6 +1,7 @@
-import Layout from 'app/Layout';
 import axios from 'axios';
+import SearchForm from 'containers/SearchFormComp';
 import { getImages, getVideos } from 'functions';
+import Footer from 'inc/Footer';
 import { IList } from 'models';
 import { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
@@ -10,6 +11,9 @@ import { setLoading } from 'redux/reducers/loading';
 import { getSearchForm } from 'redux/reducers/searchForm';
 import { setVideoList } from 'redux/reducers/videoList';
 import sal from 'sal.js';
+import { Container } from 'styles';
+
+import PhotosList from './PhotosList';
 
 const globalHeader: string = 'application/json';
 
@@ -62,7 +66,14 @@ const App: React.FC = () => {
     };
   }, [dispatch, searchForm.query]);
 
-  return <Layout />;
+  return (
+    <Container m={10} textAlign='center'>
+      <h1 data-sal='flip-left'>PixaBay Finder</h1>
+      <SearchForm />
+      <PhotosList />
+      <Footer />
+    </Container>
+  );
 };
 
 export default App;

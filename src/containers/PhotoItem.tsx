@@ -1,12 +1,12 @@
 import 'styles/main.css';
 
-import { hideImagePreviewer, toggleImagePreviewer } from 'functions';
 import { HitsOfList, SearchForm } from 'models';
 import { useEffect } from 'react';
+import { Dispatch } from 'redux';
 import { useAppDispatch, useAppSelector } from 'redux/app';
-import { getImage } from 'redux/reducers/image';
+import { getImage, setImage } from 'redux/reducers/image';
 import { getSearchForm } from 'redux/reducers/searchForm';
-import { getToggler } from 'redux/reducers/toggler';
+import { getToggler, setToggler } from 'redux/reducers/toggler';
 import sal from 'sal.js';
 import { ImageCol, Img, Modal, ModalContent } from 'styles';
 
@@ -20,6 +20,16 @@ const PhotoItem: React.FC<{
   const image: string = useAppSelector(getImage);
 
   const dispatch = useAppDispatch();
+
+  const hideImagePreviewer = (
+    toggler: boolean,
+    dispatch: Dispatch<any>
+  ): object => dispatch(setToggler(!toggler));
+
+  const toggleImagePreviewer = (item: HitsOfList, dispatch: Dispatch<any>) => {
+    dispatch(setToggler(true));
+    dispatch(setImage(item.webformatURL));
+  };
 
   useEffect(() => {
     sal();

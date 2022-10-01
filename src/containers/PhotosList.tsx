@@ -10,7 +10,6 @@ import { NoData, Row } from 'styles/photoListStyles';
 import Loader from 'ui/Loader';
 
 import PhotoItem from './PhotoItem';
-import VideoItem from './VideoItem';
 
 const PhotosList: React.FC = () => {
   const searchForm: SearchForm = useAppSelector(getSearchForm);
@@ -53,9 +52,9 @@ const PhotosList: React.FC = () => {
           ))}
         ;
         {searchType === 'Videos' &&
-          videoList?.hits.map((item: any) => {
-            <VideoItem location={item.videos.small.url} />;
-          })}
+          videoList?.hits.map((item: any) => (
+            <video src={item.videos.small.url}></video>
+          ))}
       </Row>
       <ToastContainer transition={Flip} />
     </main>
