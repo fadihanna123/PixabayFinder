@@ -3,6 +3,7 @@
 
 pnpm i
 pnpm manypkg check
+pnpm test
 htmlhint
 npx stylelint "**/*.css"
 eslint .

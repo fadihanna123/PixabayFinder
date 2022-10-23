@@ -50,7 +50,6 @@ const PhotosList: React.FC = () => {
           ) : (
             ''
           ))}
-        ;
         {searchType === 'Videos' &&
           videoList?.hits.map((item: any) => (
             <video src={item.videos.small.url}></video>
