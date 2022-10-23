@@ -18,16 +18,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: test
-        run:  echo ${{secrets.REACT_APP_PIXABAY_KEY}} | sed 's/./& /g'
-
       - name: Install and build
         run: npm install && npm run build
-        env:
-          CI: true
-          REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_KEY }}
-          REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
