@@ -21,6 +21,6 @@
       "@assets/*": ["public/assets/*"]
     }
   },
-  "include": ["src", "index.d.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src", "craco.config.ts"],
+  "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
 }
