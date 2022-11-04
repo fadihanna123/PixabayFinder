@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from 'redux/app';
 import GlobalStyles from 'styles/globalStyles';
-import { PixabayBaseURL, PixabayKey } from 'utils';
 
 if (process.env.NODE_ENV === 'development') {
   console.log(`It's looks like we are in a development mode!`);
@@ -17,8 +16,6 @@ if (process.env.NODE_ENV === 'development') {
 const root: ReactDOM.Root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLDivElement
 );
-
-console.log(PixabayKey);
 
 root.render(
   <React.StrictMode>
