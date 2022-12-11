@@ -40,11 +40,12 @@ const SearchFormComp: React.FC = () => {
           className='m-2'
           name='searchType'
           value={searchForm.type}
+          checked={searchForm.type === 'Images'}
           onChange={() => {
             dispatch(setSearchType('Images'));
+            console.log('IMAGES');
             dispatch(setSearchForm({ ...searchForm, type: 'Images' }));
           }}
-          checked
         />
         Images
         <input
@@ -52,6 +53,7 @@ const SearchFormComp: React.FC = () => {
           className='m-2'
           name='searchType'
           value={searchForm.type}
+          checked={searchForm.type === 'Videos'}
           onChange={() => {
             dispatch(setSearchType('Videos'));
             dispatch(setSearchForm({ ...searchForm, type: 'Videos' }));

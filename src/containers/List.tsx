@@ -6,12 +6,12 @@ import { getLoading } from 'redux/reducers/loading';
 import { getSearchForm } from 'redux/reducers/searchForm';
 import { getSearchType } from 'redux/reducers/searchType';
 import { getVideoList } from 'redux/reducers/videoList';
-import { NoData, Row } from 'styles/photoListStyles';
+import { ImageRow, NoData, VideoItem, VideoRow } from 'styles';
 import Loader from 'ui/Loader';
 
 import PhotoItem from './PhotoItem';
 
-const PhotosList: React.FC = () => {
+const List: React.FC = () => {
   const searchForm: SearchForm = useAppSelector(getSearchForm);
 
   const imgList: IList = useAppSelector(getImgList);
@@ -33,7 +33,7 @@ const PhotosList: React.FC = () => {
           <b data-sal='flip-left'>Results found:</b> {imgList?.hits.length}
         </>
       )}
-      <Row>
+      <ImageRow>
         {searchType === 'Images' &&
           (searchForm.query ? (
             imgList && imgList.totalHits ? (
@@ -50,14 +50,18 @@ const PhotosList: React.FC = () => {
           ) : (
             ''
           ))}
-        {searchType === 'Videos' &&
-          videoList?.hits.map((item: any) => (
-            <video src={item.videos.small.url}></video>
+      </ImageRow>
+      <VideoRow>
+        {searchForm.query !== '' &&
+          searchType === 'Videos' &&
+          videoList &&
+          videoList?.hits.map((item: any, i: number) => (
+            <VideoItem key={i} controls src={item.videos.small.url}></VideoItem>
           ))}
-      </Row>
+      </VideoRow>
       <ToastContainer transition={Flip} />
     </main>
   );
 };
 
-export default PhotosList;
+export default List;

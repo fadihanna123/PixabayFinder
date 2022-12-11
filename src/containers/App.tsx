@@ -13,7 +13,7 @@ import sal from 'sal.js';
 import { Container } from 'styles';
 import MainFooter from 'ui/MainFooter';
 
-import PhotosList from './PhotosList';
+import List from './List';
 
 const globalHeader: string = 'application/json';
 
@@ -70,7 +70,7 @@ const App: React.FC = () => {
     <Container m={10} textAlign='center'>
       <h1 data-sal='flip-left'>PixaBay Finder</h1>
       <SearchForm />
-      <PhotosList />
+      <List />
       <MainFooter dataSal='fade'>
         <i>Created by Fadi Hanna.</i>
       </MainFooter>

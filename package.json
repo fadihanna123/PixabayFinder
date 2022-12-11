@@ -34,7 +34,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^39.6.4",
     "eslint-plugin-prefer-arrow": "^1.2.3",
-    "htmlhint": "^1.1.4",
     "husky": "^8.0.2",
     "normalize.css": "^8.0.1",
     "prettier": "^2.8.0",
