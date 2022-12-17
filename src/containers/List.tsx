@@ -52,11 +52,27 @@ const List: React.FC = () => {
           ))}
       </ImageRow>
       <VideoRow>
-        {searchForm.query !== '' &&
-          searchType === 'Videos' &&
-          videoList &&
-          videoList?.hits.map((item: any, i: number) => (
-            <VideoItem key={i} controls src={item.videos.small.url}></VideoItem>
+        {searchType === 'Videos' &&
+          (searchForm.query ? (
+            videoList && videoList.totalHits ? (
+              !loading ? (
+                videoList?.hits.map((item: any, i: number) => {
+                  return (
+                    <VideoItem
+                      key={i}
+                      controls
+                      src={item.videos.small.url}
+                    ></VideoItem>
+                  );
+                })
+              ) : (
+                <Loader className={['spinner']} />
+              )
+            ) : (
+              <NoData>No videos found! 😔</NoData>
+            )
+          ) : (
+            ''
           ))}
       </VideoRow>
       <ToastContainer transition={Flip} />

@@ -43,7 +43,6 @@ const SearchFormComp: React.FC = () => {
           checked={searchForm.type === 'Images'}
           onChange={() => {
             dispatch(setSearchType('Images'));
-            console.log('IMAGES');
             dispatch(setSearchForm({ ...searchForm, type: 'Images' }));
           }}
         />

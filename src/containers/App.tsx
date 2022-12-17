@@ -34,6 +34,7 @@ const App: React.FC = () => {
         if (isSubscribed) {
           dispatch(setLoading(true));
           dispatch(setImgList(data));
+          dispatch(setLoading(false));
         } else {
           return null;
         }
@@ -50,6 +51,7 @@ const App: React.FC = () => {
         if (isSubscribed) {
           dispatch(setLoading(true));
           dispatch(setVideoList(data));
+          dispatch(setLoading(false));
         } else {
           return null;
         }
