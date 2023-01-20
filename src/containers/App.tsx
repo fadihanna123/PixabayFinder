@@ -29,7 +29,7 @@ const App: React.FC = () => {
 
     sal();
 
-    getImages(searchForm.query)
+    getImages<string>(searchForm.query)
       .then((data: IList) => {
         if (isSubscribed) {
           dispatch(setLoading(true));
@@ -46,7 +46,7 @@ const App: React.FC = () => {
       )
       .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
 
-    getVideos(searchForm.query)
+    getVideos<string>(searchForm.query)
       .then((data: IList) => {
         if (isSubscribed) {
           dispatch(setLoading(true));
