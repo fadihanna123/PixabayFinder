@@ -1,3 +1,8 @@
+/**
+ * @param {number} total
+ * @param {number} totalHits
+ * @param {HitsOfList[]} hits
+ */
 export class IList {
   constructor(
     public total: number,

@@ -1,6 +1,11 @@
 import axios from 'axios';
 import { PixabayBaseURL } from 'utils';
 
+/**
+ * Request object to manipulate api.
+ *
+ * @param {{ get: Promise<T | void>, post: Promise<T | void>, put: Promise<T | void>, delete: Promise<T | void> }} Request
+ */
 export const request = {
   get: async <T>(
     url: string,

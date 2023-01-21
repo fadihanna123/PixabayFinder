@@ -9,12 +9,11 @@ import { setSearchForm } from 'redux/reducers/searchForm';
 /**
  * Handle search-form values.
  *
- * @param e - Event
- * @param searchForm - Search form values
- * @param dispatch - Dispatch
+ * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} e - Event
+ * @param {SearchForm} searchForm - Search form values
+ * @param {Dispatch<any>} dispatch - Dispatch
  * @returns Void
  */
-
 export const typer = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   searchForm: SearchForm,
