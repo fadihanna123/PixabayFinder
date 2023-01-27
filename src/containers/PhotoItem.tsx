@@ -21,12 +21,31 @@ const PhotoItem: React.FC<{
 
   const dispatch = useAppDispatch();
 
+  /**
+   * Hide image previewer.
+   *
+   * @function hideImagePreviewer
+   * @param { boolean } toggler
+   * @param { Dispatch<any> } dispatch
+   * @returns { object }
+   */
   const hideImagePreviewer = (
     toggler: boolean,
     dispatch: Dispatch<any>
   ): object => dispatch(setToggler(!toggler));
 
-  const toggleImagePreviewer = (item: HitsOfList, dispatch: Dispatch<any>) => {
+  /**
+   * Hide image previewer.
+   *
+   * @function toggleImagePreviewer
+   * @param { HitsOfList } item
+   * @param { Dispatch<any> } dispatch
+   * @returns { void }
+   */
+  const toggleImagePreviewer = (
+    item: HitsOfList,
+    dispatch: Dispatch<any>
+  ): void => {
     dispatch(setToggler(true));
     dispatch(setImage(item.webformatURL));
   };

@@ -1,3 +1,10 @@
-export const PixabayBaseURL = process.env.REACT_APP_PIXABAY_BASE_URL;
+/**
+ * @type { string | undefined }
+ */
+export const PixabayBaseURL: string | undefined =
+  process.env.REACT_APP_PIXABAY_BASE_URL;
 
-export const PixabayKey = process.env.REACT_APP_PIXABAY_KEY;
+/**
+ * @type { string | undefined }
+ */
+export const PixabayKey: string | undefined = process.env.REACT_APP_PIXABAY_KEY;

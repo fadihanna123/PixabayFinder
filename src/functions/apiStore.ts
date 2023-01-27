@@ -9,8 +9,10 @@ import { PixabayKey } from 'utils';
 /**
  * Get imagelist from api.
  *
- * @param {string} imageVal - Image value
- * @returns Promise contains images array.
+ * @async
+ * @function getImages
+ * @param { string } imageVal - Image value
+ * @returns { Promise<any> } Promise contains images array.
  */
 
 export const getImages = async <T>(imageVal: T): Promise<any> => {
@@ -21,10 +23,11 @@ export const getImages = async <T>(imageVal: T): Promise<any> => {
 /**
  * Get video list from api.
  *
+ * @async
+ * @function getVideos
  * @param {string} val - Video value
- * @returns Promise contains video object
+ * @returns { Promise<any> } Promise contains video object
  */
-
 export const getVideos = async <T>(val: T): Promise<any> => {
   const endPoint: string = `videos/?key=${PixabayKey}&q=${val}`;
   return await request.get<IList>(endPoint);
