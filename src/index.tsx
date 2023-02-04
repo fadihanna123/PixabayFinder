@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === 'development') {
 const root: ReactDOM.Root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLDivElement
 );
+console.log(process.env.PUBLIC_URL);
 
 root.render(
   <React.StrictMode>

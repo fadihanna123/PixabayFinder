@@ -38,8 +38,8 @@ const List: React.FC = () => {
           (searchForm.query ? (
             imgList && imgList.totalHits ? (
               !loading ? (
-                imgList.hits.map((item: HitsOfList, i: number) => {
-                  return <PhotoItem key={i} item={item} />;
+                imgList.hits.map((image: HitsOfList, i: number) => {
+                  return <PhotoItem key={i} item={image} />;
                 })
               ) : (
                 <Loader className={['spinner']} />
@@ -56,12 +56,12 @@ const List: React.FC = () => {
           (searchForm.query ? (
             videoList && videoList.totalHits ? (
               !loading ? (
-                videoList?.hits.map((item: any, i: number) => {
+                videoList?.hits.map((video: any, i: number) => {
                   return (
                     <VideoItem
                       key={i}
                       controls
-                      src={item.videos.small.url}
+                      src={video.videos.small.url}
                     ></VideoItem>
                   );
                 })
