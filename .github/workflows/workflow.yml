@@ -8,11 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [17.x]
-    environment: myenvironment
+    using: 'node16'
 
     steps:
       - name: Checkout
