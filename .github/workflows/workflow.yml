@@ -20,6 +20,7 @@ jobs:
 
       - name: Install and build
         env:
+          CI: true
           REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_BASE_URL }}
           REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
         run: npm install && npm run build
