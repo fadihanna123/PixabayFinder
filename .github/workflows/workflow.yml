@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+
+      - name: Set up secrets
         env:
           REACT_APP_PIXABAY_BASE_URL: ${{ secrets.REACT_APP_PIXABAY_BASE_URL }}
           REACT_APP_PIXABAY_KEY: ${{ secrets.REACT_APP_PIXABAY_KEY }}
