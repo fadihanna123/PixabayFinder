@@ -1,0 +1,29 @@
+name: Github Pages Deploy
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    using: 'node16'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Checkout tools repo
+        uses: actions/checkout@v3
+        with:
+          repository: root
+          path: env
+
+      - name: Install and build
+        run: npm install && npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: publish # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
