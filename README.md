@@ -25,8 +25,6 @@
 - npm Please use pnpm instead of NPM to install dependencies
 - yarn Please use pnpm instead of Yarn to install dependencies
 
-## <a href="https://pixabayfinder.pages.dev/">Demo</a>
-
 ## Install
 
 ```sh
