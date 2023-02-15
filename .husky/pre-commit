@@ -6,4 +6,4 @@ pnpm manypkg check
 npx stylelint "**/*.css"
 eslint .
 npx pretty-quick --staged
-rimraf node_modules
+rm -rf node_modules
