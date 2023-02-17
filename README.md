@@ -1,5 +1,4 @@
 <h1 align="center">Welcome to PixabayFinder 👋</h1>
-<a href="https://pixabayfinder.pages.dev/">Demo</a>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.31-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D14.12.0-blue.svg" />
