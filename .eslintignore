@@ -1,4 +1,2 @@
 node_modules
-craco.config.ts
-.eslintrc.js
 *.html

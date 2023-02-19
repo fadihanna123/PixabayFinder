@@ -1,9 +1,10 @@
 import { getImages, getVideos } from 'functions';
+import { IList } from 'models';
 
 jest.mock('axios');
 
 it('get Images', async () => {
-  const data = await getImages('car');
+  const data: IList[] = await getImages('car');
   expect(Object.entries(data)).toHaveLength(2);
 });
 

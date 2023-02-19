@@ -40,9 +40,7 @@ const App: React.FC = () => {
         }
       })
       .catch((err: Error) =>
-        isSubscribed
-          ? toast.error((err as Error).message, { transition: Flip })
-          : null
+        isSubscribed ? toast.error(err.message, { transition: Flip }) : null
       )
       .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
 
@@ -57,9 +55,7 @@ const App: React.FC = () => {
         }
       })
       .catch((err: Error) =>
-        isSubscribed
-          ? toast.error((err as Error).message, { transition: Flip })
-          : null
+        isSubscribed ? toast.error(err.message, { transition: Flip }) : null
       )
       .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
 

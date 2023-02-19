@@ -22,5 +22,6 @@
     }
   },
   "include": ["src/**/*", "craco.config.ts", "jest.config.ts"],
+  "files": [".eslintrc.js"],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
 }
