@@ -6,6 +6,11 @@ const config = {
     jest: true,
   },
   root: true,
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
