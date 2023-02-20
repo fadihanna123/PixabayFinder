@@ -8,6 +8,7 @@ import { getSearchType } from 'redux/reducers/searchType';
 import { getVideoList } from 'redux/reducers/videoList';
 import { ImageRow, NoData, VideoItem, VideoRow } from 'styles';
 import Loader from 'ui/Loader';
+import React from 'react';
 
 import PhotoItem from './PhotoItem';
 

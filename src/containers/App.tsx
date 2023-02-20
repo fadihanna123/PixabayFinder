@@ -12,6 +12,7 @@ import { setVideoList } from 'redux/reducers/videoList';
 import sal from 'sal.js';
 import { Container } from 'styles';
 import MainFooter from 'ui/MainFooter';
+import React from 'react';
 
 import List from './List';
 

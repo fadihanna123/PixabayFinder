@@ -9,6 +9,7 @@ import { getSearchForm } from 'redux/reducers/searchForm';
 import { getToggler, setToggler } from 'redux/reducers/toggler';
 import sal from 'sal.js';
 import { ImageCol, Img, Modal, ModalContent } from 'styles';
+import React from 'react';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;

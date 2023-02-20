@@ -21,7 +21,7 @@
       "@assets/*": ["public/assets/*"]
     }
   },
-  "include": ["src/**/*", "craco.config.ts", "jest.config.ts"],
+  "include": ["src/**/*", "craco.config.ts", "jest.config.ts", "index.d.ts"],
   "files": [".eslintrc.js"],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
 }

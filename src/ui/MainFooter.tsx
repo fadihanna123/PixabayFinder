@@ -1,4 +1,5 @@
 import { FooterProps } from 'models';
+import React from 'react';
 
 const MainFooter: React.FC<FooterProps> = ({
   children,

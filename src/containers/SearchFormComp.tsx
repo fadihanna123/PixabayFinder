@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from 'redux/app';
 import { getSearchForm, setSearchForm } from 'redux/reducers/searchForm';
 import { getSearchType, setSearchType } from 'redux/reducers/searchType';
 import { Col, Input, InputRow } from 'styles/globalStyles';
+import React from 'react';
 
 const SearchFormComp: React.FC = () => {
   const searchForm = useAppSelector(getSearchForm);

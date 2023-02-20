@@ -1,6 +1,7 @@
 import { SearchForm } from 'models';
 import { Dispatch } from 'redux';
 import { setSearchForm } from 'redux/reducers/searchForm';
+import React from 'react';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
