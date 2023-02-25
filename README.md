@@ -25,6 +25,8 @@
 - yarn Please use pnpm instead of Yarn to install dependencies
 
 # <a href='https://funny-moxie-323a72.netlify.app/'>Demo</a>
+[go](https://funny-moxie-323a72.netlify.app/){:target="_blank" rel="noopener"}
+
 
 ## Install
 
