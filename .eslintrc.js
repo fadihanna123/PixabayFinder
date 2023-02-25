@@ -16,6 +16,7 @@ const config = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -37,6 +38,8 @@ const config = {
     'react',
   ],
   rules: {
+    'prettier/prettier': ['off', { singleQuote: true }],
+    'react/react-in-jsx-scope': 0,
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     '@typescript-eslint/no-unsafe-call': 'off',
