@@ -26,7 +26,7 @@ const config = {
     project: ['tsconfig.json'],
     sourceType: 'module',
     tsconfigRootDir: __dirname,
-    ecmaVersion: 2023,
+    ecmaVersion: 'latest',
   },
   globals: {
     JSX: 'readonly',
