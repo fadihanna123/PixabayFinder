@@ -37,7 +37,6 @@ specifiers:
   styled-components: ^5.3.8
   styled-system: ^5.1.5
   stylelint: ^15.2.0
-  stylelint-config-prettier: ^9.0.5
   stylelint-config-standard: ^30.0.1
   ts-debounce: ^4.0.0
   ts-jest: ^29.0.5
@@ -81,7 +80,6 @@ dependencies:
   styled-components: 5.3.8_biqbaboplfbrettd7655fr4n2y
   styled-system: 5.1.5
   stylelint: 15.2.0
-  stylelint-config-prettier: 9.0.5_stylelint@15.2.0
   stylelint-config-standard: 30.0.1_stylelint@15.2.0
   ts-debounce: 4.0.0
   ts-jest: 29.0.5_typescript@4.9.5
@@ -10656,16 +10654,6 @@ packages:
       browserslist: 4.21.5
       postcss: 8.4.21
       postcss-selector-parser: 6.0.11
-    dev: false
-
-  /stylelint-config-prettier/9.0.5_stylelint@15.2.0:
-    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    peerDependencies:
-      stylelint: '>= 11.x < 15'
-    dependencies:
-      stylelint: 15.2.0
     dev: false
 
   /stylelint-config-recommended/10.0.1_stylelint@15.2.0:
