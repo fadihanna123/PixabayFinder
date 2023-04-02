@@ -2,7 +2,7 @@ import axios from 'axios';
 import SearchForm from 'containers/SearchFormComp';
 import { getImages, getVideos } from 'functions';
 import { IList } from 'models';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
 import { useAppDispatch, useAppSelector } from 'redux/app';
 import { setImgList } from 'redux/reducers/imgList';
@@ -12,7 +12,6 @@ import { setVideoList } from 'redux/reducers/videoList';
 import sal from 'sal.js';
 import { Container } from 'styles';
 import MainFooter from 'ui/MainFooter';
-import React from 'react';
 
 import List from './List';
 
