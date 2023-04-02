@@ -1,8 +1,10 @@
+/**
+ * @type { import("eslint").Linter.Config }
+ */
 const config = {
   env: {
     browser: true,
     es2022: true,
-    node: true,
     jest: true,
   },
   root: true,
@@ -17,6 +19,13 @@ const config = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:jsdoc/recommended',
+    'plugin:jsdoc/recommended-error',
+    'plugin:css/recommended',
+    'plugin:css/standard',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -25,7 +34,6 @@ const config = {
     },
     project: ['tsconfig.json'],
     sourceType: 'module',
-    tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
   },
   globals: {
@@ -36,10 +44,27 @@ const config = {
     'eslint-plugin-jsdoc',
     'eslint-plugin-prefer-arrow',
     '@typescript-eslint',
+    'prefer-arrow',
+    'jsdoc',
     'react',
+    'html',
+    'css',
   ],
   rules: {
+    'import/no-unresolved': 'off',
+    'import/export': 'off',
+    'prefer-arrow/prefer-arrow-functions': [
+      'warn',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
+      },
+    ],
     'prettier/prettier': ['off', { singleQuote: true }],
+    'jsdoc/require-param-description': 'off',
+    'jsdoc/require-returns-description': 'off',
+    'jsdoc/no-undefined-types': 'off',
     'react/react-in-jsx-scope': 0,
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
@@ -166,7 +191,6 @@ const config = {
     'object-curly-newline': 'error',
     'object-shorthand': 'off',
     'one-var': ['error', 'never'],
-    'prefer-arrow/prefer-arrow-functions': 'error',
     'prefer-const': 'error',
     quotes: [0, 'single'],
     radix: 'error',
@@ -180,6 +204,7 @@ const config = {
     ],
     'use-isnan': 'error',
     'valid-typeof': 'off',
+    'no-undef': 'off',
   },
 };
 
