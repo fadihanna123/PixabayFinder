@@ -15,13 +15,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "paths": {
       "@core/*": ["src/*"],
       "@assets/*": ["public/assets/*"]
-    }
+    },
+    "incremental": true
   },
-  "include": ["src/**/*", "craco.config.ts", "jest.config.ts", "index.d.ts"],
-  "files": [".eslintrc.js"],
+  "include": [
+    "src/**/*",
+    "craco.config.ts",
+    "jest.config.ts",
+    "index.d.ts",
+    "next.config.js",
+    ".eslintrc.js"
+  ],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
 }

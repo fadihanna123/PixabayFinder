@@ -9,6 +9,9 @@ logs
 **/*.backup.*
 **/*.back.*
 
+# next
+.next
+
 node_modules
 .env
 bower_components

@@ -25,6 +25,7 @@ const config = {
     'plugin:jsdoc/recommended-error',
     'plugin:css/recommended',
     'plugin:css/standard',
+    'next/core-web-vitals',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',

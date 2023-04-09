@@ -1,5 +1,3 @@
-import 'styles/main.css';
-
 import { HitsOfList, SearchForm } from 'models';
 import React, { useEffect } from 'react';
 import { Dispatch } from 'redux';
@@ -8,7 +6,8 @@ import { getImage, setImage } from 'redux/reducers/image';
 import { getSearchForm } from 'redux/reducers/searchForm';
 import { getToggler, setToggler } from 'redux/reducers/toggler';
 import sal from 'sal.js';
-import { ImageCol, Img, Modal, ModalContent } from 'styles';
+import { ImageCol, Modal, ModalContent } from 'styles';
+import Image from 'next/image';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;
@@ -59,21 +58,20 @@ const PhotoItem: React.FC<{
       data-sal='zoom-in'
       p={0}
       overflow='hidden'
-      border='1px solid'
-      borderColor='#000'
       borderRadius='20%'
       m={10}
     >
       {item.webformatURL && (
         <>
-          <Img
+          <Image
             aria-label={searchForm.query}
-            maxWidth='100%'
-            height='100%'
             src={item.webformatURL}
             alt={searchForm.query}
             onClick={() => toggleImagePreviewer(item, dispatch)}
             loading='lazy'
+            width='500'
+            height='500'
+            style={{ maxWidth: '100%', height: '100%' }}
           />
         </>
       )}
@@ -100,7 +98,15 @@ const PhotoItem: React.FC<{
             height='100%'
             maxWidth='1200px'
           >
-            {image && <img src={image} />}
+            {image && (
+              <Image
+                width='500'
+                height='500'
+                style={{ maxWidth: '100%', height: '100%' }}
+                alt='preview'
+                src={image}
+              />
+            )}
           </ModalContent>
         </Modal>
       )}
