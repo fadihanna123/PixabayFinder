@@ -65,7 +65,7 @@
     "start": "next start",
     "build": "pnpm prebuild && set \"GENERATE_SOURCEMAP=false\" && next build",
     "dev": "next dev",
-    "prebuild": "rm -rf build",
+    "prebuild": "rm -rf build .next",
     "test": "jest",
     "lint": "next lint",
     "format": "prettier -w .",

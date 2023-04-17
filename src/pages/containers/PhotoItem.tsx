@@ -61,7 +61,7 @@ const PhotoItem: React.FC<{
       borderRadius='20%'
       m={10}
     >
-      {item.webformatURL && (
+      {item?.webformatURL && (
         <>
           <Image
             aria-label={searchForm.query}
