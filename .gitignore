@@ -14,6 +14,8 @@ logs
 
 node_modules
 .env
+Dockerfile
+docker-compose.yaml
 bower_components
 
 *.sublime*
