@@ -1,27 +1,35 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/react
-# Edit at https://www.toptal.com/developers/gitignore?templates=react
-
-### react ###
-.DS_*
-*.log
+# Logs
 logs
-**/*.backup.*
-**/*.back.*
+*.log
 
-# next
+# Next
 .next
 
+# Node modules
 node_modules
+
+# Env
 .env
+
+# Docker
 Dockerfile
 docker-compose.yaml
+
+# Bower
 bower_components
 
+# Sublime
 *.sublime*
 
+# Sketch
+sketch
+
+# Vscode
+.vscode/launch.json
+
+# Other files
 psd
 thumb
-sketch
-.vscode/launch.json
-# End of https://www.toptal.com/developers/gitignore/api/react
+.DS_*
+**/*.backup.*
+**/*.back.*
