@@ -54,7 +54,7 @@
     "sal.js": "^0.8.5",
     "styled-components": "^5.3.9",
     "styled-system": "^5.1.5",
-    "stylelint": "^15.4.0",
+    "stylelint": "^15.7.0",
     "stylelint-config-standard": "^33.0.0",
     "ts-debounce": "^4.0.0",
     "ts-jest": "^29.1.0",
