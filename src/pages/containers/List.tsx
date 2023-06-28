@@ -7,10 +7,11 @@ import { getSearchForm } from 'redux/reducers/searchForm';
 import { getSearchType } from 'redux/reducers/searchType';
 import { getVideoList } from 'redux/reducers/videoList';
 import { ImageRow, NoData, VideoItem, VideoRow } from 'styles';
-import Loader from 'pages/ui/Loader';
 import React from 'react';
 
+// Components
 import PhotoItem from './PhotoItem';
+import Loader from 'pages/ui/Loader';
 
 const List: React.FC = () => {
   const searchForm: SearchForm = useAppSelector(getSearchForm);

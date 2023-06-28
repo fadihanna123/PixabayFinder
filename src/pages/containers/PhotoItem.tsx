@@ -22,7 +22,6 @@ const PhotoItem: React.FC<{
 
   /**
    * Hide image previewer.
-   *
    * @function hideImagePreviewer
    * @param { boolean } toggler
    * @param { Dispatch<any> } dispatch
@@ -35,7 +34,6 @@ const PhotoItem: React.FC<{
 
   /**
    * Hide image previewer.
-   *
    * @function toggleImagePreviewer
    * @param { HitsOfList } item
    * @param { Dispatch<any> } dispatch

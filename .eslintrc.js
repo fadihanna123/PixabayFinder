@@ -52,6 +52,7 @@ const config = {
     'css',
   ],
   rules: {
+    'import/no-named-as-default': 'off',
     'import/no-unresolved': 'off',
     'import/export': 'off',
     'prefer-arrow/prefer-arrow-functions': [
@@ -159,7 +160,6 @@ const config = {
     'import/order': 'off',
     'jsdoc/check-alignment': 'error',
     'jsdoc/check-indentation': 'error',
-    'jsdoc/newline-after-description': 'error',
     'max-classes-per-file': ['error', 10],
     'max-len': 'off',
     'new-parens': 'error',

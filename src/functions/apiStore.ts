@@ -10,7 +10,6 @@ import { PixabayKey } from 'utils';
 
 /**
  * Handle errors coming from api requests.
- *
  * @function requestErrorHandler
  * @param { AxiosError } err - Error object
  * @returns { void }
@@ -31,7 +30,6 @@ const requestErrorHandler = (err: AxiosError): void => {
 
 /**
  * Get imagelist from api.
- *
  * @async
  * @function getImages
  * @param { string } imageVal - Image value
@@ -49,7 +47,6 @@ export const getImages = async <T>(imageVal: T): Promise<any> => {
 
 /**
  * Get video list from api.
- *
  * @async
  * @function getVideos
  * @param { string } val - Video value

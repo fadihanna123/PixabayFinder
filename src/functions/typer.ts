@@ -9,7 +9,6 @@ import React from 'react';
 
 /**
  * Handle search-form values.
- *
  * @function typer
  * @param { React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> } e - Event
  * @param { SearchForm } searchForm - Search form values

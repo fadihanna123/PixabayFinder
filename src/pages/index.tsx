@@ -1,5 +1,4 @@
 import axios from 'axios';
-import SearchForm from 'pages/containers/SearchFormComp';
 import { getImages, getVideos } from 'functions';
 import { IList } from 'models';
 import React, { useEffect } from 'react';
@@ -11,9 +10,11 @@ import { getSearchForm } from 'redux/reducers/searchForm';
 import { setVideoList } from 'redux/reducers/videoList';
 import sal from 'sal.js';
 import { Container } from 'styles';
-import MainFooter from 'pages/ui/MainFooter';
 
+// Components
 import List from './containers/List';
+import SearchForm from 'pages/containers/SearchFormComp';
+import MainFooter from 'pages/ui/MainFooter';
 
 const globalHeader: string = 'application/json';
 
