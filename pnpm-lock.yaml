@@ -117,8 +117,8 @@ dependencies:
     specifier: ^0.8.5
     version: 0.8.5
   styled-components:
-    specifier: 6.0.0-rc.3
-    version: 6.0.0-rc.3(react-dom@18.2.0)(react@18.2.0)
+    specifier: 6.0.1
+    version: 6.0.1(react-dom@18.2.0)(react@18.2.0)
   styled-system:
     specifier: ^5.1.5
     version: 5.1.5
@@ -2577,6 +2577,10 @@ packages:
     resolution: {integrity: sha512-+dyGs2n2o6QStsexh87NeaRmXYnKOnEe7iOEkcYOwKwI5a1gFL0+Mt/hZKi+4KD1qDMkLkGb0lpDrffb/vSkDQ==}
     dependencies:
       csstype: 3.1.2
+    dev: false
+
+  /@types/stylis@4.2.0:
+    resolution: {integrity: sha512-n4sx2bqL0mW1tvDf/loQ+aMX7GQD3lc3fkCMC55VFNDu/vBOabO+LTIeXKM14xK0ppk5TUGcWRjiSpIlUpghKw==}
     dev: false
 
   /@types/testing-library__jest-dom@5.14.6:
@@ -6750,8 +6754,8 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: false
 
-  /styled-components@6.0.0-rc.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-5FbCTxynopck99GRwM5Ey0+VRp8pkQq69TwGOJJeYtR7gPvwGjNx8yBPLN7/dfxwwvn9ymOZYB19eQkv2k70wQ==}
+  /styled-components@6.0.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-6VAlf5A9KZJOnX54becRCLnBFSfeqP+q3raTCdPDPFg4HOy7MNlnWFqAq3sHlQVDdZh5jcsDwK06vTU3NMO6yQ==}
     engines: {node: '>= 16'}
     peerDependencies:
       babel-plugin-styled-components: '>= 2'
@@ -6771,8 +6775,11 @@ packages:
       '@babel/preset-react': 7.22.5(@babel/core@7.22.5)
       '@babel/preset-typescript': 7.22.5(@babel/core@7.22.5)
       '@babel/traverse': 7.22.5
+      '@emotion/is-prop-valid': 1.2.1
       '@emotion/unitless': 0.8.1
+      '@types/stylis': 4.2.0
       css-to-react-native: 3.2.0
+      csstype: 3.1.2
       postcss: 8.4.24
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
