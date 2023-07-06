@@ -15,6 +15,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "sourceMap": true,
     "jsx": "preserve",
     "paths": {
       "@core/*": ["src/*"],

@@ -3,5 +3,8 @@
  * @param { string } type
  */
 export class SearchForm {
-  constructor(public query: string, public type: string) {}
+  constructor(
+    public query: string,
+    public type: string
+  ) {}
 }

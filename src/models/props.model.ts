@@ -3,7 +3,10 @@
  * @param { string } dataSal
  */
 export class FooterProps {
-  constructor(public children: JSX.Element, public dataSal: string) {}
+  constructor(
+    public children: JSX.Element,
+    public dataSal: string
+  ) {}
 }
 
 /**
