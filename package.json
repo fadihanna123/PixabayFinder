@@ -53,7 +53,7 @@
     "redux": "^4.2.1",
     "sal.js": "^0.8.5",
     "sharp": "^0.32.1",
-    "styled-components": "6.0.2",
+    "styled-components": "6.0.3",
     "styled-system": "^5.1.5",
     "stylelint": "^15.10.1",
     "stylelint-config-standard": "^34.0.0",
