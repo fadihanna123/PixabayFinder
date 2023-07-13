@@ -120,8 +120,8 @@ dependencies:
     specifier: ^0.32.2
     version: 0.32.2
   styled-components:
-    specifier: 6.0.3
-    version: 6.0.3(react-dom@18.2.0)(react@18.2.0)
+    specifier: 6.0.4
+    version: 6.0.4(react-dom@18.2.0)(react@18.2.0)
   styled-system:
     specifier: ^5.1.5
     version: 5.1.5
@@ -6971,8 +6971,8 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: false
 
-  /styled-components@6.0.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qEyWvDK4CYCyDckNIruRJIcQSvcUR3dVEw/fwxu1v0LFzUMPr2uf5PhXHp17FkGK+S4TkglOS+XIealo1MssQA==}
+  /styled-components@6.0.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lRJt4vg8hKJhlVG+VKz8QEqPCXKyTryZZ59odyK0UC0HHV3u/mshWTfSay8NpkN0Xijw1iN9r0Leld3dcCcp/w==}
     engines: {node: '>= 16'}
     peerDependencies:
       babel-plugin-styled-components: '>= 2'
