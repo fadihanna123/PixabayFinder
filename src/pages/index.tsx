@@ -30,27 +30,23 @@ const App: React.FC = () => {
 
     sal();
 
+    dispatch(setLoading(true));
+
     getImages<string>(searchForm.query)
       .then((data: IList) => {
-        if (isSubscribed) {
-          dispatch(setLoading(true));
-          dispatch(setImgList(data));
-          dispatch(setLoading(false));
-        } else {
-          return null;
-        }
+        dispatch(setImgList(data));
       })
       .catch((err: Error) =>
         isSubscribed ? toast.error(err.message, { transition: Flip }) : null
       )
-      .finally(() => (isSubscribed ? dispatch(setLoading(false)) : null));
+      .finally(() => dispatch(setLoading(false)));
+
+    dispatch(setLoading(true));
 
     getVideos<string>(searchForm.query)
       .then((data: IList) => {
         if (isSubscribed) {
-          dispatch(setLoading(true));
           dispatch(setVideoList(data));
-          dispatch(setLoading(false));
         } else {
           return null;
         }

@@ -24,6 +24,10 @@ const List: React.FC = () => {
 
   const searchType: string = useAppSelector(getSearchType);
 
+  if (loading) {
+    return <Loader className={['spinner']} />;
+  }
+
   return (
     <main>
       {imgList?.hits.length === 0 ||
@@ -39,13 +43,9 @@ const List: React.FC = () => {
         {searchType === 'Images' &&
           (searchForm.query ? (
             imgList && imgList.totalHits ? (
-              !loading ? (
-                imgList.hits.map((image: HitsOfList, i: number) => {
-                  return <PhotoItem key={i} item={image} />;
-                })
-              ) : (
-                <Loader className={['spinner']} />
-              )
+              imgList.hits.map((image: HitsOfList, i: number) => {
+                return <PhotoItem key={i} item={image} />;
+              })
             ) : (
               <NoData>No images found! 😔</NoData>
             )

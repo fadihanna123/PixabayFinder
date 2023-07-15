@@ -8,6 +8,8 @@ import { getToggler, setToggler } from 'redux/reducers/toggler';
 import sal from 'sal.js';
 import { ImageCol, Modal, ModalContent } from 'styles';
 import Image from 'next/image';
+import { getLoading } from 'redux/reducers';
+import Loader from 'pages/ui/Loader';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;
@@ -17,6 +19,7 @@ const PhotoItem: React.FC<{
   const searchForm: SearchForm = useAppSelector(getSearchForm);
 
   const image: string = useAppSelector(getImage);
+  const loading: boolean = useAppSelector(getLoading);
 
   const dispatch = useAppDispatch();
 
@@ -50,6 +53,10 @@ const PhotoItem: React.FC<{
   useEffect(() => {
     sal();
   }, []);
+
+  if (loading) {
+    return <Loader className={['spinner']} />;
+  }
 
   return (
     <ImageCol
