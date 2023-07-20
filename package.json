@@ -55,7 +55,7 @@
     "sharp": "^0.32.3",
     "styled-components": "6.0.4",
     "styled-system": "^5.1.5",
-    "stylelint": "^15.10.1",
+    "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0",
     "ts-debounce": "^4.0.0",
     "ts-jest": "^29.1.1",
