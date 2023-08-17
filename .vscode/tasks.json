@@ -1,6 +1,24 @@
 {
   "version": "2.0.0",
   "tasks": [
-    { "label": "Install", "type": "npm", "script": "install", "auto": true }
+    {
+      "label": "Install dependencies",
+      "type": "shell",
+      "command": "pnpm i",
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    },
+    {
+      "label": "Remove dependencies",
+      "type": "shell",
+      "command": "rm -rf node_modules build",
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    }
   ]
 }
