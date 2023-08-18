@@ -64,8 +64,9 @@
   },
   "scripts": {
     "start": "next start",
+    "startWebPage": "start http://localhost:3000",
     "build": "pnpm prebuild && set \"GENERATE_SOURCEMAP=false\" && next build",
-    "dev": "next dev",
+    "dev": "pnpm startWebPage && next dev",
     "prebuild": "rm -rf build .next",
     "test": "jest",
     "lint": "next lint",
