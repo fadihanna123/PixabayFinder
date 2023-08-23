@@ -1,4 +1,3 @@
-import { HitsOfList, SearchForm } from 'models';
 import React, { useEffect } from 'react';
 import { Dispatch } from 'redux';
 import { useAppDispatch, useAppSelector } from 'redux/app';

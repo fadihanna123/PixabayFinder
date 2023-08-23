@@ -1,4 +1,3 @@
-import { HitsOfList, IList, SearchForm } from 'models';
 import { Flip, ToastContainer } from 'react-toastify';
 import { useAppSelector } from 'redux/app';
 import { getImgList } from 'redux/reducers/imgList';

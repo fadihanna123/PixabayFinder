@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { getImages, getVideos } from 'functions';
-import { IList } from 'models';
 import React, { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
 import { useAppDispatch, useAppSelector } from 'redux/app';

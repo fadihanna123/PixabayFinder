@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IList } from 'models';
 import { RootState } from 'redux/app';
 
 /**

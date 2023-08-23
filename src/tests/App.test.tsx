@@ -1,5 +1,4 @@
 import { getImages, getVideos } from 'functions';
-import { IList } from 'models';
 import { jest } from '@jest/globals';
 
 jest.mock('axios');

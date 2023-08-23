@@ -90,5 +90,8 @@
     "node": ">=14.12.0",
     "npm": "Please use pnpm instead of NPM to install dependencies",
     "yarn": "Please use pnpm instead of Yarn to install dependencies"
+  },
+  "devDependencies": {
+    "jest": "^29.6.3"
   }
 }

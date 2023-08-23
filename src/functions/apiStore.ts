@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import { request } from 'api';
 import { AxiosError } from 'axios';
-import { IList } from 'models';
 import { PixabayKey } from 'utils';
 
 /**

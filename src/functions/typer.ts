@@ -1,4 +1,3 @@
-import { SearchForm } from 'models';
 import { Dispatch } from 'redux';
 import { setSearchForm } from 'redux/reducers/searchForm';
 import React from 'react';
