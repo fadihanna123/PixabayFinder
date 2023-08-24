@@ -1,31 +1,11 @@
-/* eslint-disable no-console */
 import { request } from 'api';
 import { AxiosError } from 'axios';
 import { PixabayKey } from 'utils';
+import { requestErrorHandler } from './helper';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
  */
-
-/**
- * Handle errors coming from api requests.
- * @function requestErrorHandler
- * @param { AxiosError } err - Error object
- * @returns { void }
- */
-const requestErrorHandler = (err: AxiosError): void => {
-  if (err.response) {
-    console.log(err.response.data);
-    console.log(err.response.status);
-    console.log(err.response.headers);
-  } else if (err.request) {
-    console.log(err.request);
-  } else {
-    console.log('Error', err.message);
-  }
-
-  console.log(err.config);
-};
 
 /**
  * Get imagelist from api.

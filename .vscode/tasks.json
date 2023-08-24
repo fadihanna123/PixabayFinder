@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Install dependencies",
+      "label": "Install Dependencies",
       "type": "shell",
       "command": "pnpm i",
       "runOptions": { "runOn": "folderOpen" },
@@ -12,9 +12,9 @@
       }
     },
     {
-      "label": "Remove dependencies",
+      "label": "Remove Dependencies",
       "type": "shell",
-      "command": "rm -rf node_modules build",
+      "command": "rm -rf node_modules build .next",
       "presentation": {
         "reveal": "silent",
         "close": true

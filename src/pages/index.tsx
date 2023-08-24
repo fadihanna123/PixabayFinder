@@ -9,6 +9,7 @@ import { getSearchForm } from 'redux/reducers/searchForm';
 import { setVideoList } from 'redux/reducers/videoList';
 import sal from 'sal.js';
 import { Container } from 'styles';
+import { NextPage } from 'next';
 
 // Components
 import List from './containers/List';
@@ -19,7 +20,7 @@ const globalHeader: string = 'application/json';
 
 axios.defaults.headers.common['Content-Type'] = globalHeader;
 
-const App: React.FC = () => {
+const App: NextPage = () => {
   const searchForm = useAppSelector(getSearchForm);
 
   const dispatch = useAppDispatch();

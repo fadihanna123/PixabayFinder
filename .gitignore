@@ -5,6 +5,9 @@ logs
 # Next
 .next
 
+# Build
+build
+
 # Node modules
 node_modules
 

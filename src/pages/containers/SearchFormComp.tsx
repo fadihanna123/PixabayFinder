@@ -4,8 +4,9 @@ import { getSearchForm, setSearchForm } from 'redux/reducers/searchForm';
 import { getSearchType, setSearchType } from 'redux/reducers/searchType';
 import { Col, Input, InputRow } from 'styles/globalStyles';
 import React from 'react';
+import { NextPage } from 'next';
 
-const SearchFormComp: React.FC = () => {
+const SearchFormComp: NextPage = () => {
   const searchForm = useAppSelector(getSearchForm);
 
   const searchType = useAppSelector(getSearchType);

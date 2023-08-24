@@ -1,7 +1,7 @@
-import { LoaderProps } from 'models';
+import { NextPage } from 'next';
 import React from 'react';
 
-const Loader: React.FC<LoaderProps> = ({ className }: LoaderProps) => (
+const Loader: NextPage<LoaderProps> = ({ className }: LoaderProps) => (
   <div className={className?.join(' ')}></div>
 );
 

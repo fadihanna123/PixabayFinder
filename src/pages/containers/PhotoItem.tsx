@@ -9,8 +9,9 @@ import { ImageCol, Modal, ModalContent } from 'styles';
 import Image from 'next/image';
 import { getLoading } from 'redux/reducers';
 import Loader from 'pages/ui/Loader';
+import { NextPage } from 'next';
 
-const PhotoItem: React.FC<{
+const PhotoItem: NextPage<{
   item: HitsOfList;
 }> = ({ item }: { item: HitsOfList }) => {
   const toggler: boolean = useAppSelector(getToggler);

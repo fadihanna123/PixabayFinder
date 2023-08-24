@@ -11,8 +11,9 @@ import React from 'react';
 // Components
 import PhotoItem from './PhotoItem';
 import Loader from 'pages/ui/Loader';
+import { NextPage } from 'next';
 
-const List: React.FC = () => {
+const List: NextPage = () => {
   const searchForm: SearchForm = useAppSelector(getSearchForm);
 
   const imgList: IList = useAppSelector(getImgList);

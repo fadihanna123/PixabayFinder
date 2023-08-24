@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import { Html, Head, Main, NextScript } from 'next/document';
 import { toast } from 'react-toastify';
 
@@ -8,7 +9,7 @@ if (!NEXT_PUBLIC_PIXABAY_KEY) {
   throw new Error('Missing apiKey? Add it and restart the app!');
 }
 
-const Document = () => (
+const Document: NextPage = () => (
   <Html>
     <Head />
     <body>
