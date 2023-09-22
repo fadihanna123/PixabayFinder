@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+
 env:
         KEY: ${{secrets.NEXT_PUBLIC_PIXABAY_BASE_URL}}
 
@@ -12,4 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Read a var
+        shell: bash
         run: "echo $KEY"
