@@ -3,3 +3,4 @@ build/*
 README.md
 AUTHORS
 pnpm-lock.yaml
+.github

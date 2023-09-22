@@ -1,0 +1,13 @@
+name: TESTS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read a var
+        run: "echo ${{ secrets.NEXT_PUBLIC_PIXABAY_BASE_URL }}"
