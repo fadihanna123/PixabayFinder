@@ -45,8 +45,8 @@ dependencies:
     specifier: ^5.1.28
     version: 5.1.28
   '@types/styled-system':
-    specifier: ^5.1.17
-    version: 5.1.17
+    specifier: ^5.1.18
+    version: 5.1.18
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.7.2
     version: 6.7.2(@typescript-eslint/parser@6.7.2)(eslint@8.50.0)(typescript@5.2.2)
@@ -2448,8 +2448,8 @@ packages:
       csstype: 3.1.2
     dev: false
 
-  /@types/styled-system@5.1.17:
-    resolution: {integrity: sha512-TTrfh1eKI/m3e8KtVIqINOMeLrjdzLhkMm5BsSHd2GsCYsiS7942Fkel+upqMjw0JlDRNU4q7XWtDud8hcxkQA==}
+  /@types/styled-system@5.1.18:
+    resolution: {integrity: sha512-ec6qSpzRZxTdylYl8VnCV9ko5he7E6g27aU2eagaHHpkO7oDpY28TdWiwzryUspcwXpOnIFQ4zrCzwwW0ClEMQ==}
     dependencies:
       csstype: 3.1.2
     dev: false
