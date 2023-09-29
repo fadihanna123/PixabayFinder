@@ -12,7 +12,7 @@
     "name": "Fadi Hanna",
     "email": "fhanna181@gmail.com"
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
   "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.11.1",
