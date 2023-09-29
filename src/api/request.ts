@@ -16,7 +16,7 @@ export const request = {
 
   post: async <T>(
     url: string,
-    redata: any,
+    redata: unknown,
     headers?: { headers: Record<string, never> }
   ): Promise<T | void> => {
     const { data } = await axios.post<T>(
@@ -29,7 +29,7 @@ export const request = {
 
   put: async <T>(
     url: string,
-    redata: any,
+    redata: unknown,
     headers?: { headers: Record<string, never> }
   ): Promise<T | void> => {
     await axios.put<T>(`${PixabayBaseURL}${url}`, redata, headers);

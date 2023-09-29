@@ -33,12 +33,12 @@ const List: NextPage = () => {
       {imgList?.hits.length === 0 ||
       imgList?.hits.length === undefined ||
       searchForm.query === '' ? (
-        ''
-      ) : (
-        <>
-          <b data-sal='flip-left'>Results found:</b> {imgList?.hits.length}
-        </>
-      )}
+          ''
+        ) : (
+          <>
+            <b data-sal='flip-left'>Results found:</b> {imgList?.hits.length}
+          </>
+        )}
       <ImageRow>
         {searchType === 'Images' &&
           (searchForm.query ? (

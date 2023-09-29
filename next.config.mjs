@@ -1,5 +1,5 @@
 /**
- * @type {import('next').NextConfig}
+ * @type { import('next').NextConfig }
  */
 const config = {
   compiler: {
@@ -13,4 +13,4 @@ const config = {
   output: 'export',
 };
 
-module.exports = config;
+export default config;

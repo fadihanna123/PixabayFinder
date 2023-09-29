@@ -28,7 +28,7 @@
     "craco.config.ts",
     "jest.config.ts",
     "index.d.ts",
-    "next.config.js",
+    "next.config.mjs",
     ".eslintrc.js"
   ],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
