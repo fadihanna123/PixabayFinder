@@ -45,8 +45,8 @@ dependencies:
     specifier: ^5.1.28
     version: 5.1.28
   '@types/styled-system':
-    specifier: ^5.1.18
-    version: 5.1.18
+    specifier: ^5.1.19
+    version: 5.1.19
   axios:
     specifier: ^1.5.1
     version: 1.5.1
@@ -2436,8 +2436,8 @@ packages:
       csstype: 3.1.2
     dev: false
 
-  /@types/styled-system@5.1.18:
-    resolution: {integrity: sha512-ec6qSpzRZxTdylYl8VnCV9ko5he7E6g27aU2eagaHHpkO7oDpY28TdWiwzryUspcwXpOnIFQ4zrCzwwW0ClEMQ==}
+  /@types/styled-system@5.1.19:
+    resolution: {integrity: sha512-KO570UwUWA6FgD+PWrGj5Lc++J5O1SCj7BWys5SE5sSK14Sy+Wl6K13kPfFOIAZdpwTZR9bGv52FLTHCtsvHbQ==}
     dependencies:
       csstype: 3.1.2
     dev: false
