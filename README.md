@@ -2,8 +2,7 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.41-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D14.12.0-blue.svg" />
-  <img src="https://img.shields.io/badge/npm-Please%20use%20pnpm%20instead%20of%20NPM%20to%20install%20dependencies-blue.svg" />
-  <img src="https://img.shields.io/badge/yarn-Please%20use%20pnpm%20instead%20of%20Yarn%20to%20install%20dependencies-blue.svg" />
+  <img src="https://img.shields.io/badge/npm-Please%20use%20Yarn%20instead%20of%20NPM%20to%20install%20dependencies-blue.svg" />
   <a href="https://github.com/fadihanna123/PixabayFinder/blob/master/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
