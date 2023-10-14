@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to PixabayFinder 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.40-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.41-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D14.12.0-blue.svg" />
   <img src="https://img.shields.io/badge/npm-Please%20use%20pnpm%20instead%20of%20NPM%20to%20install%20dependencies-blue.svg" />
   <img src="https://img.shields.io/badge/yarn-Please%20use%20pnpm%20instead%20of%20Yarn%20to%20install%20dependencies-blue.svg" />
@@ -21,8 +21,7 @@
 ## Prerequisites
 
 - node >=14.12.0
-- npm Please use pnpm instead of NPM to install dependencies
-- yarn Please use pnpm instead of Yarn to install dependencies
+- npm Please use Yarn instead of NPM to install dependencies
 
 # [Demo](https://funny-moxie-323a72.netlify.app/)
 
@@ -30,19 +29,19 @@
 ## Install
 
 ```sh
-pnpm i
+yarn
 ```
 
 ## Usage
 
 ```sh
-pnpm start
+yarn dev
 ```
 
 ## Run tests
 
 ```sh
-pnpm test
+yarn test
 ```
 
 ## Author
