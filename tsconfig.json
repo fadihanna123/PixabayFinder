@@ -4,6 +4,7 @@
     "baseUrl": "src",
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
+    "alwaysStrict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
