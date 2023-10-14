@@ -19,7 +19,7 @@
 
 ## Prerequisites
 
-- node >=14.12.0
+- node >=16.0.0
 - npm Please use Yarn instead of NPM to install dependencies
 
 # [Demo](https://funny-moxie-323a72.netlify.app/)
