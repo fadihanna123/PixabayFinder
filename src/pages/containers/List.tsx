@@ -64,6 +64,8 @@ const List: NextPage = () => {
                       key={i}
                       controls
                       src={video.videos.small.url}
+                      autoPlay={true}
+                      muted={true}
                     ></VideoItem>
                   );
                 })

@@ -11,6 +11,7 @@ const config = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@next/next/recommended',
+    'prettier',
   ],
   overrides: [
     {
@@ -30,7 +31,6 @@ const config = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],

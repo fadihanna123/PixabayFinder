@@ -7,7 +7,7 @@ import { getToggler, setToggler } from 'redux/reducers/toggler';
 import sal from 'sal.js';
 import { ImageCol, Modal, ModalContent } from 'styles';
 import Image from 'next/image';
-import { getLoading } from 'redux/reducers';
+import { getLoading, setLoading } from 'redux/reducers';
 import Loader from 'pages/ui/Loader';
 import { NextPage } from 'next';
 
@@ -20,7 +20,6 @@ const PhotoItem: NextPage<{
 
   const image: string = useAppSelector(getImage);
   const loading: boolean = useAppSelector(getLoading);
-
   const dispatch = useAppDispatch();
 
   /**
@@ -76,7 +75,12 @@ const PhotoItem: NextPage<{
             loading='lazy'
             width='500'
             height='500'
-            style={{ maxWidth: '100%', height: '100%' }}
+            style={{
+              maxWidth: '100%',
+              height: '100%',
+              display: loading ? 'none' : 'block',
+            }}
+            onLoadingComplete={() => dispatch(setLoading(false))}
           />
         </>
       )}
