@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to PixabayFinder 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.41-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.42-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D14.12.0-blue.svg" />
   <img src="https://img.shields.io/badge/npm-Please%20use%20Yarn%20instead%20of%20NPM%20to%20install%20dependencies-blue.svg" />
   <a href="https://github.com/fadihanna123/PixabayFinder/blob/master/README.md" target="_blank">
