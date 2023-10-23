@@ -10,13 +10,12 @@ import { AppProps } from 'next/app';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   if (process.env.NODE_ENV === 'development') {
-    // eslint-disable-next-line no-console
-    console.log('It\'s looks like we are in a development mode!');
+    // eslint-disable-next-line no-console, quotes
+    console.log("It's looks like we are in a development mode!");
   }
 
   return (
     <>
-      <GlobalStyles />
       <Provider store={store}>
         <Head>
           <meta charSet='utf-8' />
@@ -46,6 +45,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <meta name='description' content='PixaBayFinder' />
           <link href='manifest.json?v=1' rel='manifest' />
         </Head>
+        <GlobalStyles />
         <Component {...pageProps} />
       </Provider>
     </>
