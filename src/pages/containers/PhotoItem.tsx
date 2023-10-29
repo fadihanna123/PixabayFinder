@@ -80,7 +80,7 @@ const PhotoItem: NextPage<{
               height: '100%',
               display: loading ? 'none' : 'block',
             }}
-            onLoadingComplete={() => dispatch(setLoading(false))}
+            onLoad={() => dispatch(setLoading(false))}
           />
         </>
       )}

@@ -61,7 +61,7 @@
   "scripts": {
     "start": "next start",
     "build": "yarn prebuild && set \"GENERATE_SOURCEMAP=false\" && next build",
-    "dev": "yarn startWebPage & next dev",
+    "dev": "yarn startWebPage & next dev --turbo",
     "prebuild": "rm -rf build .next build",
     "preview": "yarn build && live-server build",
     "startWebPage": "start http://localhost:3000",
