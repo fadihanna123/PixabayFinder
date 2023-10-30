@@ -60,7 +60,7 @@ const SearchFormComp: NextPage = () => {
             dispatch(setSearchForm({ ...searchForm, type: 'Videos' }));
           }}
         />
-        Videos(soon)
+        Videos
       </Col>
     </InputRow>
   );
