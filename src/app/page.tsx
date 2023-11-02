@@ -1,5 +1,5 @@
+'use client';
 import axios from 'axios';
-import { getImages, getVideos } from 'functions';
 import React, { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
 import { useAppDispatch, useAppSelector } from 'redux/app';
@@ -10,9 +10,10 @@ import { setVideoList } from 'redux/reducers/videoList';
 import sal from 'sal.js';
 import { Container } from 'styles';
 import { NextPage } from 'next';
+import { getImages, getVideos } from './functions';
 
 // Components
-import List from './containers/List';
+import List from './pages/containers/List';
 import SearchForm from 'pages/containers/SearchFormComp';
 import MainFooter from 'pages/ui/MainFooter';
 

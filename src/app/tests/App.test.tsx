@@ -1,4 +1,4 @@
-import { getImages, getVideos } from 'functions';
+import { getImages, getVideos } from '../functions';
 import { jest } from '@jest/globals';
 
 jest.mock('axios');

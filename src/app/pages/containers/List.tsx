@@ -1,4 +1,4 @@
-import { Flip, ToastContainer } from 'react-toastify';
+'use client';
 import { useAppSelector } from 'redux/app';
 import { getImgList } from 'redux/reducers/imgList';
 import { getLoading } from 'redux/reducers/loading';
@@ -79,7 +79,6 @@ const List: NextPage = () => {
             ''
           ))}
       </VideoRow>
-      <ToastContainer transition={Flip} />
     </main>
   );
 };

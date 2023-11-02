@@ -1,4 +1,5 @@
-import { typer } from 'functions';
+'use client';
+import { typer } from '../../functions';
 import { useAppDispatch, useAppSelector } from 'redux/app';
 import { getSearchForm, setSearchForm } from 'redux/reducers/searchForm';
 import { getSearchType, setSearchType } from 'redux/reducers/searchType';

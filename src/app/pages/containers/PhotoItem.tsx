@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect } from 'react';
 import { Dispatch } from 'redux';
 import { useAppDispatch, useAppSelector } from 'redux/app';

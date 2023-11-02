@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "baseUrl": "src",
+    "baseUrl": "src/app",
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
     "alwaysStrict": true,
@@ -40,17 +40,24 @@
     "jsx": "preserve",
     "paths": {
       "@core/*": ["src/*"],
-      "@assets/*": ["public/assets/*"]
+      "@assets/*": ["public/assets/*"],
+      "react": ["./node_modules/@types/react"]
     },
     "incremental": true,
-    "noEmit": true
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "src/**/*",
     "jest.config.ts",
     "index.d.ts",
     "next.config.mjs",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "build/types/**/*.ts"
   ],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
 }

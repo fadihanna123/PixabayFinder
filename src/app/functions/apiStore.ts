@@ -1,4 +1,4 @@
-import { request } from 'api';
+import { request } from '../api';
 import { AxiosError } from 'axios';
 import { PixabayKey } from 'utils';
 import { requestErrorHandler } from './helper';

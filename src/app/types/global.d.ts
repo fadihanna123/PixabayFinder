@@ -68,6 +68,8 @@ declare global {
       NODE_ENV: 'development' | 'production';
     }
   }
+
+  type logType = 'warn' | 'error' | 'log';
 }
 
 export {};
