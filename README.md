@@ -48,8 +48,7 @@ yarn test
 👤 **Fadi Hanna**
 
 * Github: [@fadihanna123](https://github.com/fadihanna123)
-* LinkedIn: [@fadi-hanna-5506401b0](https://linkedin.com/in/fadi-hanna-5506401b0)
-
+  
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fadihanna123/PixabayFinder/issues). 
