@@ -1268,10 +1268,10 @@
     "@types/react" "*"
     csstype "^3.0.2"
 
-"@types/styled-system@^5.1.20":
-  version "5.1.20"
-  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.20.tgz#6387c3c8ac88e35bdc5f7d7263e7bc132c26ccc3"
-  integrity sha512-oiaziko13jwrjmOCYfosXds7ZoPtWyBU96ONYtmYL2c+yh/yjcqVDs+w78VpTHLwZZ01yU9//ZyIhxqay8vbCw==
+"@types/styled-system@^5.1.22":
+  version "5.1.22"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.22.tgz#508499f4c68bb86dde3454693e92f5771edf177f"
+  integrity sha512-NbRp37zWcrf/+Qf2NumdyZfhSx1dzJ50zgfKvnezYJx1HTRUMVYY8jtWvK1eoIAa6F5sXwHLhE8oXNu15ThBAA==
   dependencies:
     csstype "^3.0.2"
 
