@@ -27,7 +27,7 @@
     "@testing-library/jest-dom": "^6.1.4",
     "@types/eslint": "^8.44.6",
     "@types/jest": "^29.5.7",
-    "@types/react": "^18.2.34",
+    "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.14",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.29",
