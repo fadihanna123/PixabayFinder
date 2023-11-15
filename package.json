@@ -32,7 +32,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.29",
     "@types/styled-system": "^5.1.22",
-    "axios": "^1.6.0",
+    "axios": "^1.6.2",
     "eslint-config-next": "^14.0.2",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-css": "^0.8.1",
