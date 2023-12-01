@@ -24,7 +24,7 @@
     "@jest/globals": "^29.7.0",
     "@manypkg/cli": "^0.21.1",
     "@reduxjs/toolkit": "^1.9.7",
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/jest-dom": "^6.1.5",
     "@types/eslint": "^8.44.8",
     "@types/jest": "^29.5.10",
     "@types/react": "^18.2.39",
