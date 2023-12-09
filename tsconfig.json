@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "baseUrl": "src/app",
-    "lib": ["dom", "dom.iterable", "ESNext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "ESNext"
+    ],
     "allowJs": true,
     "alwaysStrict": true,
     "skipLibCheck": true,
@@ -26,7 +30,10 @@
     "noImplicitAny": true,
     "noImplicitOverride": true,
     "noImplicitThis": true,
-    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
     "strictNullChecks": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
@@ -39,9 +46,15 @@
     "removeComments": true,
     "jsx": "preserve",
     "paths": {
-      "@core/*": ["src/*"],
-      "@assets/*": ["public/assets/*"],
-      "react": ["./node_modules/@types/react"]
+      "@core/*": [
+        "src/*"
+      ],
+      "@assets/*": [
+        "public/assets/*"
+      ],
+      "react": [
+        "./node_modules/@types/react"
+      ]
     },
     "incremental": true,
     "noEmit": true,
@@ -57,7 +70,14 @@
     "index.d.ts",
     "next.config.mjs",
     ".eslintrc.js",
-    "build/types/**/*.ts"
+    "build/types/**/*.ts",
+    ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
+  "exclude": [
+    "node_modules",
+    ".github",
+    ".husky",
+    ".vscode",
+    "public"
+  ]
 }

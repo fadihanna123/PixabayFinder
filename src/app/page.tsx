@@ -1,19 +1,20 @@
 'use client';
 import React, { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
-import { useAppDispatch, useAppSelector } from 'redux/app';
-import { setImgList } from 'redux/reducers/imgList';
-import { getLoading, setLoading } from 'redux/reducers/loading';
-import { getSearchForm } from 'redux/reducers/searchForm';
-import { setVideoList } from 'redux/reducers/videoList';
+import { useAppDispatch, useAppSelector } from './redux/app';
+import { setImgList } from './redux/reducers/imgList';
+import { getLoading, setLoading } from './redux/reducers/loading';
+import { getSearchForm } from './redux/reducers/searchForm';
+import { setVideoList } from './redux/reducers/videoList';
 import sal from 'sal.js';
 import { Container } from 'styles';
 import { getImages, getVideos } from 'functions';
 import { PacmanLoader } from 'react-spinners';
+import { setMediaLoading } from './redux/reducers';
 
 // Components
 import List from './pages/containers/List';
-import SearchForm from 'pages/containers/SearchFormComp';
+import SearchFormComp from 'pages/containers/SearchFormComp';
 import MainFooter from 'pages/ui/MainFooter';
 
 const App = () => {
@@ -26,21 +27,24 @@ const App = () => {
     sal();
 
     dispatch(setLoading(true));
-    // eslint-disable-next-line no-console
-    console.log(searchForm.query);
+    dispatch(setMediaLoading(true));
+
     getImages<string>(searchForm.query)
       .then((imagesData) => {
         dispatch(setImgList(imagesData));
+        dispatch(setMediaLoading(false));
       })
       .catch((err) => toast.error(err.message, { transition: Flip }));
 
     getVideos<string>(searchForm.query)
       .then((videosData) => {
         dispatch(setVideoList(videosData));
-        dispatch(setLoading(false));
+        dispatch(setMediaLoading(false));
       })
       .catch((err) => toast.error(err.message, { transition: Flip }));
-  }, []);
+
+    dispatch(setLoading(false));
+  }, [searchForm]);
 
   if (loading) {
     return (
@@ -55,7 +59,7 @@ const App = () => {
   return (
     <Container m={10} textAlign='center'>
       <h1>PixaBay Finder</h1>
-      <SearchForm />
+      <SearchFormComp />
       <List />
       <MainFooter dataSal='fade'>
         <i>Created by Fadi Hanna.</i>

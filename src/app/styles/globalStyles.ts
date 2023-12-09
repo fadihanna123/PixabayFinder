@@ -77,9 +77,10 @@ export const Col = styled('section')(layout, space);
 export const Input = styled.input`
   display: block;
   width: 100%;
+  height: 35px;
   min-height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  padding: 1%;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -87,12 +88,11 @@ export const Input = styled.input`
   background-clip: padding-box;
   border: 1px solid gray;
   appearance: none;
-  border-radius: 0.25rem;
-  margin-bottom: 10px;
-  transition:
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  transition: 0.3s;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-indent: 10px;
+  margin-bottom: 15px;
+  transition: all 0.5s linear;
 
   &:focus {
     border-color: #0275d8;
@@ -100,6 +100,6 @@ export const Input = styled.input`
       0 1px 1px rgba(0, 0, 0, 0.075) inset,
       0 0 8px lightblue;
     outline: 0 none;
-    transition: 0.3s;
+    transition: all 0.5s linear;
   }
 `;

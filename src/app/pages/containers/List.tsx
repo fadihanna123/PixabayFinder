@@ -1,9 +1,10 @@
 'use client';
-import { useAppSelector } from 'redux/app';
-import { getImgList } from 'redux/reducers/imgList';
-import { getSearchForm } from 'redux/reducers/searchForm';
-import { getSearchType } from 'redux/reducers/searchType';
-import { getVideoList } from 'redux/reducers/videoList';
+import { useAppSelector } from '../../redux/app';
+import { getImgList } from '../../redux/reducers/imgList';
+import { getSearchForm } from '../../redux/reducers/searchForm';
+import { getSearchType } from '../../redux/reducers/searchType';
+import { getVideoList } from '../../redux/reducers/videoList';
+import { getMediatLoading } from '../../redux/reducers';
 import { ImageRow, NoData, VideoItem, VideoRow } from 'styles';
 import React from 'react';
 
@@ -11,7 +12,6 @@ import React from 'react';
 import PhotoItem from './PhotoItem';
 import Loader from 'pages/ui/Loader';
 import { NextPage } from 'next';
-import { getMediatLoading } from 'redux/reducers';
 
 const List: NextPage = () => {
   const searchForm: SearchForm = useAppSelector(getSearchForm);

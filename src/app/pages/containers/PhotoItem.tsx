@@ -1,16 +1,19 @@
 'use client';
 import React, { useEffect } from 'react';
 import { Dispatch } from 'redux';
-import { useAppDispatch, useAppSelector } from 'redux/app';
-import { getImage, setImage } from 'redux/reducers/image';
-import { getSearchForm } from 'redux/reducers/searchForm';
-import { getToggler, setToggler } from 'redux/reducers/toggler';
+import { useAppDispatch, useAppSelector } from '../../redux/app';
+import { getImage, setImage } from '../../redux/reducers/image';
+import { getSearchForm } from '../../redux/reducers/searchForm';
+import { getToggler, setToggler } from '../../redux/reducers/toggler';
 import sal from 'sal.js';
 import { ImageCol, Modal, ModalContent } from 'styles';
 import Image from 'next/image';
 import Loader from 'pages/ui/Loader';
 import { NextPage } from 'next';
-import { getMediatLoading, setMediaLoading } from 'redux/reducers/mediaLoading';
+import {
+  getMediatLoading,
+  setMediaLoading,
+} from '../../redux/reducers/mediaLoading';
 
 const PhotoItem: NextPage<{
   item: HitsOfList;

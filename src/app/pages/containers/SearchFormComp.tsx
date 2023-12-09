@@ -1,8 +1,8 @@
 'use client';
 import { typer } from '../../functions';
-import { useAppDispatch, useAppSelector } from 'redux/app';
-import { getSearchForm, setSearchForm } from 'redux/reducers/searchForm';
-import { setSearchType } from 'redux/reducers/searchType';
+import { useAppDispatch, useAppSelector } from '../../redux/app';
+import { getSearchForm, setSearchForm } from '../../redux/reducers/searchForm';
+import { setSearchType } from '../../redux/reducers/searchType';
 import { Col, Input, InputRow } from 'styles/globalStyles';
 import React from 'react';
 import { NextPage } from 'next';
@@ -21,7 +21,6 @@ const SearchFormComp: NextPage = () => {
         m={['margin 0 auto', 'auto']}
       >
         <Input
-          id='query'
           name='query'
           placeholder={'Type here'}
           value={searchForm.query}
