@@ -7,6 +7,7 @@ import searchFormReducer from '../reducers/searchForm';
 import searchTypeReducer from '../reducers/searchType';
 import togglerReducer from '../reducers/toggler';
 import videoListReducer from '../reducers/videoList';
+import mediaLoadingReducer from '../reducers/mediaLoading';
 
 export const store = configureStore({
   reducer: {
@@ -17,6 +18,7 @@ export const store = configureStore({
     searchForm: searchFormReducer,
     searchType: searchTypeReducer,
     videoList: videoListReducer,
+    mediaLoading: mediaLoadingReducer,
   },
 });
 

@@ -13,6 +13,7 @@ import React from 'react';
  * @param { SearchForm } searchForm - Search form values
  * @param { Dispatch<any> } dispatch - Dispatch
  * @returns { void } Void
+ * @example  typer(e, { query: "Cat"; type: "Images" }, dispatch);
  */
 export const typer = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

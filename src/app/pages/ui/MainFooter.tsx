@@ -2,9 +2,8 @@
 import { NextPage } from 'next';
 import React from 'react';
 
-const MainFooter: NextPage<FooterProps> = ({
-  children,
-  dataSal,
-}: FooterProps) => <footer data-sal={dataSal}>{children}</footer>;
+const MainFooter: NextPage<FooterProps> = ({ children }: FooterProps) => (
+  <footer>{children}</footer>
+);
 
 export default MainFooter;

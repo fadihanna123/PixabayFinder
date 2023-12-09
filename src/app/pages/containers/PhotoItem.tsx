@@ -8,9 +8,9 @@ import { getToggler, setToggler } from 'redux/reducers/toggler';
 import sal from 'sal.js';
 import { ImageCol, Modal, ModalContent } from 'styles';
 import Image from 'next/image';
-import { getLoading, setLoading } from 'redux/reducers';
 import Loader from 'pages/ui/Loader';
 import { NextPage } from 'next';
+import { getMediatLoading, setMediaLoading } from 'redux/reducers/mediaLoading';
 
 const PhotoItem: NextPage<{
   item: HitsOfList;
@@ -20,7 +20,7 @@ const PhotoItem: NextPage<{
   const searchForm: SearchForm = useAppSelector(getSearchForm);
 
   const image: string = useAppSelector(getImage);
-  const loading: boolean = useAppSelector(getLoading);
+  const mediaLoading: boolean = useAppSelector(getMediatLoading);
   const dispatch = useAppDispatch();
 
   /**
@@ -54,7 +54,7 @@ const PhotoItem: NextPage<{
     sal();
   }, []);
 
-  if (loading) {
+  if (mediaLoading) {
     return <Loader className={['spinner']} />;
   }
 
@@ -79,9 +79,9 @@ const PhotoItem: NextPage<{
             style={{
               maxWidth: '100%',
               height: '100%',
-              display: loading ? 'none' : 'block',
+              display: mediaLoading ? 'none' : 'block',
             }}
-            onLoad={() => dispatch(setLoading(false))}
+            onLoad={() => dispatch(setMediaLoading(false))}
           />
         </>
       )}

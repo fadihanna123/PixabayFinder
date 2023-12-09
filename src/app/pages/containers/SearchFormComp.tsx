@@ -2,7 +2,7 @@
 import { typer } from '../../functions';
 import { useAppDispatch, useAppSelector } from 'redux/app';
 import { getSearchForm, setSearchForm } from 'redux/reducers/searchForm';
-import { getSearchType, setSearchType } from 'redux/reducers/searchType';
+import { setSearchType } from 'redux/reducers/searchType';
 import { Col, Input, InputRow } from 'styles/globalStyles';
 import React from 'react';
 import { NextPage } from 'next';
@@ -10,17 +10,10 @@ import { NextPage } from 'next';
 const SearchFormComp: NextPage = () => {
   const searchForm = useAppSelector(getSearchForm);
 
-  const searchType = useAppSelector(getSearchType);
-
   const dispatch = useAppDispatch();
 
   return (
-    <InputRow
-      data-sal='zoom-in'
-      display='grid'
-      width={['100%', '40%']}
-      m='0 auto'
-    >
+    <InputRow display='grid' width={['100%', '40%']} m='0 auto'>
       <Col
         mt={30}
         display={['grid', 'auto']}
@@ -30,11 +23,11 @@ const SearchFormComp: NextPage = () => {
         <Input
           id='query'
           name='query'
-          placeholder={searchType !== '' ? 'Type here' : ''}
+          placeholder={'Type here'}
           value={searchForm.query}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            typer(e, searchForm, dispatch)
-          }
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            typer(e, searchForm, dispatch);
+          }}
         />
       </Col>
       <Col>

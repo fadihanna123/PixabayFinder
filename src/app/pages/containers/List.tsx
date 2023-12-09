@@ -1,7 +1,6 @@
 'use client';
 import { useAppSelector } from 'redux/app';
 import { getImgList } from 'redux/reducers/imgList';
-import { getLoading } from 'redux/reducers/loading';
 import { getSearchForm } from 'redux/reducers/searchForm';
 import { getSearchType } from 'redux/reducers/searchType';
 import { getVideoList } from 'redux/reducers/videoList';
@@ -12,6 +11,7 @@ import React from 'react';
 import PhotoItem from './PhotoItem';
 import Loader from 'pages/ui/Loader';
 import { NextPage } from 'next';
+import { getMediatLoading } from 'redux/reducers';
 
 const List: NextPage = () => {
   const searchForm: SearchForm = useAppSelector(getSearchForm);
@@ -20,11 +20,11 @@ const List: NextPage = () => {
 
   const videoList = useAppSelector(getVideoList);
 
-  const loading: boolean = useAppSelector(getLoading);
+  const mediaLoading: boolean = useAppSelector(getMediatLoading);
 
-  const searchType: string = useAppSelector(getSearchType);
+  const searchType: searchFormType = useAppSelector(getSearchType);
 
-  if (loading) {
+  if (mediaLoading) {
     return <Loader className={['spinner']} />;
   }
 
@@ -36,7 +36,7 @@ const List: NextPage = () => {
         ''
       ) : (
         <>
-          <b data-sal='flip-left'>Results found:</b> {imgList?.hits.length}
+          <b>Results found:</b> {imgList?.hits.length}
         </>
       )}
       <ImageRow>
@@ -57,7 +57,7 @@ const List: NextPage = () => {
         {searchType === 'Videos' &&
           (searchForm.query ? (
             videoList && videoList.totalHits ? (
-              !loading ? (
+              !mediaLoading ? (
                 videoList?.hits.map((video: any, i: number) => {
                   return (
                     <VideoItem

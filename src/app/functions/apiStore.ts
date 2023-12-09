@@ -13,6 +13,7 @@ import { requestErrorHandler } from './helper';
  * @function getImages
  * @param { string } imageVal - Image value
  * @returns { Promise<any> } Promise contains images array.
+ * @example getImage("cat");
  */
 export const getImages = async <T>(imageVal: T): Promise<any> => {
   const endPoint: string = `?key=${PixabayKey}&q=${imageVal}`;
@@ -30,9 +31,10 @@ export const getImages = async <T>(imageVal: T): Promise<any> => {
  * @function getVideos
  * @param { string } val - Video value
  * @returns { Promise<any> } Promise contains video object
+ * @example getVideos("cat");
  */
-export const getVideos = async <T>(val: T): Promise<any> => {
-  const endPoint: string = `videos/?key=${PixabayKey}&q=${val}`;
+export const getVideos = async <T>(videoVal: T): Promise<any> => {
+  const endPoint: string = `videos/?key=${PixabayKey}&q=${videoVal}`;
 
   try {
     return await request.get<IList>(endPoint);

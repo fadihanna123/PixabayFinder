@@ -1,7 +1,10 @@
 import axios from 'axios';
 import { PixabayBaseURL } from 'utils';
 
+const globalHeader: string = 'application/json';
 axios.defaults.baseURL = PixabayBaseURL;
+
+axios.defaults.headers.common['Content-Type'] = globalHeader;
 
 /**
  * Request object to manipulate api.

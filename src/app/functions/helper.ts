@@ -1,7 +1,16 @@
 /* eslint-disable no-console */
 import { AxiosError } from 'axios';
 
-const log = (msg: any, type: logType, isString: boolean = true) => {
+/**
+ * Customize console log.
+ * @function log
+ * @param { any } msg
+ * @param { logType } type
+ * @param { isString } [ isString = true ] isString
+ * @returns { void }
+ * @example log("HI");
+ */
+const log = (msg: any, type: logType, isString: boolean = true): void => {
   if (!isString) {
     return console.log(msg);
   }
@@ -17,6 +26,7 @@ const log = (msg: any, type: logType, isString: boolean = true) => {
  * @function requestErrorHandler
  * @param { AxiosError } err - Error object
  * @returns { void }
+ * @example  requestErrorHandler({ message: "Error" });
  */
 const requestErrorHandler = (err: AxiosError): void => {
   if (err.response) {

@@ -1,5 +1,7 @@
-'use client';
+/* eslint-disable no-console */
+// @ts-check
 /* eslint-disable quotes */
+'use client';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './styles/globalStyles';
@@ -26,15 +28,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { NEXT_PUBLIC_PIXABAY_KEY } = process.env;
+
   if (process.env.NODE_ENV === 'development') {
     log("It's looks like we are in a development mode!", 'log');
   }
 
-  const { NEXT_PUBLIC_PIXABAY_KEY } = process.env;
-
   if (!NEXT_PUBLIC_PIXABAY_KEY) {
     toast.error('Missing apiKey? Add it and restart the app!');
     log('Missing apiKey? Add it and restart the app!', 'error');
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    console.log = () => {};
+    console.warn = () => {};
   }
 
   return (

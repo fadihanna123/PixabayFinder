@@ -1,5 +1,6 @@
 declare global {
   /**
+   * IList
    * @param { number } total
    * @param { number } totalHits
    * @param { HitsOfList[] } hits
@@ -10,6 +11,30 @@ declare global {
     hits: HitsOfList[];
   }
 
+  /**
+   * HitsOfList
+   * @param { number } id
+   * @param { string } pageURL
+   * @param { string } type
+   * @param { string } tags
+   * @param { string } previewURL
+   * @param { number } previewWidth
+   * @param { number } previewHeight
+   * @param { string } webformatURL
+   * @param { number } webformatWidth
+   * @param { number } webformatHeight
+   * @param { number } imageWidth
+   * @param { number } imageHeight
+   * @param { number } imageSize
+   * @param { number } views
+   * @param { number } downloads
+   * @param { number } favorites
+   * @param { number } likes
+   * @param { number } comments
+   * @param { number } user_id
+   * @param { string } user
+   * @param { string } userImageURL
+   */
   interface HitsOfList {
     id: number;
     pageURL: string;
@@ -36,6 +61,7 @@ declare global {
   }
 
   /**
+   * FooterProps
    * @param { JSX.Element } children
    * @param { string } dataSal
    */
@@ -45,6 +71,7 @@ declare global {
   }
 
   /**
+   * LoaderProps
    * @param { string[] } className
    */
   interface LoaderProps {
@@ -52,6 +79,7 @@ declare global {
   }
 
   /**
+   * SearchForm
    * @param { string } query
    * @param { string } type
    */
@@ -61,15 +89,24 @@ declare global {
   }
 
   namespace NodeJS {
+    /**
+     * ProcessEnv
+     * @param { string } NEXT_PUBLIC_PIXABAY_BASE_URL
+     * @param { string } NEXT_PUBLIC_PIXABAY_KEY
+     * @param { string } NODE_VERSION
+     * @param { 'development' | 'production' } NODE_ENV
+     */
     interface ProcessEnv {
-      REACT_APP_PIXABAY_BASE_URL: string;
-      REACT_APP_PIXABAY_KEY: string;
+      NEXT_PUBLIC_PIXABAY_BASE_URL: string;
+      NEXT_PUBLIC_PIXABAY_KEY: string;
       NODE_VERSION: string;
       NODE_ENV: 'development' | 'production';
     }
   }
 
   type logType = 'warn' | 'error' | 'log';
+
+  type searchFormType = 'Images' | 'Videos';
 }
 
 export {};

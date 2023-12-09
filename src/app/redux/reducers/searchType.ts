@@ -5,13 +5,13 @@ import { RootState } from 'redux/app';
  * @author Fadi Hanna <fhanna181@gmail.com>
  */
 
-const initialState: string = 'Images';
+const initialState = 'Images' as searchFormType;
 
 export const searchTypeSlice = createSlice({
   name: 'searchType',
   initialState,
   reducers: {
-    setSearchType: (state, action: PayloadAction<string>) =>
+    setSearchType: (state, action: PayloadAction<searchFormType>) =>
       (state = action.payload),
   },
 });
