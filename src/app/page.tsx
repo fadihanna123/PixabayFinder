@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use client';
 import React, { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
@@ -8,7 +9,7 @@ import { getSearchForm } from './redux/reducers/searchForm';
 import { setVideoList } from './redux/reducers/videoList';
 import sal from 'sal.js';
 import { Container } from 'styles';
-import { getImages, getVideos } from 'functions';
+import { getImages, getVideos, log } from 'functions';
 import { PacmanLoader } from 'react-spinners';
 import { setMediaLoading } from './redux/reducers';
 
@@ -17,7 +18,24 @@ import List from './pages/containers/List';
 import SearchFormComp from 'pages/containers/SearchFormComp';
 import MainFooter from 'pages/ui/MainFooter';
 
-const App = () => {
+const Home = () => {
+  const { NEXT_PUBLIC_PIXABAY_KEY } = process.env;
+
+  if (process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line quotes
+    log("It's looks like we are in a development mode!", 'log');
+  }
+
+  if (!NEXT_PUBLIC_PIXABAY_KEY) {
+    toast.error('Missing apiKey? Add it and restart the app!');
+    log('Missing apiKey? Add it and restart the app!', 'error');
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    console.log = () => {};
+    console.warn = () => {};
+  }
+
   const loading = useAppSelector(getLoading);
   const searchForm = useAppSelector(getSearchForm);
 
@@ -68,4 +86,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

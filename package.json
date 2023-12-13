@@ -92,7 +92,9 @@
     "npm": "Please use Yarn instead of NPM to install dependencies"
   },
   "devDependencies": {
+    "@types/next": "^9.0.0",
     "@types/react-loader-spinner": "^4.0.0",
+    "@types/react-redux": "^7.1.32",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "eslint": "^8.55.0",

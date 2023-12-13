@@ -1,3 +1,4 @@
+'use client';
 import styled from '@emotion/styled';
 import { createGlobalStyle } from 'styled-components';
 import { layout, space } from 'styled-system';
