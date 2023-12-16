@@ -10,7 +10,6 @@ const config = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@next/next/recommended',
     'prettier',
   ],
   overrides: [
@@ -29,7 +28,7 @@ const config = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'html'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],

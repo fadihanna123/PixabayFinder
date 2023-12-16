@@ -2,9 +2,6 @@
 logs
 *.log
 
-# Next
-.next
-
 # Build
 build
 

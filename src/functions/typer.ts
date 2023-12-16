@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dispatch } from 'redux';
-import { setSearchForm } from 'redux/reducers';
+import { setSearchForm } from '../redux/reducers';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
