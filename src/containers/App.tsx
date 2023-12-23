@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
 import { useAppDispatch, useAppSelector } from '../redux/app';

@@ -12,7 +12,7 @@ import { AxiosError } from 'axios';
  */
 const log = (msg: any, type: logType, isString: boolean = true): void => {
   if (!isString) {
-    return console.log(msg);
+    return console.log(`ℹ️ ${msg}`);
   }
 
   return console.log(

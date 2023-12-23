@@ -89,6 +89,7 @@
     "npm": "Please use Yarn instead of NPM to install dependencies"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/react-loader-spinner": "^4.0.0",
     "@types/react-redux": "^7.1.33",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
