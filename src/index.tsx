@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import './styles';
-import 'normalize.css';
 import 'sal.js/dist/sal.css';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactDOM from 'react-dom/client';
