@@ -18,7 +18,7 @@
   "license": "UNLICENSED",
   "homepage": ".",
   "dependencies": {
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@jest/globals": "^29.7.0",
