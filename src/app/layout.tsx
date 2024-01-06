@@ -6,7 +6,7 @@ import { MainFooter } from 'ui';
 
 const Layout: React.FC = () => {
   return (
-    <Container m={10} textAlign='center'>
+    <Container>
       <h1>PixaBay Finder</h1>
       <SearchFormComp />
       <List />
