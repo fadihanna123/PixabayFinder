@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { createGlobalStyle } from 'styled-components';
-import { layout, space } from 'styled-system';
 
 export default createGlobalStyle`
   *
@@ -70,9 +69,23 @@ export default createGlobalStyle`
 
 `;
 
-export const InputRow = styled('section')(layout, space);
+export const InputRow = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+`;
 
-export const Col = styled('section')(layout, space);
+export const Col = styled.section`
+  margin-top: 30px;
+  width: 40%;
+  margin: 0 auto;
+
+  @media (max-width: 1020px) {
+    display: auto;
+    width: 100%;
+    margin: auto;
+  }
+`;
 
 export const Input = styled.input`
   display: block;

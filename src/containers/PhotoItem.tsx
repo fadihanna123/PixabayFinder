@@ -59,55 +59,31 @@ const PhotoItem: React.FC<{
   }
 
   return (
-    <ImageCol
-      data-sal='zoom-in'
-      p={0}
-      overflow='hidden'
-      borderRadius='20%'
-      m={10}
-    >
+    <ImageCol data-sal='zoom-in'>
       {item?.webformatURL && (
-        <>
-          <img
-            aria-label={searchForm.query}
-            src={item.webformatURL}
-            alt={searchForm.query}
-            onClick={() => toggleImagePreviewer(item, dispatch)}
-            loading='lazy'
-            width='500'
-            height='500'
-            style={{
-              maxWidth: '100%',
-              height: '100%',
-              display: mediaLoading ? 'none' : 'block',
-            }}
-            onLoad={() => dispatch(setMediaLoading(false))}
-          />
-        </>
+        <img
+          aria-label={searchForm.query}
+          src={item.webformatURL}
+          alt={searchForm.query}
+          onClick={() => toggleImagePreviewer(item, dispatch)}
+          width='500'
+          height='500'
+          style={{
+            maxWidth: '100%',
+            height: '100%',
+            display: mediaLoading ? 'none' : 'block',
+          }}
+          onLoad={() => dispatch(setMediaLoading(false))}
+        />
       )}
 
       {toggler && (
         <Modal
-          position='fixed'
-          padding={[10, 62, 0, 62]}
-          left='0'
-          top='0'
-          overflow='hidden'
-          width={1}
           className='modal'
           color='white'
           onClick={() => hideImagePreviewer(toggler, dispatch)}
         >
-          <ModalContent
-            position='relative'
-            display='flex'
-            justifyContent='center'
-            margin='auto'
-            padding={[0, 0, 0, 0]}
-            width='100%'
-            height='100%'
-            maxWidth='1200px'
-          >
+          <ModalContent>
             {image && (
               <img
                 width='500'

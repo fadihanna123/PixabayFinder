@@ -11,13 +11,8 @@ const SearchFormComp: React.FC = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <InputRow display='grid' width={['100%', '40%']} m='0 auto'>
-      <Col
-        mt={30}
-        display={['grid', 'auto']}
-        width={['100%', '100%']}
-        m={['margin 0 auto', 'auto']}
-      >
+    <InputRow>
+      <Col>
         <Input
           name='query'
           placeholder={'Type here'}
