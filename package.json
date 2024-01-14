@@ -1,16 +1,18 @@
 {
   "name": "pixabayfinder",
-  "version": "0.1.49",
+  "version": "0.1.50",
+  "types": "src/types/global.d.ts",
+  "private": "true",
+  "license": "UNLICENSED",
+  "homepage": ".",
   "bugs": {
     "url": "https://github.com/fadihanna123/PixabayFinder/issues",
     "email": "fhanna181@gmail.com"
   },
-  "types": "src/types/global.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/fadihanna123/PixabayFinder"
   },
-  "private": "true",
   "author": {
     "name": "Fadi Hanna",
     "email": "fhanna181@gmail.com"
@@ -18,8 +20,6 @@
   "resolutions": {
     "@types/react": "^18.2.34"
   },
-  "license": "UNLICENSED",
-  "homepage": ".",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.11.3",
@@ -49,7 +49,7 @@
     "react-redux": "^9.1.0",
     "react-scripts": "^5.0.1",
     "react-spinners": "^0.13.8",
-    "react-toastify": "^9.1.3",
+    "react-toastify": "^10.0.0",
     "redux": "^5.0.1",
     "sal.js": "^0.8.5",
     "styled-components": "^6.1.8",
