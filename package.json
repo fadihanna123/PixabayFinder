@@ -1,7 +1,11 @@
 {
   "name": "pixabayfinder",
   "version": "0.1.49",
-  "bugs": "https://github.com/fadihanna123/PixabayFinder/issues",
+  "bugs": {
+    "url": "https://github.com/fadihanna123/PixabayFinder/issues",
+    "email": "fhanna181@gmail.com"
+  },
+  "types": "src/types/global.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/fadihanna123/PixabayFinder"
