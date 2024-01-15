@@ -26,7 +26,7 @@
     "@emotion/styled": "^11.11.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@jest/globals": "^29.7.0",
-    "@manypkg/cli": "^0.21.1",
+    "@manypkg/cli": "^0.21.2",
     "@reduxjs/toolkit": "^2.0.1",
     "@testing-library/jest-dom": "^6.2.0",
     "@types/eslint": "^8.56.2",
