@@ -9303,10 +9303,10 @@ react-spinners@^0.13.8:
   resolved "https://registry.yarnpkg.com/react-spinners/-/react-spinners-0.13.8.tgz#5262571be0f745d86bbd49a1e6b49f9f9cb19acc"
   integrity sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA==
 
-react-toastify@^10.0.2:
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-10.0.2.tgz#061c2d31938fe4dfd45675a2f2d7b6b2f613894e"
-  integrity sha512-U4qt1h0TV2VhHV2hscN1lKfqkZ6XiK1GkkQSa1gO2+IuEyQK13NLruorI8NWzknS3eTjJQcFBSqi9M62TeixMQ==
+react-toastify@^10.0.3:
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-10.0.3.tgz#1b948fabf63393464eb2f82119485de58b9a9b2f"
+  integrity sha512-PBJwXjFKKM73tgb6iSld4GMs9ShBWGUvc9zPHmdDgT4CdSr32iqSNh6y/fFN/tosvkTS6/tBLptDxXiXgcjvuw==
   dependencies:
     clsx "^2.1.0"
 
