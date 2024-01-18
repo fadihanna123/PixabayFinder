@@ -1,61 +1,44 @@
-<h1 align="center">Welcome to PixabayFinder 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.43-blue.svg?cacheSeconds=2592000" />
-  <img src="https://img.shields.io/badge/node-%3E%3D14.12.0-blue.svg" />
-  <img src="https://img.shields.io/badge/npm-Please%20use%20Yarn%20instead%20of%20NPM%20to%20install%20dependencies-blue.svg" />
-  <a href="https://github.com/fadihanna123/PixabayFinder/blob/master/README.md" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/fadihanna123/PixabayFinder/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: UNLICENSED" src="https://img.shields.io/github/license/fadihanna123/PixabayFinder" />
-  </a>
-</p>
+# PixabayFinder
 
-> PixabayFind gets images from Pixabay
-
-
-## Prerequisites
-
-- node >=16.0.0
-- npm Please use Yarn instead of NPM to install dependencies
+> PixabayFind fetches images and videos from Pixabay.
 
 # [Demo](https://funny-moxie-323a72.netlify.app/)
 
 
-## Install
+## 🚀 Quick Start
 
 ```sh
+# Clone the project
+git clone https://github.com/fadihanna123/PixabayFinder.git
+```
+
+```sh
+# Install Dependencies
 yarn
+```
+
+```sh
+# Start the server
+yarn dev
+# Go to http://localhost:3000
 ```
 
 ## Usage
 
-```sh
-yarn dev
-```
-
-## Run tests
+You start typing your search term and then you see the result below consisting of images or videos fetched from Pixabay. You can search by choosing photos or videos.
 
 ```sh
+# Run testenvironment
 yarn test
 ```
 
-## Author
-
-👤 **Fadi Hanna**
-
-* Github: [@fadihanna123](https://github.com/fadihanna123)
-  
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fadihanna123/PixabayFinder/issues). 
+1 - Clone the project. <br />
+2 - Fork the project. <br />
+3 - Create your own branch: ```
+git checkout -b <your branchname>``` <br />
+4 - Push changes. <br />
+5 - Create a pull request. <br />
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fadihanna123/PixabayFinder/issues).
