@@ -41,15 +41,15 @@
     "paths": {
       "@core/*": ["src/*"],
       "@assets/*": ["public/assets/*"],
-      "react": ["./node_modules/@types/react"]
+      "react": ["./node_modules/@types/react"],
     },
     "incremental": true,
     "noEmit": true,
     "plugins": [
       {
-        "name": "next"
-      }
-    ]
+        "name": "next",
+      },
+    ],
   },
   "include": [
     "src/**/*",
@@ -58,7 +58,7 @@
     "next.config.mjs",
     ".eslintrc.js",
     "build/types/**/*.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
   ],
-  "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
+  "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"],
 }

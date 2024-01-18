@@ -2,7 +2,7 @@
 
 > PixabayFind fetches images and videos from Pixabay.
 
-# [Demo](https://funny-moxie-323a72.netlify.app/)
+[Demo](https://funny-moxie-323a72.netlify.app/
 
 
 ## 🚀 Quick Start
@@ -13,7 +13,7 @@ git clone https://github.com/fadihanna123/PixabayFinder.git
 ```
 
 ```sh
-# Install Dependencies
+# Install dependencies
 yarn
 ```
 
