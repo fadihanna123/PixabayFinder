@@ -1,6 +1,6 @@
 # PixabayFinder
 
-> PixabayFind fetches images and videos from Pixabay.
+> PixabayFinder fetches images and videos from Pixabay.
 
 [Demo](https://funny-moxie-323a72.netlify.app/)
 
@@ -10,6 +10,11 @@
 ```sh
 # Clone the project
 git clone https://github.com/fadihanna123/PixabayFinder.git
+```
+
+```sh
+# Go to the directory
+cd PixabayFinder
 ```
 
 ```sh
@@ -25,7 +30,7 @@ yarn dev
 
 ## Usage
 
-You start typing your search term and then you see the result below consisting of images or videos fetched from Pixabay. You can search by choosing photos or videos.
+You start typing your search term and then you see the result below consisting of images or videos fetched from Pixabay. You can choose between photos or videos.
 
 ```sh
 # Run testenvironment
