@@ -14,6 +14,10 @@ export const Modal = styled.div`
   top: 0;
   overflow: hidden;
   width: 100%;
+
+  @media (max-width: 1020px) {
+    padding: 10px;
+  }
 `;
 
 export const ModalContent = styled.div`
@@ -24,5 +28,5 @@ export const ModalContent = styled.div`
   padding: 0 0 0 0;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
 `;
