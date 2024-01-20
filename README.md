@@ -13,6 +13,11 @@ git clone https://github.com/fadihanna123/PixabayFinder.git
 ```
 
 ```sh
+# Go to the directory
+cd PixabayFinder
+```
+
+```sh
 # Install dependencies
 yarn
 ```
