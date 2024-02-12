@@ -24,18 +24,17 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@jest/globals": "^29.7.0",
     "@manypkg/cli": "^0.21.2",
-    "@reduxjs/toolkit": "^2.1.0",
+    "@reduxjs/toolkit": "^2.2.0",
     "@testing-library/jest-dom": "^6.4.2",
     "@types/eslint": "^8.56.2",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@types/react-redux": "^7.1.33",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "axios": "^1.6.7",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
@@ -67,8 +66,7 @@
     "test": "jest",
     "lint": "eslint .",
     "format": "prettier -w .",
-    "eject": "react-scripts eject",
-    "postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
