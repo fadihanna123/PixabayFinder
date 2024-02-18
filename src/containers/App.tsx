@@ -12,7 +12,7 @@ import { PixabayKey } from 'utils';
 import { getImages, getVideos, log } from '../functions';
 
 // Components
-import { Layout } from 'app';
+import { Layout } from '../app';
 
 const App = () => {
   if (!PixabayKey) {

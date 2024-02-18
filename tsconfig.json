@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
     "baseUrl": "src",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
     "alwaysStrict": true,
@@ -38,11 +38,6 @@
     "noUncheckedIndexedAccess": true,
     "removeComments": true,
     "jsx": "preserve",
-    "paths": {
-      "@core/*": ["src/*"],
-      "@assets/*": ["public/assets/*"],
-      "react": ["./node_modules/@types/react"]
-    },
     "incremental": true,
     "noEmit": true,
     "plugins": [
