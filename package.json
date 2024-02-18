@@ -3,7 +3,7 @@
   "version": "0.1.53",
   "types": "src/types/global.d.ts",
   "private": "true",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": ".",
   "bugs": {
     "url": "https://github.com/fadihanna123/PixabayFinder/issues",
