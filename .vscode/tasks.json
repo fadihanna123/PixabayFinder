@@ -14,7 +14,7 @@
     {
       "label": "Remove Dependencies",
       "type": "shell",
-      "command": "rm -rf node_modules build .next",
+      "command": "rm -rf node_modules build",
       "presentation": {
         "reveal": "silent",
         "close": true

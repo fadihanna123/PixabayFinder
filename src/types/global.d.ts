@@ -91,14 +91,14 @@ declare global {
   namespace NodeJS {
     /**
      * ProcessEnv
-     * @param { string } NEXT_PUBLIC_PIXABAY_BASE_URL
-     * @param { string } NEXT_PUBLIC_PIXABAY_KEY
+     * @param { string } REACT_APP_PUBLIC_PIXABAY_BASE_URL
+     * @param { string } REACT_APP_PUBLIC_PIXABAY_KEY
      * @param { string } NODE_VERSION
      * @param { 'development' | 'production' } NODE_ENV
      */
     interface ProcessEnv {
-      NEXT_PUBLIC_PIXABAY_BASE_URL: string;
-      NEXT_PUBLIC_PIXABAY_KEY: string;
+      REACT_APP_PUBLIC_PIXABAY_BASE_URL: string;
+      REACT_APP_PUBLIC_PIXABAY_KEY: string;
       NODE_VERSION: string;
       NODE_ENV: 'development' | 'production';
     }
