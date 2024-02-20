@@ -61,7 +61,7 @@
   "scripts": {
     "build": "yarn prebuild && set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "dev": "react-scripts start",
-    "prebuild": "rimraf build",
+    "prebuild": "rm -rf build",
     "preview": "yarn build && live-server build",
     "test": "jest",
     "lint": "eslint .",
