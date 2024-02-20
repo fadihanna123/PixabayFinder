@@ -47,4 +47,3 @@ git checkout -b <your branchname>``` <br />
 5 - Create a pull request. <br />
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fadihanna123/PixabayFinder/issues).
-
