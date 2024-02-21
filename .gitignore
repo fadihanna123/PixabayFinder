@@ -33,3 +33,6 @@ thumb
 .DS_*
 **/*.backup.*
 **/*.back.*
+
+# Local Netlify folder
+.netlify
