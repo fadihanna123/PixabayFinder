@@ -1,3 +1,6 @@
+# API
+api.http
+
 # Logs
 logs
 *.log
