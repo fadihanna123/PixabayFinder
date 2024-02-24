@@ -27,6 +27,7 @@
     "noImplicitOverride": true,
     "noImplicitThis": true,
     "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["vite/client"],
     "strictNullChecks": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
@@ -46,7 +47,8 @@
     "jest.config.ts",
     "index.d.ts",
     ".eslintrc.js",
-    "build/types/**/*.ts"
+    "build/types/**/*.ts",
+    "vite.config.ts"
   ],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
 }

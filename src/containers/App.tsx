@@ -8,7 +8,7 @@ import { setVideoList } from '../redux/reducers/videoList';
 import sal from 'sal.js';
 import { PacmanLoader } from 'react-spinners';
 import { setMediaLoading } from '../redux/reducers';
-import { PixabayKey } from 'utils';
+import { PixabayKey } from '../utils';
 import { getImages, getVideos, log } from '../functions';
 
 // Components
