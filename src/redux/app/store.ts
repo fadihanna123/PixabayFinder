@@ -20,6 +20,12 @@ export const store = configureStore({
     videoList: videoListReducer,
     mediaLoading: mediaLoadingReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      thunk: true,
+      serializableCheck: false,
+      immutableCheck: false,
+    }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

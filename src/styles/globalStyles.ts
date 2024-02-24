@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   *
