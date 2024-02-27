@@ -79,10 +79,6 @@
       "last 1 safari version"
     ]
   },
-  "engines": {
-    "node": ">=16.0.0 <=21.x.x",
-    "npm": "Please use Yarn instead of NPM to install dependencies"
-  },
   "config": {
     "port": 3000
   }
