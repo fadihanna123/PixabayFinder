@@ -58,7 +58,7 @@
     "vite": "^5.1.4"
   },
   "scripts": {
-    "build": "yarn prebuild && set \"GENERATE_SOURCEMAP=false\" && vite build",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && vite build",
     "dev": "vite",
     "prebuild": "rm -rf build",
     "preview": "yarn build && live-server build",
