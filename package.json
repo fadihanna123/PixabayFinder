@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@emotion/react": "^11.11.3",
+    "@emotion/react": "^11.11.4",
     "@manypkg/cli": "^0.21.2",
     "@reduxjs/toolkit": "^2.2.1",
     "@testing-library/jest-dom": "^6.4.2",
