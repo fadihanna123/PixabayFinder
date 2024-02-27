@@ -58,14 +58,14 @@
     "vite": "^5.1.4"
   },
   "scripts": {
-    "build": "set \"GENERATE_SOURCEMAP=false\" && vite build",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && vite dist",
     "dev": "vite",
-    "prebuild": "rm -rf build",
-    "preview": "yarn build && live-server build",
+    "prebuild": "rm -rf dist",
+    "preview": "yarn build && live-server dist",
     "test": "jest",
     "lint": "eslint .",
     "format": "prettier -w .",
-    "eject": "react-scripts eject"
+    "eject": "vite eject"
   },
   "browserslist": {
     "production": [
