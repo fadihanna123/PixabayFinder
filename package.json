@@ -46,7 +46,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
     "react-spinners": "^0.13.8",
-    "react-toastify": "^10.0.4",
+    "react-toastify": "^10.0.5",
     "redux": "^5.0.1",
     "sal.js": "^0.8.5",
     "styled-components": "^6.1.8",
