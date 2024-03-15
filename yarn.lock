@@ -1019,12 +1019,12 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@manypkg/cli@^0.21.2":
-  version "0.21.2"
-  resolved "https://registry.yarnpkg.com/@manypkg/cli/-/cli-0.21.2.tgz#35e1167b386cfb1d2776e0b188492da75ba74336"
-  integrity sha512-Q9apaGBmzSqtzoYgQnY8onKmUOpigsUtAcbB/M0rQDsc6rXZlkDhDUkpwNQlt1Y1XQD0cVUgElbUsiLgtTi9jQ==
+"@manypkg/cli@^0.21.3":
+  version "0.21.3"
+  resolved "https://registry.yarnpkg.com/@manypkg/cli/-/cli-0.21.3.tgz#6bd83afd8851a5ade97970260810fefde5499c43"
+  integrity sha512-ro6j5b+44dN2AfId23voWxdlOqUCSbCwUHrUwq0LpoN/oZy6zQFAHDwYHbw50j2nL9EgpwIA03ZjaBceuUcMrw==
   dependencies:
-    "@manypkg/get-packages" "^2.2.0"
+    "@manypkg/get-packages" "^2.2.1"
     chalk "^2.4.2"
     detect-indent "^6.0.0"
     find-up "^4.1.0"
@@ -1047,10 +1047,10 @@
     find-up "^4.1.0"
     fs-extra "^8.1.0"
 
-"@manypkg/get-packages@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@manypkg/get-packages/-/get-packages-2.2.0.tgz#268c918880f60146351e348380ab590460c1dcc4"
-  integrity sha512-B5p5BXMwhGZKi/syEEAP1eVg5DZ/9LP+MZr0HqfrHLgu9fq0w4ZwH8yVen4JmjrxI2dWS31dcoswYzuphLaRxg==
+"@manypkg/get-packages@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@manypkg/get-packages/-/get-packages-2.2.1.tgz#622f97aa39d7d89c1ba1c4f8aef5f64de9cdd8ba"
+  integrity sha512-TrJd86paBkKEx6InhObcUhuoJNcATlbO6+s1dQdLd4+Y1SLDKJUAMhU46kTZ1SOFbegTuhDbIF3j+Jy564BERA==
   dependencies:
     "@manypkg/find-root" "^2.2.0"
     "@manypkg/tools" "^1.1.0"
