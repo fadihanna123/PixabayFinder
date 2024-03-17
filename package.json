@@ -61,7 +61,7 @@
     "build": "set \"GENERATE_SOURCEMAP=false\" && vite build",
     "dev": "vite",
     "prebuild": "rm -rf dist",
-    "preview": "yarn build && live-server dist",
+    "preview": "vite preview",
     "test": "jest",
     "lint": "eslint .",
     "format": "prettier -w .",

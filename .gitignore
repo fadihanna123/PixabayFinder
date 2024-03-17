@@ -17,7 +17,6 @@ node_modules
 
 # Docker
 Dockerfile
-docker-compose.yaml
 
 # Bower
 bower_components
