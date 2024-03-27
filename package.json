@@ -65,7 +65,9 @@
     "test": "jest",
     "lint": "eslint .",
     "format": "prettier -w .",
-    "eject": "vite eject"
+    "eject": "vite eject",
+    "setup": "yarn",
+    "clear": "rimraf node_modules dist build"
   },
   "browserslist": {
     "production": [
