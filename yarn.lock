@@ -1024,10 +1024,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@manypkg/cli@^0.21.3":
-  version "0.21.3"
-  resolved "https://registry.yarnpkg.com/@manypkg/cli/-/cli-0.21.3.tgz#6bd83afd8851a5ade97970260810fefde5499c43"
-  integrity sha512-ro6j5b+44dN2AfId23voWxdlOqUCSbCwUHrUwq0LpoN/oZy6zQFAHDwYHbw50j2nL9EgpwIA03ZjaBceuUcMrw==
+"@manypkg/cli@^0.21.4":
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/@manypkg/cli/-/cli-0.21.4.tgz#e17d4bd3e1defceec0acf0449b7309d0490b6cd0"
+  integrity sha512-EACxxb+c/t6G0l1FrlyewZeBnyR5V1cLkXjnBfsay5TN1UgbilFpG6POglzn+lVJet9NqnEKe3RLHABzkIDZ0Q==
   dependencies:
     "@manypkg/get-packages" "^2.2.1"
     chalk "^2.4.2"
