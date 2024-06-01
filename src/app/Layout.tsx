@@ -11,7 +11,7 @@ const Layout: React.FC = () => {
       <SearchFormComp />
       <List />
       <MainFooter dataSal='fade'>
-        <i>Created by Fadi Hanna.</i>
+        <i>Created by Fadi Hanna</i>
       </MainFooter>
       <ToastContainer transition={Flip} />
     </Container>
