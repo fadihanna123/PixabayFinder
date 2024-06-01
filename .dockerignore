@@ -1,4 +1,16 @@
+# Dependencies
+
 node_modules
+
+# Build
+
 build
+dist
+
+# Git
+
 .git
-.env
+
+# Readme
+
+README.md

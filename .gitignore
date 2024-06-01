@@ -11,9 +11,7 @@ node_modules
 
 # Env
 .env
-
-# Docker
-Dockerfile
+.env.prod
 
 # Vscode
 launch.json
