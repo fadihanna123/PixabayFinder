@@ -1,24 +1,33 @@
 # Dependencies
-
 node_modules
 
 # Build
-
 build
 dist
 
 # Git
-
 .git
+.gitignore
 
 # Readme
-
 README.md
 
 # License
-
 LICENSE
 
 # Docker
-
 Dockerfile
+
+# Vscode
+.vscode
+
+# Tests
+src/tests
+src/setupTests.ts
+
+# Enviroment
+.env
+
+# Linting
+.eslintrc.js
+.stylelintrc.json
