@@ -2,7 +2,7 @@
 
 > PixabayFinder fetches images and videos from Pixabay.
 
-# [Demo](https://funny-moxie-323a72.netlify.app/)
+[comment]: [Demo](https://funny-moxie-323a72.netlify.app/)
 
 
 ## 🚀 Quick Start
