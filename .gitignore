@@ -11,7 +11,7 @@ node_modules
 
 # Env
 .env
-.env.prod
+.env.production
 
 # Vscode
 launch.json
