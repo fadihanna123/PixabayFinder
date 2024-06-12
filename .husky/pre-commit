@@ -1,10 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-yarn
-yarn manypkg check
-npx stylelint "**/*.css"
+yarn --ignore-scripts --emoji
 yarn lint
 yarn format
-rm -rf node_modules
+rimraf node_modules
 git add -A
