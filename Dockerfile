@@ -1,4 +1,4 @@
-FROM node:20.14.0-alpine3.20
+FROM node:20.15.0-alpine3.20
 WORKDIR /app
 COPY yarn.lock package.json .
 RUN yarn install --production --ignore-scripts
