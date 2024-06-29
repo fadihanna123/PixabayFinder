@@ -17,6 +17,7 @@ LICENSE
 
 # Docker
 Dockerfile
+.dockerignore
 
 # Vscode
 .vscode
