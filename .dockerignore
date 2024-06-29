@@ -28,7 +28,9 @@ src/setupTests.ts
 
 # Enviroment
 .env
+.docker.env
 
 # Linting
 .eslintrc.js
 .stylelintrc.json
+.editorconfig
