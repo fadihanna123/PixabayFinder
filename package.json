@@ -91,7 +91,7 @@
     "port": 3000
   },
   "devDependencies": {
-    "@eslint/compat": "^1.1.0",
+    "@eslint/compat": "^1.1.1",
     "@eslint/js": "^9.6.0",
     "eslint-plugin-react": "^7.34.3",
     "typescript-eslint": "^7.16.0"
