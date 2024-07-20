@@ -26,6 +26,7 @@ const App = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    let mounted = true;
     sal();
 
     dispatch(setLoading(true));
@@ -33,19 +34,27 @@ const App = () => {
 
     getImages<string>(searchForm.query)
       .then((imagesData) => {
-        dispatch(setImgList(imagesData));
+        if (mounted) {
+          dispatch(setImgList(imagesData));
+        }
         dispatch(setMediaLoading(false));
       })
       .catch((err) => toast.error(err.message, { transition: Flip }));
 
     getVideos<string>(searchForm.query)
       .then((videosData) => {
-        dispatch(setVideoList(videosData));
-        dispatch(setMediaLoading(false));
+        if (mounted) {
+          dispatch(setVideoList(videosData));
+          dispatch(setMediaLoading(false));
+        }
       })
       .catch((err) => toast.error(err.message, { transition: Flip }));
 
     dispatch(setLoading(false));
+
+    return () => {
+      mounted = false;
+    };
   }, [searchForm]);
 
   if (loading) {

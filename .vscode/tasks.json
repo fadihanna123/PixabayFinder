@@ -4,7 +4,7 @@
     {
       "label": "Install Dependencies",
       "type": "shell",
-      "command": "yarn --emoji",
+      "command": "yarn --silent --ignore-scripts --production --emoji",
       "runOptions": { "runOn": "folderOpen" },
       "presentation": {
         "reveal": "silent",
@@ -14,7 +14,7 @@
     {
       "label": "Remove Dependencies",
       "type": "shell",
-      "command": "rm -rf node_modules build",
+      "command": "rimraf node_modules build",
       "presentation": {
         "reveal": "silent",
         "close": true

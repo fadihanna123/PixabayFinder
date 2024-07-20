@@ -28,7 +28,7 @@ const List: React.FC = () => {
 
   return (
     <main>
-      {imgList?.hits.length === 0 ||
+      {(imgList && imgList?.hits.length === 0) ||
       imgList?.hits.length === undefined ||
       searchForm.query === '' ? (
         ''
