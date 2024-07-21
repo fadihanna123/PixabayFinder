@@ -1,5 +1,4 @@
 yarn --ignore-scripts --emoji
 yarn lint
 yarn format
-rm -rf node_modules
 git add -A
