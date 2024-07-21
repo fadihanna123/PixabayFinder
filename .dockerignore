@@ -34,3 +34,6 @@ src/setupTests.ts
 .eslintrc.js
 .stylelintrc.json
 .editorconfig
+
+# Other scripts
+run.sh
