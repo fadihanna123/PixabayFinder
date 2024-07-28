@@ -3,6 +3,7 @@
 > PixabayFinder fetches images and videos from Pixabay.
 
 [Website](https://pixabayfinderx.netlify.app/)
+===============	
 
 ## 🚀 Quick Start
 
