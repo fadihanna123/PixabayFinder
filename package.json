@@ -24,7 +24,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.13.0",
     "@manypkg/cli": "^0.21.4",
-    "@reduxjs/toolkit": "^2.2.6",
+    "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^6.4.8",
     "@types/eslint": "^9.6.0",
     "@types/jest": "^29.5.12",
