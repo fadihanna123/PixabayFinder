@@ -18,7 +18,6 @@ launch.json
 
 # Other files
 .DS_*
-run.sh
 
 # Local Netlify folder
 .netlify
