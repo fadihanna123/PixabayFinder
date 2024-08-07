@@ -27,7 +27,7 @@
     "noImplicitOverride": true,
     "noImplicitThis": true,
     "typeRoots": ["./node_modules/@types", "./src/types"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "node"],
     "strictNullChecks": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
