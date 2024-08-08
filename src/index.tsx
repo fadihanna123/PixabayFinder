@@ -9,7 +9,7 @@ import ReduxStore from './redux/ReduxStore';
 import { App } from './containers';
 import { log } from './functions';
 
-const { NODE_ENV } = import.meta.env;
+const { NODE_ENV } = process.env;
 
 if (NODE_ENV === 'development') {
   // eslint-disable-next-line quotes

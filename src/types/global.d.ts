@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+
 declare global {
   /**
    * IList
@@ -87,22 +88,6 @@ declare global {
   interface SearchForm {
     query: string;
     type: string;
-  }
-
-  namespace NodeJS {
-    /**
-     * ImportMetaEnv
-     * @param { string } VITE_APP_PUBLIC_PIXABAY_BASE_URL
-     * @param { string } VITE_APP_PUBLIC_PIXABAY_KEY
-     * @param { string } NODE_VERSION
-     * @param { 'development' | 'production' } NODE_ENV
-     */
-    interface ImportMetaEnv {
-      VITE_APP_PUBLIC_PIXABAY_BASE_URL: string;
-      VITE_APP_PUBLIC_PIXABAY_KEY: string;
-      NODE_VERSION: string;
-      NODE_ENV: 'development' | 'production';
-    }
   }
 
   type logType = 'warn' | 'error' | 'log';

@@ -18,4 +18,10 @@ export default defineConfig({
     open: false,
     host: true,
   },
+  define: {
+    'process.env': {
+      VITE_APP_PUBLIC_PIXABAY_BASE_URL: 'https://pixabay.com/api/',
+      VITE_APP_PUBLIC_PIXABAY_KEY: '18269871-9984b5717c4bef14378a76910',
+    },
+  },
 });

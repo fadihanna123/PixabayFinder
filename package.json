@@ -63,7 +63,7 @@
     "dev": "vite",
     "prebuild": "rm -rf dist",
     "preview": "vite preview",
-    "test": "jest",
+    "test": "jest --watchAll",
     "lint": "eslint .",
     "format": "prettier -w .",
     "eject": "vite eject",
@@ -93,8 +93,11 @@
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
     "@eslint/js": "^9.8.0",
+    "@testing-library/react": "^16.0.0",
     "@types/node": "^22.1.0",
     "eslint-plugin-react": "^7.35.0",
-    "typescript-eslint": "^8.0.1"
+    "react-test-renderer": "^18.3.1",
+    "typescript-eslint": "^8.0.1",
+    "vite-plugin-environment": "^1.1.3"
   }
 }

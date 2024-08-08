@@ -15,7 +15,7 @@ export const request = {
     url: string,
     headers?: Record<string, never>
   ): Promise<T | void> => {
-    const { data } = await axios.get<T>(`${url}`, headers);
+    const { data } = await axios.get<T>(url, headers);
     return data;
   },
 

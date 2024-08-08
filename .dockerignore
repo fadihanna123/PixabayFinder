@@ -23,7 +23,6 @@ Dockerfile
 .vscode
 
 # Tests
-src/tests
 src/setupTests.ts
 
 # Enviroment
