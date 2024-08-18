@@ -46,7 +46,7 @@
     "src/**/*",
     "jest.config.ts",
     "index.d.ts",
-    ".eslintrc.js",
+    "eslint.config.mjs",
     "build/types/**/*.ts",
     "vite.config.ts"
   ],

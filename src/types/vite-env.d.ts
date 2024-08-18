@@ -1,4 +1,8 @@
 /// <reference types="vite/client" />
+declare module 'eslint-plugin-html';
+declare module '@typescript-eslint/parser';
+declare module '@eslint/js';
+declare module '@eslint/eslintrc';
 
 interface ImportMetaEnv {
   VITE_APP_PUBLIC_PIXABAY_BASE_URL: string;
