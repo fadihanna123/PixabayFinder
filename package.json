@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@emotion/react": "^11.13.0",
+    "@emotion/react": "^11.13.3",
     "@manypkg/cli": "^0.21.4",
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^6.4.8",
@@ -95,7 +95,7 @@
     "@eslint/js": "^9.9.0",
     "@testing-library/react": "^16.0.0",
     "@types/": "eslint/js",
-    "@types/node": "^22.4.1",
+    "@types/node": "^22.4.2",
     "eslint-plugin-react": "^7.35.0",
     "react-test-renderer": "^18.3.1",
     "typescript-eslint": "^8.2.0",
