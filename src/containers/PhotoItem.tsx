@@ -1,27 +1,18 @@
 import React, { useEffect } from 'react';
 import { Dispatch } from 'redux';
-import { useAppDispatch, useAppSelector } from '../redux/app';
-import { getImage, setImage } from '../redux/reducers/image';
-import { getSearchForm } from '../redux/reducers/searchForm';
-import { getToggler, setToggler } from '../redux/reducers/toggler';
+import { setImage } from '../redux/reducers/image';
+import { setToggler } from '../redux/reducers/toggler';
 import sal from 'sal.js';
-import {
-  getMediatLoading,
-  setMediaLoading,
-} from '../redux/reducers/mediaLoading';
 import { Loader } from '../ui';
 import { ImageCol, Modal, ModalContent } from '../styles';
+import { setMediaLoading } from '../redux/reducers';
+import useReduxConsts from '../hooks/useReduxConsts';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;
 }> = ({ item }: { item: HitsOfList }) => {
-  const toggler: boolean = useAppSelector(getToggler);
-
-  const searchForm: SearchForm = useAppSelector(getSearchForm);
-
-  const image: string = useAppSelector(getImage);
-  const mediaLoading: boolean = useAppSelector(getMediatLoading);
-  const dispatch = useAppDispatch();
+  const { image, mediaLoading, searchForm, toggler, dispatch } =
+    useReduxConsts();
 
   /**
    * Hide image previewer.

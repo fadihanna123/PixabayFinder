@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { Flip, toast } from 'react-toastify';
-import { useAppDispatch, useAppSelector } from '../redux/app';
 import { setImgList } from '../redux/reducers/imgList';
-import { getLoading, setLoading } from '../redux/reducers/loading';
-import { getSearchForm } from '../redux/reducers/searchForm';
+import { setLoading } from '../redux/reducers/loading';
 import { setVideoList } from '../redux/reducers/videoList';
 import sal from 'sal.js';
 import { PacmanLoader } from 'react-spinners';
@@ -13,17 +11,15 @@ import { getImages, getVideos, log } from '../functions';
 
 // Components
 import { Layout } from '../app';
+import useReduxConsts from '../hooks/useReduxConsts';
 
 const App = () => {
+  const { searchForm, loading, dispatch } = useReduxConsts();
+
   if (!PixabayKey) {
     toast.error('Missing apiKey? Add it and restart the app!');
     log('Missing apiKey? Add it and restart the app!', 'error');
   }
-
-  const loading = useAppSelector(getLoading);
-  const searchForm = useAppSelector(getSearchForm);
-
-  const dispatch = useAppDispatch();
 
   useEffect(() => {
     let mounted = true;

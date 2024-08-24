@@ -1,14 +1,12 @@
-import { useAppDispatch, useAppSelector } from '../redux/app';
-import { getSearchForm, setSearchForm } from '../redux/reducers/searchForm';
+import { setSearchForm } from '../redux/reducers/searchForm';
 import { setSearchType } from '../redux/reducers/searchType';
 import React from 'react';
 import { Col, Input, InputRow } from '../styles';
 import { typer } from '../functions';
+import useReduxConsts from '../hooks/useReduxConsts';
 
 const SearchFormComp: React.FC = () => {
-  const searchForm = useAppSelector(getSearchForm);
-
-  const dispatch = useAppDispatch();
+  const { dispatch, searchForm } = useReduxConsts();
 
   return (
     <InputRow>

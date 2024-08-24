@@ -1,26 +1,14 @@
-import { useAppSelector } from '../redux/app';
-import { getImgList } from '../redux/reducers/imgList';
-import { getSearchForm } from '../redux/reducers/searchForm';
-import { getSearchType } from '../redux/reducers/searchType';
-import { getVideoList } from '../redux/reducers/videoList';
-import { getMediatLoading } from '../redux/reducers';
 import React from 'react';
 
 // Components
 import PhotoItem from './PhotoItem';
 import Loader from '../ui/Loader';
 import { ImageRow, NoData, VideoItem, VideoRow } from '../styles';
+import useReduxConsts from '../hooks/useReduxConsts';
 
 const List: React.FC = () => {
-  const searchForm: SearchForm = useAppSelector(getSearchForm);
-
-  const imgList: IList = useAppSelector(getImgList);
-
-  const videoList = useAppSelector(getVideoList);
-
-  const mediaLoading: boolean = useAppSelector(getMediatLoading);
-
-  const searchType: searchFormType = useAppSelector(getSearchType);
+  const { imgList, mediaLoading, searchForm, searchType, videoList } =
+    useReduxConsts();
 
   if (mediaLoading) {
     return <Loader className={['spinner']} />;
