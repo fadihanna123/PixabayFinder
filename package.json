@@ -1,6 +1,6 @@
 {
   "name": "pixabayfinder",
-  "version": "0.1.52",
+  "version": "0.1.53",
   "types": "src/types/global.d.ts",
   "private": "true",
   "license": "MIT",
@@ -94,7 +94,6 @@
     "@eslint/compat": "^1.1.1",
     "@eslint/js": "^9.9.1",
     "@testing-library/react": "^16.0.0",
-    "@types/": "eslint/js",
     "@types/node": "^22.5.0",
     "eslint-plugin-react": "^7.35.0",
     "react-test-renderer": "^18.3.1",
