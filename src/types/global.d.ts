@@ -93,6 +93,15 @@ declare global {
   type logType = 'warn' | 'error' | 'log';
 
   type searchFormType = 'Images' | 'Videos';
+
+  type METHODS =
+    | 'head'
+    | 'options'
+    | 'put'
+    | 'post'
+    | 'patch'
+    | 'delete'
+    | 'get';
 }
 
 export {};

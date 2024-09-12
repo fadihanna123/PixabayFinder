@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Dispatch } from 'redux';
 import { setImage } from '../redux/reducers/image';
 import { setToggler } from '../redux/reducers/toggler';
 import sal from 'sal.js';
@@ -21,10 +20,8 @@ const PhotoItem: React.FC<{
    * @param { Dispatch<any> } dispatch
    * @returns { object }
    */
-  const hideImagePreviewer = (
-    toggler: boolean,
-    dispatch: Dispatch<any>
-  ): object => dispatch(setToggler(!toggler));
+  const hideImagePreviewer = (toggler: boolean, dispatch: any): object =>
+    dispatch(setToggler(!toggler));
 
   /**
    * Hide image previewer.
@@ -33,10 +30,7 @@ const PhotoItem: React.FC<{
    * @param { Dispatch<any> } dispatch
    * @returns { void }
    */
-  const toggleImagePreviewer = (
-    item: HitsOfList,
-    dispatch: Dispatch<any>
-  ): void => {
+  const toggleImagePreviewer = (item: HitsOfList, dispatch: any): void => {
     dispatch(setToggler(true));
     dispatch(setImage(item.webformatURL));
   };
