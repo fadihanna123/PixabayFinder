@@ -2,8 +2,8 @@ import { setSearchForm } from '../redux/reducers/searchForm';
 import { setSearchType } from '../redux/reducers/searchType';
 import React from 'react';
 import { Col, Input, InputRow } from '../styles';
-import { typer } from '../functions';
 import useReduxConsts from '../hooks/useReduxConsts';
+import { useTyper } from '../hooks';
 
 const SearchFormComp: React.FC = () => {
   const { dispatch, searchForm } = useReduxConsts();
@@ -16,7 +16,7 @@ const SearchFormComp: React.FC = () => {
           placeholder={'Type here'}
           value={searchForm.query}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            typer(e, searchForm, dispatch)
+            useTyper(e, searchForm, dispatch)
           }
         />
       </Col>

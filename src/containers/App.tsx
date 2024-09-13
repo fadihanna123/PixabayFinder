@@ -1,11 +1,11 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import { PixabayBaseURL, PixabayKey } from '../utils';
-import { log } from '../functions';
 
 // Components
 import { Layout } from '../app';
 import axios from 'axios';
+import useLog from '../hooks/useLog';
 
 const App = () => {
   const globalHeader: string = 'application/json';
@@ -15,7 +15,7 @@ const App = () => {
 
   if (!PixabayKey) {
     toast.error('Missing apiKey? Add it and restart the app!');
-    log('Missing apiKey? Add it and restart the app!', 'error');
+    useLog('Missing apiKey? Add it and restart the app!', 'error');
   }
 
   return <Layout />;
