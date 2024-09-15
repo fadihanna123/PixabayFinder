@@ -5428,10 +5428,10 @@ typescript-eslint@^8.5.0:
     "@typescript-eslint/parser" "8.5.0"
     "@typescript-eslint/utils" "8.5.0"
 
-typescript@5.6.2:
-  version "5.6.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.2.tgz#d1de67b6bef77c41823f822df8f0b3bcff60a5a0"
-  integrity sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==
+typescript@4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
+  integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
