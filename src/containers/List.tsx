@@ -5,35 +5,10 @@ import PhotoItem from './PhotoItem';
 import Loader from '../ui/Loader';
 import { ImageRow, NoData, VideoItem, VideoRow } from '../styles';
 import useReduxConsts from '../hooks/useReduxConsts';
-import { PixabayKey } from '../utils';
-import useAPI from '../hooks/useAPI';
-import { PacmanLoader } from 'react-spinners';
 
 const List: React.FC = () => {
-  const { mediaLoading, searchForm, searchType } = useReduxConsts();
-
-  const imagesEndPoint: string = `?key=${PixabayKey}&q=${searchForm.query}`;
-  const videosEndPoint: string = `videos/?key=${PixabayKey}&q=${searchForm.query}`;
-  const { data: imgList, loading: imagesLoading } = useAPI(
-    imagesEndPoint,
-    'get',
-    searchForm
-  );
-  const { data: videoList, loading: videoLoading } = useAPI(
-    videosEndPoint,
-    'get',
-    searchForm
-  );
-
-  if (imagesLoading || videoLoading) {
-    return (
-      <PacmanLoader
-        cssOverride={{ margin: '0 auto' }}
-        loading={imagesLoading ?? videoLoading}
-        color='#36d7b7'
-      />
-    );
-  }
+  const { mediaLoading, searchForm, searchType, imgList, videoList } =
+    useReduxConsts();
 
   if (mediaLoading) {
     return <Loader className={['spinner']} />;
@@ -69,12 +44,12 @@ const List: React.FC = () => {
           (searchForm.query ? (
             videoList && videoList.totalHits ? (
               !mediaLoading ? (
-                videoList?.hits.map((video: any, i: number) => {
+                videoList?.hits.map((video: HitsOfList, i: number) => {
                   return (
                     <VideoItem
                       key={i}
                       controls
-                      src={video.videos.small.url}
+                      src={video.videos?.small.url}
                       autoPlay={true}
                       muted={true}
                     ></VideoItem>

@@ -5,6 +5,8 @@ import searchFormReducer from '../reducers/searchForm';
 import searchTypeReducer from '../reducers/searchType';
 import togglerReducer from '../reducers/toggler';
 import mediaLoadingReducer from '../reducers/mediaLoading';
+import imgListReducer from '../reducers/imgList';
+import videoListReducer from '../reducers/videoList';
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +15,8 @@ export const store = configureStore({
     searchForm: searchFormReducer,
     searchType: searchTypeReducer,
     mediaLoading: mediaLoadingReducer,
+    imgList: imgListReducer,
+    videoList: videoListReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

@@ -1,11 +1,11 @@
-import axios, { AxiosError } from 'axios';
+import axios, { AxiosError, HeadersDefaults } from 'axios';
 import { useEffect, useState } from 'react';
 
 const useAPI = (
   endPoint: string,
   method: METHODS = 'get',
   changeParameter?: any,
-  headers?: any,
+  headers?: HeadersDefaults,
   body?: any
 ) => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -13,11 +13,9 @@ const useAPI = (
   const [error, setError] = useState<string>('');
 
   const getData = async () => {
-    axios[method](
-      endPoint,
-      JSON.parse(headers ? headers : null),
-      JSON.parse(body ? body : null)
-    )
+    setLoading(true);
+
+    axios[method](endPoint, headers && headers, JSON.parse(body ? body : null))
       .then((res) => {
         setData(res.data);
       })
