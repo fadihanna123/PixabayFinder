@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const ImgItem = styled.img`
+  max-width: 100%;
+  height: 100%;
+`;
+
+export const ModalImg = styled.img`
+  max-width: 100%;
+  height: 100%;
+`;
+
 export const NoData = styled.div`
   grid-column-start: 3;
   grid-column-end: 5;
