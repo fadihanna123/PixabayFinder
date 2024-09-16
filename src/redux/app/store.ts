@@ -7,6 +7,7 @@ import togglerReducer from '../reducers/toggler';
 import mediaLoadingReducer from '../reducers/mediaLoading';
 import imgListReducer from '../reducers/imgList';
 import videoListReducer from '../reducers/videoList';
+import langReducer from '../reducers/lang';
 
 export const store = configureStore({
   reducer: {
@@ -17,6 +18,7 @@ export const store = configureStore({
     mediaLoading: mediaLoadingReducer,
     imgList: imgListReducer,
     videoList: videoListReducer,
+    lang: langReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

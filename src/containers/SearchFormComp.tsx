@@ -4,16 +4,17 @@ import React from 'react';
 import { Col, Input, InputRow } from '../styles';
 import useReduxConsts from '../hooks/useReduxConsts';
 import { useTyper } from '../hooks';
+import useTranslate from '../hooks/useTranslate';
 
 const SearchFormComp: React.FC = () => {
-  const { dispatch, searchForm } = useReduxConsts();
+  const { dispatch, searchForm, lang } = useReduxConsts();
 
   return (
     <InputRow>
       <Col>
         <Input
           name='query'
-          placeholder={'Type here'}
+          placeholder={`${useTranslate('INPUT_PLACEHOLDER_TXT', lang)}...`}
           value={searchForm.query}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             useTyper(e, searchForm, dispatch)
@@ -32,7 +33,7 @@ const SearchFormComp: React.FC = () => {
             dispatch(setSearchForm({ ...searchForm, type: 'Images' }));
           }}
         />
-        Images
+        {useTranslate('IMAGES', lang)}
         <input
           type='radio'
           className='m-2'
@@ -44,7 +45,7 @@ const SearchFormComp: React.FC = () => {
             dispatch(setSearchForm({ ...searchForm, type: 'Videos' }));
           }}
         />
-        Videos
+        {useTranslate('VIDEOS', lang)}
       </Col>
     </InputRow>
   );

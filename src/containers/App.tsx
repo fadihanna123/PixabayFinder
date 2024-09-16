@@ -9,6 +9,8 @@ import useLog from '../hooks/useLog';
 import { setImgList, setVideoList } from '../redux';
 import useReduxConsts from '../hooks/useReduxConsts';
 import useAPI from '../hooks/useAPI';
+import { sessionStorageKeys } from '../utils/consts';
+import { setLang } from '../redux/reducers/lang';
 
 const App = () => {
   const globalHeader: string = 'application/json';
@@ -26,6 +28,20 @@ const App = () => {
     toast.error('Missing apiKey? Add it and restart the app!');
     useLog('Missing apiKey? Add it and restart the app!', 'error');
   }
+
+  useEffect(() => {
+    const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
+
+    if (lang === '') {
+      dispatch(setLang('en'));
+    }
+
+    if (lang === null || undefined) {
+      sessionStorage.setItem(sessionStorageKeys.Lang, 'en');
+    }
+
+    dispatch(setLang(lang!));
+  }, []);
 
   useEffect(() => {
     dispatch(setImgList(imgData!));

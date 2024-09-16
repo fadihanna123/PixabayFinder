@@ -8,6 +8,7 @@ import {
   getToggler,
   getVideoList,
 } from '../redux/reducers';
+import { getLang } from '../redux/reducers/lang';
 
 const useReduxConsts = () => {
   const searchForm: SearchForm = useAppSelector(getSearchForm);
@@ -17,6 +18,8 @@ const useReduxConsts = () => {
   const image: string = useAppSelector(getImage);
   const imgList: IList = useAppSelector(getImgList);
   const videoList: IList = useAppSelector(getVideoList);
+  const lang: string = useAppSelector(getLang);
+
   const dispatch = useAppDispatch();
 
   return {
@@ -27,6 +30,7 @@ const useReduxConsts = () => {
     image,
     imgList,
     videoList,
+    lang,
     dispatch,
   };
 };

@@ -2,17 +2,18 @@ import { List, SearchFormComp } from '../containers';
 import React from 'react';
 import { Flip, ToastContainer } from 'react-toastify';
 import { Container } from '../styles';
-import { MainFooter } from '../ui';
+import Header from '../inc/Header';
+import Footer from '../inc/Footer';
 
 const Layout: React.FC = () => {
   return (
     <Container>
+      <Header />
+      <br />
       <h1>PixaBay Finder</h1>
       <SearchFormComp />
       <List />
-      <MainFooter dataSal='fade'>
-        <i>Created by Fadi Hanna</i>
-      </MainFooter>
+      <Footer />
       <ToastContainer transition={Flip} />
     </Container>
   );
