@@ -15,7 +15,7 @@ const useAPI = (
   const getData = async () => {
     setLoading(true);
 
-    axios[method](endPoint, headers && headers, JSON.parse(body ? body : null))
+    axios[method](endPoint, headers, JSON.parse(body ? body : null))
       .then((res) => {
         setData(res.data);
       })

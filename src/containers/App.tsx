@@ -20,7 +20,7 @@ const App = () => {
 
   const { dispatch, searchForm } = useReduxConsts();
   const imagesEndPoint: string = `?key=${PixabayKey}&q=${searchForm.query}`;
-  const videosEndPoint: string = `videos/?key=${PixabayKey}&q=${searchForm.query && searchForm.query}`;
+  const videosEndPoint: string = `videos/?key=${PixabayKey}&q=${searchForm.query}`;
   const { data: imgData } = useAPI(imagesEndPoint, 'get', searchForm);
   const { data: videoData } = useAPI(videosEndPoint, 'get', searchForm);
 
