@@ -37,10 +37,6 @@ const App = () => {
       dispatch(setLang('en'));
     }
 
-    if (!lang) {
-      sessionStorage.setItem(sessionStorageKeys.Lang, 'en');
-    }
-
     dispatch(setLang(lang!));
   }, []);
 
