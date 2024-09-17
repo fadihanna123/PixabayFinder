@@ -30,9 +30,9 @@ const App = () => {
   }
 
   useEffect(() => {
-    if (sessionStorage !== undefined) {
-      const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
+    const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
 
+    if (typeof lang !== 'undefined' && lang !== null) {
       if (lang === '') {
         dispatch(setLang('en'));
       }
