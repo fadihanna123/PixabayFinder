@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { PixabayBaseURL, PixabayKey } from '../utils';
 
@@ -10,7 +10,7 @@ import { setImgList, setVideoList } from '../redux';
 import useReduxConsts from '../hooks/useReduxConsts';
 import useAPI from '../hooks/useAPI';
 import { sessionStorageKeys } from '../utils/consts';
-import { setLang } from '../redux/reducers/lang';
+import lang, { setLang } from '../redux/reducers/lang';
 
 const App = () => {
   const globalHeader: string = 'application/json';
@@ -29,7 +29,7 @@ const App = () => {
     useLog('Missing apiKey? Add it and restart the app!', 'error');
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
 
     if (lang === '') {
@@ -41,7 +41,7 @@ const App = () => {
     }
 
     dispatch(setLang(lang!));
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     dispatch(setImgList(imgData!));
