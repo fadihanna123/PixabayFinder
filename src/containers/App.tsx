@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { PixabayBaseURL, PixabayKey } from '../utils';
@@ -35,6 +34,10 @@ const App = () => {
 
     if (lang === '') {
       dispatch(setLang('en'));
+    }
+
+    if (lang === null || undefined) {
+      sessionStorage.setItem(sessionStorageKeys.Lang, 'en');
     }
 
     dispatch(setLang(lang!));
