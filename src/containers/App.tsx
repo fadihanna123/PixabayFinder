@@ -10,7 +10,7 @@ import { setImgList, setVideoList } from '../redux';
 import useReduxConsts from '../hooks/useReduxConsts';
 import useAPI from '../hooks/useAPI';
 import { sessionStorageKeys } from '../utils/consts';
-import lang, { setLang } from '../redux/reducers/lang';
+import { setLang } from '../redux/reducers/lang';
 
 const App = () => {
   const globalHeader: string = 'application/json';
@@ -30,18 +30,20 @@ const App = () => {
   }
 
   useEffect(() => {
-    const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
+    if (sessionStorage !== undefined) {
+      const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
 
-    if (lang === '') {
-      dispatch(setLang('en'));
+      if (lang === '') {
+        dispatch(setLang('en'));
+      }
+
+      if (lang === null || undefined) {
+        sessionStorage.setItem(sessionStorageKeys.Lang, 'en');
+      }
+
+      dispatch(setLang(lang!));
     }
-
-    if (lang === null || undefined) {
-      sessionStorage.setItem(sessionStorageKeys.Lang, 'en');
-    }
-
-    dispatch(setLang(lang!));
-  }, [lang]);
+  }, []);
 
   useEffect(() => {
     dispatch(setImgList(imgData!));
