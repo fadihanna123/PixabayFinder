@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { toast } from 'react-toastify';
 import { PixabayBaseURL, PixabayKey } from '../utils';
 
@@ -29,9 +29,8 @@ const App = () => {
     useLog('Missing apiKey? Add it and restart the app!', 'error');
   }
 
-  useEffect(() => {
-    const lang =
-      sessionStorage && sessionStorage.getItem(sessionStorageKeys.Lang);
+  useLayoutEffect(() => {
+    const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
 
     if (lang === '') {
       dispatch(setLang('en'));
