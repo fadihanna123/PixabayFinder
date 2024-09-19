@@ -64,7 +64,7 @@
     "prebuild": "rm -rf dist",
     "preview": "vite preview",
     "test": "jest --watchAll",
-    "lint": "eslint .",
+    "lint": "eslint . && stylelint **/*.css",
     "format": "prettier -w .",
     "eject": "vite eject",
     "setup": "yarn --silent --ignore-scripts",
