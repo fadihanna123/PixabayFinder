@@ -19,6 +19,8 @@ declare global {
    * @param { string } pageURL
    * @param { string } type
    * @param { string } tags
+   * @param { number } duration
+   * @param { VideoList } videos
    * @param { string } previewURL
    * @param { number } previewWidth
    * @param { number } previewHeight
@@ -42,6 +44,8 @@ declare global {
     pageURL: string;
     type: string;
     tags: string;
+    duration?: number;
+    videos?: VideoList;
     previewURL: string;
     previewWidth: number;
     previewHeight: number;
@@ -60,6 +64,45 @@ declare global {
     user_id: number;
     user: string;
     userImageURL: string;
+  }
+
+  export interface VideoList {
+    large: LargeOfVideoList;
+    medium: MediumOfVideoList;
+    small: SmallOfVideoList;
+    tiny: TinyOfVideoList;
+  }
+
+  export interface LargeOfVideoList {
+    url: string;
+    width: number;
+    height: number;
+    size: number;
+    thumbnail: string;
+  }
+
+  export interface MediumOfVideoList {
+    url: string;
+    width: number;
+    height: number;
+    size: number;
+    thumbnail: string;
+  }
+
+  export interface SmallOfVideoList {
+    url: string;
+    width: number;
+    height: number;
+    size: number;
+    thumbnail: string;
+  }
+
+  export interface TinyOfVideoList {
+    url: string;
+    width: number;
+    height: number;
+    size: number;
+    thumbnail: string;
   }
 
   /**
@@ -93,6 +136,15 @@ declare global {
   type logType = 'warn' | 'error' | 'log';
 
   type searchFormType = 'Images' | 'Videos';
+
+  type METHODS =
+    | 'head'
+    | 'options'
+    | 'put'
+    | 'post'
+    | 'patch'
+    | 'delete'
+    | 'get';
 }
 
 export {};

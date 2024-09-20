@@ -14,6 +14,8 @@ export const Modal = styled.div`
   top: 0;
   overflow: hidden;
   width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 
   @media (max-width: 1020px) {
     padding: 10px;

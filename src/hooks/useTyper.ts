@@ -1,5 +1,4 @@
 import React from 'react';
-import { Dispatch } from 'redux';
 import { setSearchForm } from '../redux/reducers';
 
 /**
@@ -8,17 +7,16 @@ import { setSearchForm } from '../redux/reducers';
 
 /**
  * Handle search-form values.
- * @function typer
  * @param { React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> } e - Event
  * @param { SearchForm } searchForm - Search form values
- * @param { Dispatch<any> } dispatch - Dispatch
+ * @param { any } dispatch - Dispatch
  * @returns { void } Void
  * @example  typer(e, { query: "Cat"; type: "Images" }, dispatch);
  */
-export const typer = (
+export const useTyper = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   searchForm: SearchForm,
-  dispatch: Dispatch<any>
+  dispatch: any
 ): void => {
   dispatch(
     setSearchForm({
@@ -27,3 +25,5 @@ export const typer = (
     })
   );
 };
+
+export default useTyper;

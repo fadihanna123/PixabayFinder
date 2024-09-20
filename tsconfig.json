@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "../",
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
@@ -15,7 +15,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "sourceMap": false,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "checkJs": true,

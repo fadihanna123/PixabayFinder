@@ -1,67 +1,52 @@
 import React, { useEffect } from 'react';
-import { Flip, toast } from 'react-toastify';
-import { setImgList } from '../redux/reducers/imgList';
-import { setLoading } from '../redux/reducers/loading';
-import { setVideoList } from '../redux/reducers/videoList';
-import sal from 'sal.js';
-import { PacmanLoader } from 'react-spinners';
-import { setMediaLoading } from '../redux/reducers';
-import { PixabayKey } from '../utils';
-import { getImages, getVideos, log } from '../functions';
+import { toast } from 'react-toastify';
+import { PixabayBaseURL, PixabayKey } from '../utils';
 
 // Components
 import { Layout } from '../app';
+import axios from 'axios';
+import useLog from '../hooks/useLog';
+import { setImgList, setVideoList } from '../redux';
 import useReduxConsts from '../hooks/useReduxConsts';
+import useAPI from '../hooks/useAPI';
+import { sessionStorageKeys } from '../utils/consts';
+import { setLang } from '../redux/reducers/lang';
 
 const App = () => {
-  const { searchForm, loading, dispatch } = useReduxConsts();
+  const globalHeader: string = 'application/json';
+
+  axios.defaults.baseURL = PixabayBaseURL;
+  axios.defaults.headers.common['Content-Type'] = globalHeader;
+
+  const { dispatch, searchForm } = useReduxConsts();
+  const imagesEndPoint: string = `?key=${PixabayKey}&q=${searchForm.query}`;
+  const videosEndPoint: string = `videos/?key=${PixabayKey}&q=${searchForm.query}`;
+  const { data: imgData } = useAPI(imagesEndPoint, 'get', searchForm);
+  const { data: videoData } = useAPI(videosEndPoint, 'get', searchForm);
 
   if (!PixabayKey) {
     toast.error('Missing apiKey? Add it and restart the app!');
-    log('Missing apiKey? Add it and restart the app!', 'error');
+    useLog('Missing apiKey? Add it and restart the app!', 'error');
   }
 
   useEffect(() => {
-    let mounted = true;
-    sal();
+    const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
 
-    dispatch(setLoading(true));
-    dispatch(setMediaLoading(true));
+    if (lang === '') {
+      dispatch(setLang('en'));
+    }
 
-    getImages<string>(searchForm.query)
-      .then((imagesData) => {
-        if (mounted) {
-          dispatch(setImgList(imagesData));
-        }
-        dispatch(setMediaLoading(false));
-      })
-      .catch((err) => toast.error(err.message, { transition: Flip }));
+    if (lang === null || undefined) {
+      sessionStorage.setItem(sessionStorageKeys.Lang, 'en');
+    }
 
-    getVideos<string>(searchForm.query)
-      .then((videosData) => {
-        if (mounted) {
-          dispatch(setVideoList(videosData));
-          dispatch(setMediaLoading(false));
-        }
-      })
-      .catch((err) => toast.error(err.message, { transition: Flip }));
+    dispatch(setLang(lang!));
+  }, []);
 
-    dispatch(setLoading(false));
-
-    return () => {
-      mounted = false;
-    };
-  }, [searchForm]);
-
-  if (loading) {
-    return (
-      <PacmanLoader
-        cssOverride={{ margin: '0 auto' }}
-        loading={loading}
-        color='#36d7b7'
-      />
-    );
-  }
+  useEffect(() => {
+    dispatch(setImgList(imgData!));
+    dispatch(setVideoList(videoData!));
+  }, [imgData]);
 
   return <Layout />;
 };

@@ -7,13 +7,13 @@ import React from 'react';
 import GlobalStyles from './styles/globalStyles';
 import ReduxStore from './redux/ReduxStore';
 import { App } from './containers';
-import { log } from './functions';
+import useLog from './hooks/useLog';
 
 const { NODE_ENV } = process.env;
 
 if (NODE_ENV === 'development') {
   // eslint-disable-next-line quotes
-  log("It's looks like we are in a development mode!", 'log');
+  useLog("It's looks like we are in a development mode!", 'log');
 } else if (NODE_ENV === 'production') {
   console.log = () => {};
   console.warn = () => {};

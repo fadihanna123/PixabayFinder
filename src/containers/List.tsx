@@ -5,9 +5,10 @@ import PhotoItem from './PhotoItem';
 import Loader from '../ui/Loader';
 import { ImageRow, NoData, VideoItem, VideoRow } from '../styles';
 import useReduxConsts from '../hooks/useReduxConsts';
+import useTranslate from '../hooks/useTranslate';
 
 const List: React.FC = () => {
-  const { imgList, mediaLoading, searchForm, searchType, videoList } =
+  const { mediaLoading, searchForm, searchType, imgList, videoList, lang } =
     useReduxConsts();
 
   if (mediaLoading) {
@@ -22,7 +23,8 @@ const List: React.FC = () => {
         ''
       ) : (
         <>
-          <b>Results found:</b> {imgList?.hits.length}
+          <b>{useTranslate('RESULTS_FOUND_TXT', lang)}:</b>{' '}
+          {imgList?.hits.length}
         </>
       )}
       <ImageRow>
@@ -33,7 +35,7 @@ const List: React.FC = () => {
                 return <PhotoItem key={i} item={image} />;
               })
             ) : (
-              <NoData>No images found! 😔</NoData>
+              <NoData>{useTranslate('NO_PHOTOS_FOUND_TXT', lang)}! 😔</NoData>
             )
           ) : (
             ''
@@ -44,12 +46,12 @@ const List: React.FC = () => {
           (searchForm.query ? (
             videoList && videoList.totalHits ? (
               !mediaLoading ? (
-                videoList?.hits.map((video: any, i: number) => {
+                videoList?.hits.map((video: HitsOfList, i: number) => {
                   return (
                     <VideoItem
                       key={i}
                       controls
-                      src={video.videos.small.url}
+                      src={video.videos?.small.url}
                       autoPlay={true}
                       muted={true}
                     ></VideoItem>
@@ -59,7 +61,7 @@ const List: React.FC = () => {
                 <Loader className={['spinner']} />
               )
             ) : (
-              <NoData>No videos found! 😔</NoData>
+              <NoData>{useTranslate('NO_VIDEOS_FOUND_TXT', lang)}! 😔</NoData>
             )
           ) : (
             ''

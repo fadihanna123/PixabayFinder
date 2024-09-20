@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { Dispatch } from 'redux';
 import { setImage } from '../redux/reducers/image';
 import { setToggler } from '../redux/reducers/toggler';
 import sal from 'sal.js';
 import { Loader } from '../ui';
-import { ImageCol, Modal, ModalContent } from '../styles';
+import { ImageCol, Modal, ModalContent, ImgItem, ModalImg } from '../styles';
 import { setMediaLoading } from '../redux/reducers';
 import useReduxConsts from '../hooks/useReduxConsts';
 
@@ -21,10 +20,8 @@ const PhotoItem: React.FC<{
    * @param { Dispatch<any> } dispatch
    * @returns { object }
    */
-  const hideImagePreviewer = (
-    toggler: boolean,
-    dispatch: Dispatch<any>
-  ): object => dispatch(setToggler(!toggler));
+  const hideImagePreviewer = (toggler: boolean, dispatch: any): object =>
+    dispatch(setToggler(!toggler));
 
   /**
    * Hide image previewer.
@@ -33,10 +30,7 @@ const PhotoItem: React.FC<{
    * @param { Dispatch<any> } dispatch
    * @returns { void }
    */
-  const toggleImagePreviewer = (
-    item: HitsOfList,
-    dispatch: Dispatch<any>
-  ): void => {
+  const toggleImagePreviewer = (item: HitsOfList, dispatch: any): void => {
     dispatch(setToggler(true));
     dispatch(setImage(item.webformatURL));
   };
@@ -52,7 +46,7 @@ const PhotoItem: React.FC<{
   return (
     <ImageCol data-sal='zoom-in'>
       {item?.webformatURL && (
-        <img
+        <ImgItem
           aria-label={searchForm.query}
           src={item.webformatURL}
           alt={searchForm.query}
@@ -60,14 +54,12 @@ const PhotoItem: React.FC<{
           width='500'
           height='500'
           style={{
-            maxWidth: '100%',
-            height: '100%',
+            aspectRatio: '1 / 1',
             display: mediaLoading ? 'none' : 'block',
           }}
           onLoad={() => dispatch(setMediaLoading(false))}
         />
       )}
-
       {toggler && (
         <Modal
           className='modal'
@@ -76,13 +68,7 @@ const PhotoItem: React.FC<{
         >
           <ModalContent>
             {image && (
-              <img
-                width='500'
-                height='500'
-                style={{ maxWidth: '100%', height: '100%' }}
-                alt='preview'
-                src={image}
-              />
+              <ModalImg width='500' height='500' alt='preview' src={image} />
             )}
           </ModalContent>
         </Modal>

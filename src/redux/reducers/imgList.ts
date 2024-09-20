@@ -5,7 +5,11 @@ import { RootState } from '../app/store';
  * @author Fadi Hanna <fhanna181@gmail.com>
  */
 
-const initialState: IList = { hits: [], totalHits: 0, total: 0 };
+const initialState: IList = {
+  total: 0,
+  totalHits: 0,
+  hits: [],
+};
 
 export const imgListSlice = createSlice({
   name: 'imgList',
