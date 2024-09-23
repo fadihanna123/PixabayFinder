@@ -41,8 +41,6 @@ const App = () => {
     }
 
     dispatch(setLang(langFromStorage!));
-    // eslint-disable-next-line no-console
-    console.log(langFromStorage ? langFromStorage : null);
   }, []);
 
   useEffect(() => {
