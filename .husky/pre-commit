@@ -1,4 +1,5 @@
-yarn --ignore-scripts --emoji
+yarn setup
 yarn lint
 yarn format
+rimraf node_modules
 git add -A

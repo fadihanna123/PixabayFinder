@@ -34,6 +34,62 @@ const photos = {
       userImageURL:
         'https://cdn.pixabay.com/user/2020/09/01/08-42-41-938_250x250.jpg',
     },
-    // ...more photos values.
+    // ...other photos values.
+  ],
+};
+
+const videos = {
+  total: 91714,
+  totalHits: 500,
+  hits: [
+    {
+      id: 228847,
+      pageURL: 'https://pixabay.com/videos/id-228847/',
+      type: 'film',
+      tags: 'waterfall, mountain stream, flow',
+      duration: 20,
+      videos: {
+        large: {
+          url: 'https://cdn.pixabay.com/video/2024/08/30/228847_large.mp4',
+          width: 2160,
+          height: 3840,
+          size: 211672535,
+          thumbnail:
+            'https://cdn.pixabay.com/video/2024/08/30/228847_large.jpg',
+        },
+        medium: {
+          url: 'https://cdn.pixabay.com/video/2024/08/30/228847_medium.mp4',
+          width: 1440,
+          height: 2560,
+          size: 138078676,
+          thumbnail:
+            'https://cdn.pixabay.com/video/2024/08/30/228847_medium.jpg',
+        },
+        small: {
+          url: 'https://cdn.pixabay.com/video/2024/08/30/228847_small.mp4',
+          width: 1080,
+          height: 1920,
+          size: 75579502,
+          thumbnail:
+            'https://cdn.pixabay.com/video/2024/08/30/228847_small.jpg',
+        },
+        tiny: {
+          url: 'https://cdn.pixabay.com/video/2024/08/30/228847_tiny.mp4',
+          width: 720,
+          height: 1280,
+          size: 22177602,
+          thumbnail: 'https://cdn.pixabay.com/video/2024/08/30/228847_tiny.jpg',
+        },
+      },
+      views: 54288,
+      downloads: 18457,
+      likes: 283,
+      comments: 44,
+      user_id: 4749850,
+      user: 'Kanenori',
+      userImageURL:
+        'https://cdn.pixabay.com/user/2023/03/30/07-49-26-304_250x250.jpg',
+    },
+    // ...other videos values.
   ],
 };

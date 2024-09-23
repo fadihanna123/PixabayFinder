@@ -2,7 +2,7 @@ node_modules/*
 build/*
 README.md
 AUTHORS
-pnpm-lock.yaml
+yarn.lock
 .github
 .netlify
 .dockerignore
