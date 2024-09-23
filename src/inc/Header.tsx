@@ -1,11 +1,11 @@
 import React from 'react';
 import useReduxConsts from '../hooks/useReduxConsts';
 import { switchLang } from '../functions';
-import { sessionStorageKeys } from '../utils/consts';
+import { localStorageKeys } from '../utils/consts';
 import { LangSwitcher } from '../styles';
 
 const Header = () => {
-  const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
+  const lang = localStorage.getItem(localStorageKeys.Lang);
   const { dispatch } = useReduxConsts();
 
   return (

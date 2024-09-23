@@ -1,11 +1,11 @@
 import { Dispatch } from 'redux';
 import { setLang } from '../redux/reducers/lang';
-import { sessionStorageKeys } from '../utils/consts';
+import { localStorageKeys } from '../utils/consts';
 import { toast } from 'react-toastify';
 
 const switchLang = (e: { target: HTMLSelectElement }, dispatch: Dispatch) => {
   try {
-    sessionStorage.setItem(sessionStorageKeys.Lang, e.target.value);
+    localStorage.setItem(localStorageKeys.Lang, e.target.value);
 
     dispatch(setLang(e.target.value));
   } catch (err) {

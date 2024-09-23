@@ -9,7 +9,7 @@ import useLog from '../hooks/useLog';
 import { setImgList, setVideoList } from '../redux';
 import useReduxConsts from '../hooks/useReduxConsts';
 import useAPI from '../hooks/useAPI';
-import { sessionStorageKeys } from '../utils/consts';
+import { localStorageKeys } from '../utils/consts';
 import { setLang } from '../redux/reducers/lang';
 
 const App = () => {
@@ -30,17 +30,19 @@ const App = () => {
   }
 
   useEffect(() => {
-    const lang = sessionStorage.getItem(sessionStorageKeys.Lang);
+    const langFromStorage = localStorage.getItem(localStorageKeys.Lang);
 
-    if (lang === '') {
+    if (langFromStorage === '') {
       dispatch(setLang('en'));
     }
 
-    if (lang === null || undefined) {
-      sessionStorage.setItem(sessionStorageKeys.Lang, 'en');
+    if (langFromStorage === null) {
+      localStorage.setItem(localStorageKeys.Lang, 'en');
     }
 
-    dispatch(setLang(lang!));
+    dispatch(setLang(langFromStorage!));
+    // eslint-disable-next-line no-console
+    console.log(langFromStorage ? langFromStorage : null);
   }, []);
 
   useEffect(() => {

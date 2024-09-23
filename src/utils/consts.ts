@@ -1,3 +1,3 @@
-export enum sessionStorageKeys {
+export enum localStorageKeys {
   Lang = 'lang',
 }
