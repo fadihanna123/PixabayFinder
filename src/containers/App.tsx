@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import axios from 'axios';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { PixabayBaseURL, PixabayKey } from '../utils';
 
 // Components
+import { localStorageKeys } from '@utils/consts';
 import { Layout } from '../app';
-import axios from 'axios';
-import useLog from '../hooks/useLog';
-import { setImgList, setVideoList } from '../redux';
-import useReduxConsts from '../hooks/useReduxConsts';
 import useAPI from '../hooks/useAPI';
-import { localStorageKeys } from '../utils/consts';
+import useLog from '../hooks/useLog';
+import useReduxConsts from '../hooks/useReduxConsts';
+import { setImgList, setVideoList } from '../redux';
 import { setLang } from '../redux/reducers/lang';
 
 const App = () => {

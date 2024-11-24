@@ -1,7 +1,6 @@
-import React from 'react';
-import useReduxConsts from '../hooks/useReduxConsts';
+import { localStorageKeys } from '@utils/consts';
 import { switchLang } from '../functions';
-import { localStorageKeys } from '../utils/consts';
+import useReduxConsts from '../hooks/useReduxConsts';
 import { LangSwitcher } from '../styles';
 
 const Header = () => {

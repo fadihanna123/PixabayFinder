@@ -1,9 +1,9 @@
-import { List, SearchFormComp } from '../containers';
 import React from 'react';
 import { Flip, ToastContainer } from 'react-toastify';
-import { Container } from '../styles';
-import Header from '../inc/Header';
+import { List, SearchFormComp } from '../containers';
 import Footer from '../inc/Footer';
+import Header from '../inc/Header';
+import { Container } from '../styles';
 
 const Layout: React.FC = () => {
   return (
