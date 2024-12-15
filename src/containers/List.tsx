@@ -35,7 +35,7 @@ const List: React.FC = () => {
                 return <PhotoItem key={i} item={image} />;
               })
             ) : (
-              <NoData>{useTranslate('NO_PHOTOS_FOUND_TXT', lang)}! 😔</NoData>
+              <NoData>{useTranslate('NO_IMAGES_FOUND_TXT', lang)}! 😔</NoData>
             )
           ) : (
             ''

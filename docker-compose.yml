@@ -9,5 +9,8 @@ services:
     restart: unless-stopped
     volumes:
       - ./:/app
-      - /app/node_modules
+      - nodemodules:/app/node_modules
     command: yarn dev
+
+volumes:
+  nodemodules:
