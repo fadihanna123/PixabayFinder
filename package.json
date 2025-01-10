@@ -20,6 +20,20 @@
   "resolutions": {
     "@types/react": "^18.2.34"
   },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "prebuild": "rm -rf dist",
+    "preview": "vite preview",
+    "test": "jest --watchAll",
+    "lint": "eslint . && yarn type-check && stylelint **/*.css",
+    "format": "prettier -w .",
+    "eject": "vite eject",
+    "setup": "yarn --silent --ignore-scripts",
+    "clear": "rimraf node_modules dist build",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky"
+  },
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.14.0",
@@ -28,11 +42,11 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@types/eslint": "^9.6.1",
     "@types/jest": "^29.5.14",
-    "@types/react": "^19.0.1",
+    "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "@types/react-redux": "^7.1.34",
-    "@typescript-eslint/eslint-plugin": "8.18.0",
-    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
     "@vitejs/plugin-react": "^4.3.4",
     "axios": "1.7.9",
     "eslint": "9.17.0",
@@ -47,29 +61,16 @@
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
     "react-spinners": "^0.15.0",
-    "react-toastify": "^10.0.6",
+    "react-toastify": "^11.0.2",
     "redux": "^5.0.1",
     "sal.js": "^0.8.5",
-    "styled-components": "^6.1.13",
+    "styled-components": "^6.1.14",
     "stylelint": "^16.12.0",
     "stylelint-config-standard": "^36.0.1",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "5.7.2",
-    "vite": "^6.0.3"
-  },
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "prebuild": "rm -rf dist",
-    "preview": "vite preview",
-    "test": "jest --watchAll",
-    "lint": "eslint . && stylelint **/*.css",
-    "format": "prettier -w .",
-    "eject": "vite eject",
-    "setup": "yarn --silent --ignore-scripts",
-    "clear": "rimraf node_modules dist build",
-    "prepare": "husky"
+    "typescript": "5.7.3",
+    "vite": "^6.0.7"
   },
   "browserslist": {
     "production": [
@@ -94,11 +95,11 @@
     "@eslint/compat": "^1.2.4",
     "@eslint/js": "^9.17.0",
     "@testing-library/react": "^16.1.0",
-    "@types/node": "^22.10.2",
-    "eslint-plugin-react": "^7.37.2",
+    "@types/node": "^22.10.5",
+    "eslint-plugin-react": "^7.37.3",
     "react-test-renderer": "^19.0.0",
     "stylelint-config-recommended": "^14.0.1",
-    "typescript-eslint": "^8.18.0",
+    "typescript-eslint": "^8.19.1",
     "vite-plugin-environment": "^1.1.3",
     "vite-tsconfig-paths": "^5.1.4"
   }

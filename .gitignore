@@ -22,3 +22,5 @@ launch.json
 # Local Netlify folder
 .netlify
 
+# Typescript
+tsconfig.tsbuildinfo
