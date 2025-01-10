@@ -5,6 +5,7 @@ logs
 # Build
 build
 dist
+tsconfig.tsbuildinfo
 
 # Node modules
 node_modules
@@ -22,5 +23,3 @@ launch.json
 # Local Netlify folder
 .netlify
 
-# Typescript
-tsconfig.tsbuildinfo

@@ -4,6 +4,7 @@ node_modules
 # Build
 build
 dist
+tsconfig.tsbuildinfo
 
 # Git
 .git
