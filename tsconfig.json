@@ -40,6 +40,7 @@
     "jsx": "preserve",
     "incremental": true,
     "noEmit": true,
+    "outDir": "build",
     "paths": {
       "@/*": ["src/*"],
       "@app/*": ["src/app/*"],
@@ -54,7 +55,8 @@
     "index.d.ts",
     "eslint.config.mjs",
     "build/types/**/*.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "**/*.json"
   ],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]
 }

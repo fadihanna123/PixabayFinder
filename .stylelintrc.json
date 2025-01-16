@@ -1,3 +1,6 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-recommended"]
+  "extends": ["stylelint-config-standard", "stylelint-config-recommended"],
+  "rules": {
+    "declaration-property-value-no-unknown": null
+  }
 }

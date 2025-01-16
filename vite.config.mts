@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   build: {
     sourcemap: false,
+    outDir: 'build',
   },
   base: '/',
   server: {
