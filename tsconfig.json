@@ -18,9 +18,6 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "checkJs": true,
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
     "moduleDetection": "force",
     "noImplicitAny": true,
     "noImplicitOverride": true,
@@ -38,7 +35,7 @@
     "noUncheckedIndexedAccess": true,
     "removeComments": true,
     "jsx": "preserve",
-    "incremental": true,
+    "incremental": false,
     "noEmit": true,
     "outDir": "build",
     "paths": {
