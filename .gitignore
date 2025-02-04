@@ -14,9 +14,6 @@ node_modules
 .env
 .docker.env
 
-# Vscode
-launch.json
-
 # Other files
 .DS_*
 
