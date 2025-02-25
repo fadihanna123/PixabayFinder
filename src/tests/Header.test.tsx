@@ -3,14 +3,14 @@ import { render } from '@testing-library/react';
 import { expect, it } from 'vitest';
 
 // Components
+import Header from '@inc/Header';
 import ReduxStore from '@core/redux/ReduxStore';
-import App from '@core/containers/App';
 
-it('Render App', () => {
+it('Render Header', () => {
   const { getByText } = render(
     <ReduxStore>
-      <App />
+      <Header />
     </ReduxStore>
   );
-  expect(getByText(/PixaBay Finder/)).toBeInTheDocument();
+  expect(getByText(/EN/)).toBeInTheDocument();
 });

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Flip, ToastContainer } from 'react-toastify';
-import { List, SearchFormComp } from '../containers';
 import Footer from '../inc/Footer';
 import Header from '../inc/Header';
-import { Container } from '../styles';
+import { Container } from '@styles/layoutStyles';
+import SearchFormComp from '@core/containers/SearchFormComp';
+import List from '@core/containers/List';
 
 const Layout: React.FC = () => {
   return (

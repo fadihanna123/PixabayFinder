@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainFooter } from '../ui';
+import MainFooter from '@ui/MainFooter';
 import useTranslate from '../hooks/useTranslate';
 import useReduxConsts from '../hooks/useReduxConsts';
 

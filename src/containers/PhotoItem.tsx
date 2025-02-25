@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
-import { setImage } from '../redux/reducers/image';
-import { setToggler } from '../redux/reducers/toggler';
 import sal from 'sal.js';
-import { Loader } from '../ui';
-import { ImageCol, Modal, ModalContent, ImgItem, ModalImg } from '../styles';
-import { setMediaLoading } from '../redux/reducers';
-import useReduxConsts from '../hooks/useReduxConsts';
+
+// Components
+import Loader from '@ui/Loader';
+import { setMediaLoading } from '@redux/reducers/mediaLoading';
+import useReduxConsts from '@hooks/useReduxConsts';
+import { setImage } from '@redux/reducers/image';
+import { setToggler } from '@redux/reducers/toggler';
+import { ImageCol, Modal, ModalContent } from '@core/styles/photoItemStyles';
+import { ImgItem, ModalImg } from '@core/styles/listStyles';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;

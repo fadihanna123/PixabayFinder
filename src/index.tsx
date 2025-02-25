@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 import React from 'react';
 import GlobalStyles from './styles/globalStyles';
 import ReduxStore from './redux/ReduxStore';
-import { App } from './containers';
+import App from '@containers/App';
 import useLog from './hooks/useLog';
 
 const { NODE_ENV } = process.env;

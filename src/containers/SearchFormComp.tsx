@@ -1,7 +1,7 @@
 import { setSearchForm } from '../redux/reducers/searchForm';
 import { setSearchType } from '../redux/reducers/searchType';
 import React from 'react';
-import { Col, Input, InputRow } from '../styles';
+import { Col, Input, InputRow } from '@styles/globalStyles';
 import useReduxConsts from '../hooks/useReduxConsts';
 import { useTyper } from '../hooks';
 import useTranslate from '../hooks/useTranslate';

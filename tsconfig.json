@@ -39,11 +39,17 @@
     "noEmit": true,
     "outDir": "build",
     "paths": {
-      "@/*": ["src/*"],
-      "@app/*": ["src/app/*"],
-      "@styles/*": ["src/styles/*"],
-      "@tests/*": ["src/tests/*"],
-      "@utils/*": ["src/utils/*"]
+      "@core/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@inc/*": ["./src/inc/*"],
+      "@functions/*": ["./src/functions/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@tests/*": ["./src/tests/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@ui/*": ["./src/ui/*"]
     }
   },
   "include": [

@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
-import { PixabayBaseURL, PixabayKey } from '../utils';
+import { PixabayBaseURL, PixabayKey } from '@utils/envsVariables';
 
 // Components
 import { localStorageKeys } from '@utils/consts';
-import { Layout } from '../app';
+import Layout from '@app/Layout';
 import useAPI from '../hooks/useAPI';
 import useLog from '../hooks/useLog';
 import useReduxConsts from '../hooks/useReduxConsts';

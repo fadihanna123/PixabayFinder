@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import PhotoItem from './PhotoItem';
 import Loader from '../ui/Loader';
-import { ImageRow, NoData, VideoItem, VideoRow } from '../styles';
+import { ImageRow, NoData, VideoItem, VideoRow } from '@styles/listStyles';
 import useReduxConsts from '../hooks/useReduxConsts';
 import useTranslate from '../hooks/useTranslate';
 
