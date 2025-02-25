@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import './styles';
+import '@styles/index';
 import 'sal.js/dist/sal.css';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactDOM from 'react-dom/client';
 import React from 'react';
-import GlobalStyles from './styles/globalStyles';
-import ReduxStore from './redux/ReduxStore';
+import GlobalStyles from '@styles/globalStyles';
+import ReduxStore from '@redux/ReduxStore';
 import App from '@containers/App';
-import useLog from './hooks/useLog';
+import useLog from '@hooks/useLog';
 
 const { NODE_ENV } = process.env;
 
