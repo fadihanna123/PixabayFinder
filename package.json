@@ -1,6 +1,6 @@
 {
   "name": "pixabayfinder",
-  "version": "0.1.63",
+  "version": "0.1.64",
   "types": "src/types/global.d.ts",
   "private": "true",
   "license": "MIT",
@@ -23,17 +23,17 @@
   "scripts": {
     "setup": "yarn --silent --ignore-scripts",
     "dev": "vite",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf ./dist",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "lint": "eslint . && yarn type-check && stylelint **/*.css && htmlhint **/*.html",
-    "format": "prettier -w .",
+    "lint": "eslint ./ && yarn type-check && stylelint **/*.css && htmlhint **/*.html",
+    "format": "prettier -w ./",
     "eject": "vite eject",
     "type-check": "tsc --noEmit",
     "prepare": "husky",
     "ci": "yarn lint && yarn build && yarn test",
-    "clear": "rimraf node_modules dist build"
+    "clear": "rimraf ./node_modules ./dist ./build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.6.0",
@@ -44,7 +44,7 @@
     "@typescript-eslint/eslint-plugin": "8.25.0",
     "@typescript-eslint/parser": "8.25.0",
     "@vitejs/plugin-react": "4.3.4",
-    "axios": "1.7.9",
+    "axios": "1.8.1",
     "eslint": "9.21.0",
     "eslint-plugin-html": "8.1.2",
     "husky": "9.1.7",
@@ -57,7 +57,7 @@
     "redux": "5.0.1",
     "sal.js": "0.8.5",
     "styled-components": "6.1.15",
-    "stylelint": "16.14.1",
+    "stylelint": "16.15.0",
     "typescript": "5.7.3",
     "vite": "6.2.0"
   },
@@ -85,8 +85,8 @@
     "@eslint/js": "9.21.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "16.2.0",
-    "@types/node": "22.13.5",
-    "eslint-config-prettier": "10.0.1",
+    "@types/node": "22.13.8",
+    "eslint-config-prettier": "10.0.2",
     "eslint-plugin-react": "7.37.4",
     "htmlhint": "1.1.4",
     "jsdom": "^26.0.0",
