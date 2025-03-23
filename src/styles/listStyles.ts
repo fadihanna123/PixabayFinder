@@ -7,7 +7,9 @@ export const ImgItem = styled.img`
 
 export const ModalImg = styled.img`
   max-width: 100%;
-  height: 100%;
+  height: 50%;
+  display: block;
+  margin: auto;
 `;
 
 export const NoData = styled.div`

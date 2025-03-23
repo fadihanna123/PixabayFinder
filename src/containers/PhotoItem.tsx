@@ -7,7 +7,13 @@ import { setMediaLoading } from '@redux/reducers/mediaLoading';
 import useReduxConsts from '@hooks/useReduxConsts';
 import { setImage } from '@redux/reducers/image';
 import { setToggler } from '@redux/reducers/toggler';
-import { ImageCol, Modal, ModalContent } from '@core/styles/photoItemStyles';
+import {
+  ImageCol,
+  Modal,
+  ModalContent,
+  CloseLink,
+  CloseLinkContainer,
+} from '@core/styles/photoItemStyles';
 import { ImgItem, ModalImg } from '@core/styles/listStyles';
 
 const PhotoItem: React.FC<{
@@ -47,7 +53,7 @@ const PhotoItem: React.FC<{
   }
 
   return (
-    <ImageCol data-sal='zoom-in'>
+    <ImageCol>
       {item?.webformatURL && (
         <ImgItem
           aria-label={searchForm.query}
@@ -64,14 +70,20 @@ const PhotoItem: React.FC<{
         />
       )}
       {toggler && (
-        <Modal
-          className='modal'
-          color='white'
-          onClick={() => hideImagePreviewer(toggler, dispatch)}
-        >
+        <Modal className='modal' color='white'>
           <ModalContent>
             {image && (
-              <ModalImg width='500' height='500' alt='preview' src={image} />
+              <>
+                <CloseLinkContainer>
+                  <CloseLink
+                    href='#'
+                    onClick={() => hideImagePreviewer(toggler, dispatch)}
+                  >
+                    X
+                  </CloseLink>
+                </CloseLinkContainer>
+                <ModalImg width='500' height='500' alt='preview' src={image} />
+              </>
             )}
           </ModalContent>
         </Modal>

@@ -32,3 +32,15 @@ export const ModalContent = styled.div`
   height: 100%;
   max-width: 1300px;
 `;
+
+export const CloseLink = styled.a`
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+`;
+
+export const CloseLinkContainer = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+`;

@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+export const MainHeader = styled.header``;
+
 export const LangSwitcher = styled.select`
   float: right;
   border: 0;
   margin: 0;
   font-size: 1rem;
+
   /* Custom dropdown styling */
   padding: 0.5rem 1rem;
   box-shadow:
