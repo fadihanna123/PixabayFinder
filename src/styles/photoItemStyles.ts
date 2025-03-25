@@ -37,6 +37,10 @@ export const CloseLink = styled.a`
   font-size: 30px;
   color: #fff;
   text-decoration: none;
+
+  &:hover {
+    color: #ff0000;
+  }
 `;
 
 export const CloseLinkContainer = styled.div`

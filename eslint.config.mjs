@@ -41,7 +41,6 @@ export default [
     },
 
     rules: {
-      'linebreak-style': ['error', 'windows'],
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
       'no-console': 'error',
