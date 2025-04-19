@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import EN from '../translations/en.json';
 
 declare global {
   /**
@@ -132,6 +133,8 @@ declare global {
     query: string;
     type: string;
   }
+
+  type TRANSLATIONS = typeof EN;
 
   type logType = 'warn' | 'error' | 'log';
 

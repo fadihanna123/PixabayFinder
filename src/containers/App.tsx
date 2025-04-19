@@ -32,11 +32,8 @@ const App = () => {
   useEffect(() => {
     const langFromStorage = localStorage.getItem(localStorageKeys.Lang);
 
-    if (langFromStorage === '') {
+    if (!langFromStorage) {
       dispatch(setLang('en'));
-    }
-
-    if (langFromStorage === null) {
       localStorage.setItem(localStorageKeys.Lang, 'en');
     }
 

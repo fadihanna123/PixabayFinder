@@ -60,10 +60,8 @@ const PhotoItem: React.FC<{
           src={item.webformatURL}
           alt={searchForm.query}
           onClick={() => toggleImagePreviewer(item, dispatch)}
-          width='500'
-          height='500'
           style={{
-            aspectRatio: '1 / 1',
+            width: '100%',
             display: mediaLoading ? 'none' : 'block',
           }}
           onLoad={() => dispatch(setMediaLoading(false))}

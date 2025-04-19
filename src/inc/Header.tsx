@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <MainHeader>
       <LangSwitcher
-        defaultValue={lang === 'en' ? 'en' : 'sv'}
+        defaultValue={lang || 'en'}
         onChange={(e) => switchLang(e, dispatch)}
         name='langList'
       >

@@ -13,7 +13,7 @@ import SV from '../translations/sv.json';
  * @returns { any } Any
  * @example useTranslate("Start", "en");
  */
-const useTranslate = (val: string, lang: string): any => {
+const useTranslate = (val: keyof TRANSLATIONS, lang: string): any => {
   let data: Record<string, string> = {};
 
   data = lang === 'en' ? EN : lang === 'sv' ? SV : {};

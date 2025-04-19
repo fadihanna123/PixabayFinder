@@ -1,7 +1,7 @@
 .modal {
   height: 100%;
   color: #fff;
-  background: rgba(0 0 0 10%) !important;
+  background: rgb(0 0 0 10%) !important;
 }
 
 @keyframes inlightbox {

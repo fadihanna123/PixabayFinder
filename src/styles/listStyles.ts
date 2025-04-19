@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ImgItem = styled.img`
-  max-width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
 `;
 
 export const ModalImg = styled.img`
@@ -24,17 +24,10 @@ export const NoData = styled.div`
 `;
 
 export const ImageRow = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   transition: 0.3s;
-
-  @media (max-width: 1900px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (max-width: 560px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 export const VideoItem = styled.video`

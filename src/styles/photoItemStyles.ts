@@ -4,7 +4,17 @@ export const ImageCol = styled.section`
   padding: 0;
   overflow: hidden;
   margin: 10px;
-  border-radius: 20%;
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+
+  @media (max-width: 900px) {
+    margin: 5px;
+  }
 `;
 
 export const Modal = styled.div`

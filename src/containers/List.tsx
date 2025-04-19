@@ -52,7 +52,7 @@ const List: React.FC = () => {
                       key={i}
                       controls
                       src={video.videos?.small.url}
-                      autoPlay={true}
+                      autoPlay={false}
                       muted={true}
                     ></VideoItem>
                   );
