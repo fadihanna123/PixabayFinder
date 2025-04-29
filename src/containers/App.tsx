@@ -33,8 +33,9 @@ const App = () => {
     const langFromStorage = localStorage.getItem(localStorageKeys.Lang);
 
     if (!langFromStorage) {
-      dispatch(setLang('en'));
+      localStorage.removeItem(localStorageKeys.Lang);
       localStorage.setItem(localStorageKeys.Lang, 'en');
+      dispatch(setLang('en'));
     }
 
     dispatch(setLang(langFromStorage!));
