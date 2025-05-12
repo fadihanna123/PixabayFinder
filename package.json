@@ -87,7 +87,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "16.3.0",
     "@types/node": "22.15.17",
-    "eslint-config-prettier": "10.1.2",
+    "eslint-config-prettier": "10.1.5",
     "eslint-plugin-react": "7.37.5",
     "globals": "16.1.0",
     "htmlhint": "1.1.4",
