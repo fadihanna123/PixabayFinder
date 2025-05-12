@@ -587,7 +587,7 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.0.tgz#c8e119a30a7c8d60b9d2e22d2073722dde3b710b"
   integrity sha512-ZENoHJBxA20C2zFzh6AI4fT6RraMzjYw4xKWemRTRmRVtN9c5DcH9r/f2ihEkMjOW5eGgrwCslG/+Y/3bL+DHQ==
 
-"@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
+"@eslint-community/eslint-utils@^4.2.0":
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.1.tgz#d1145bf2c20132d6400495d6df4bf59362fd9d56"
   integrity sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA==
@@ -1349,21 +1349,6 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@8.31.1":
-  version "8.31.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.31.1.tgz#62f1befe59647524994e89de4516d8dcba7a850a"
-  integrity sha512-oUlH4h1ABavI4F0Xnl8/fOtML/eu8nI2A1nYd+f+55XI0BLu+RIqKoCiZKNo6DtqZBEQm5aNKA20G3Z5w3R6GQ==
-  dependencies:
-    "@eslint-community/regexpp" "^4.10.0"
-    "@typescript-eslint/scope-manager" "8.31.1"
-    "@typescript-eslint/type-utils" "8.31.1"
-    "@typescript-eslint/utils" "8.31.1"
-    "@typescript-eslint/visitor-keys" "8.31.1"
-    graphemer "^1.4.0"
-    ignore "^5.3.1"
-    natural-compare "^1.4.0"
-    ts-api-utils "^2.0.1"
-
 "@typescript-eslint/eslint-plugin@8.32.0":
   version "8.32.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.32.0.tgz#86630dd3084f9d6c4239bbcd6a7ee1a7ee844f7f"
@@ -1417,16 +1402,6 @@
     "@typescript-eslint/types" "8.32.0"
     "@typescript-eslint/visitor-keys" "8.32.0"
 
-"@typescript-eslint/type-utils@8.31.1":
-  version "8.31.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/type-utils/-/type-utils-8.31.1.tgz#be0f438fb24b03568e282a0aed85f776409f970c"
-  integrity sha512-fNaT/m9n0+dpSp8G/iOQ05GoHYXbxw81x+yvr7TArTuZuCA6VVKbqWYVZrV5dVagpDTtj/O8k5HBEE/p/HM5LA==
-  dependencies:
-    "@typescript-eslint/typescript-estree" "8.31.1"
-    "@typescript-eslint/utils" "8.31.1"
-    debug "^4.3.4"
-    ts-api-utils "^2.0.1"
-
 "@typescript-eslint/type-utils@8.32.0":
   version "8.32.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/type-utils/-/type-utils-8.32.0.tgz#5e0882393e801963f749bea38888e716045fe895"
@@ -1474,16 +1449,6 @@
     minimatch "^9.0.4"
     semver "^7.6.0"
     ts-api-utils "^2.1.0"
-
-"@typescript-eslint/utils@8.31.1":
-  version "8.31.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-8.31.1.tgz#5628ea0393598a0b2f143d0fc6d019f0dee9dd14"
-  integrity sha512-2DSI4SNfF5T4oRveQ4nUrSjUqjMND0nLq9rEkz0gfGr3tg0S5KB6DhwR+WZPCjzkZl3cH+4x2ce3EsL50FubjQ==
-  dependencies:
-    "@eslint-community/eslint-utils" "^4.4.0"
-    "@typescript-eslint/scope-manager" "8.31.1"
-    "@typescript-eslint/types" "8.31.1"
-    "@typescript-eslint/typescript-estree" "8.31.1"
 
 "@typescript-eslint/utils@8.32.0":
   version "8.32.0"
@@ -2837,10 +2802,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-prettier@10.1.2:
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.1.2.tgz#31a4b393c40c4180202c27e829af43323bf85276"
-  integrity sha512-Epgp/EofAUeEpIdZkW60MHKvPyru1ruQJxPL+WIycnaPApuseK0Zpkrh/FwL9oIpQvIhJwV7ptOy0DWUjTlCiA==
+eslint-config-prettier@10.1.5:
+  version "10.1.5"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.1.5.tgz#00c18d7225043b6fbce6a665697377998d453782"
+  integrity sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==
 
 eslint-plugin-html@8.1.2:
   version "8.1.2"
@@ -6111,11 +6076,6 @@ tr46@~0.0.3:
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
 
 ts-api-utils@^2.0.1, ts-api-utils@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.1.0.tgz#595f7094e46eed364c13fd23e75f9513d29baf91"
-  integrity sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==
-
-ts-api-utils@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.1.0.tgz#595f7094e46eed364c13fd23e75f9513d29baf91"
   integrity sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==
