@@ -57,7 +57,7 @@
     "react-toastify": "11.0.5",
     "redux": "5.0.1",
     "sal.js": "0.8.5",
-    "styled-components": "6.1.17",
+    "styled-components": "6.1.18",
     "stylelint": "16.19.1",
     "typescript": "5.8.3",
     "vite": "6.3.5"
