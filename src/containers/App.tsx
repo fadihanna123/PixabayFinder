@@ -47,12 +47,12 @@ const App = () => {
   }
 
   useEffect(() => {
-    const langFromStorage = localStorage.getItem(localStorageKeys.Lang);
+    let langFromStorage = localStorage.getItem(localStorageKeys.Lang);
 
     if (!langFromStorage) {
       localStorage.removeItem(localStorageKeys.Lang);
       localStorage.setItem(localStorageKeys.Lang, 'en');
-      setLang('en');
+      langFromStorage = 'en';
     }
 
     setLang(langFromStorage!);
