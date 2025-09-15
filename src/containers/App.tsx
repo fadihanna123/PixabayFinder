@@ -50,7 +50,6 @@ const App = () => {
     let langFromStorage = localStorage.getItem(localStorageKeys.Lang);
 
     if (!langFromStorage) {
-      localStorage.removeItem(localStorageKeys.Lang);
       localStorage.setItem(localStorageKeys.Lang, 'en');
       langFromStorage = 'en';
     }
