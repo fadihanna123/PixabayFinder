@@ -22,7 +22,7 @@ const Layout: React.FC = () => {
         className='toggleThemeBtn'
         onClick={() => toggleTheme(darkMode, setDarkMode)}
       >
-        {darkMode ? (
+        {!darkMode ? (
           <i className='fa-solid fa-moon moonIcon'></i>
         ) : (
           <i className='fa-solid fa-sun sunIcon'></i>
