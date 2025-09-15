@@ -148,6 +148,26 @@ declare global {
     | 'patch'
     | 'delete'
     | 'get';
+
+  type GlobalContent = {
+    darkMode: boolean;
+    image: string;
+    imgList: IList;
+    videoList: IList;
+    lang: string;
+    searchForm: { query: string; type: string };
+    searchType: searchFormType;
+    toggler: boolean;
+    mediaLoading: boolean;
+    setToggler: (toggler: boolean) => void;
+    setSearchType: (searchType: searchFormType) => void;
+    setSearchForm: (searchForm: SearchForm) => void;
+    setMediaLoading: (mediaLoading: boolean) => void;
+    setLang: (lang: string) => void;
+    setImage: (image: string) => void;
+    setImgList: (imgList: IList) => void;
+    setDarkMode: (darkMode: boolean) => void;
+  };
 }
 
 export {};

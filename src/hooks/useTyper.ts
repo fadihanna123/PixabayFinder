@@ -1,5 +1,4 @@
 import React from 'react';
-import { setSearchForm } from '../redux/reducers';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -16,14 +15,12 @@ import { setSearchForm } from '../redux/reducers';
 export const useTyper = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   searchForm: SearchForm,
-  dispatch: any
+  setSearchForm: (searchForm: SearchForm) => void
 ): void => {
-  dispatch(
-    setSearchForm({
-      ...searchForm,
-      [e.target.name]: e.target.value,
-    })
-  );
+  setSearchForm({
+    ...searchForm,
+    [e.target.name]: e.target.value,
+  });
 };
 
 export default useTyper;

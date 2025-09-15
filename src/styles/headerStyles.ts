@@ -5,7 +5,7 @@ export const MainHeader = styled.header``;
 export const LangSwitcher = styled.select`
   float: right;
   border: 0;
-  margin: 0;
+  margin: 10px;
   font-size: 1rem;
 
   /* Custom dropdown styling */

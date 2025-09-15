@@ -1,16 +1,24 @@
 import { localStorageKeys } from '@utils/consts';
 import { toast } from 'react-toastify';
-import { Dispatch } from 'redux';
-import { setLang } from '../redux/reducers/lang';
 
-const switchLang = (e: { target: HTMLSelectElement }, dispatch: Dispatch) => {
+const toggleTheme = (
+  darkMode: boolean,
+  setDarkMode: (darkMode: boolean) => void
+) => {
+  setDarkMode(!darkMode);
+};
+
+const switchLang = (
+  e: { target: HTMLSelectElement },
+  setLang: (lang: string) => void
+) => {
   try {
     localStorage.setItem(localStorageKeys.Lang, e.target.value);
 
-    dispatch(setLang(e.target.value));
+    setLang(e.target.value);
   } catch (err) {
     toast.error((err as Error).message);
   }
 };
 
-export { switchLang };
+export { switchLang, toggleTheme };

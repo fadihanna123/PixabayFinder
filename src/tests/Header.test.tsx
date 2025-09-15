@@ -4,13 +4,8 @@ import { expect, it } from 'vitest';
 
 // Components
 import Header from '@inc/Header';
-import ReduxStore from '@core/redux/ReduxStore';
 
 it('Render Header', () => {
-  const { getByText } = render(
-    <ReduxStore>
-      <Header />
-    </ReduxStore>
-  );
+  const { getByText } = render(<Header />);
   expect(getByText(/EN/)).toBeInTheDocument();
 });

@@ -4,13 +4,8 @@ import { expect, it } from 'vitest';
 
 // Components
 import Layout from '@core/app/Layout';
-import ReduxStore from '@core/redux/ReduxStore';
 
 it('Render Layout', () => {
-  const { getByText } = render(
-    <ReduxStore>
-      <Layout />
-    </ReduxStore>
-  );
+  const { getByText } = render(<Layout />);
   expect(getByText(/PixaBay Finder/)).toBeInTheDocument();
 });

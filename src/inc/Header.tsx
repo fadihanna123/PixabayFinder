@@ -1,17 +1,17 @@
 import { localStorageKeys } from '@utils/consts';
 import { switchLang } from '@functions/helper';
-import useReduxConsts from '@hooks/useReduxConsts';
 import { MainHeader, LangSwitcher } from '@styles/headerStyles';
+import { useGlobalContext } from '@core/states';
 
 const Header = () => {
   const lang = localStorage.getItem(localStorageKeys.Lang);
-  const { dispatch } = useReduxConsts();
+  const { setLang } = useGlobalContext();
 
   return (
     <MainHeader>
       <LangSwitcher
         defaultValue={lang || 'en'}
-        onChange={(e) => switchLang(e, dispatch)}
+        onChange={(e) => switchLang(e, setLang)}
         name='langList'
       >
         <option value='en'>EN</option>

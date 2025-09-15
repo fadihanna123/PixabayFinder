@@ -4,6 +4,37 @@
   background: rgb(0 0 0 10%) !important;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.toggleThemeBtn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  padding: 10px;
+  z-index: 50;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.moonIcon {
+  color: #000;
+}
+
+.sunIcon {
+  color: #000;
+  background-color: #fff;
+}
+
 @keyframes inlightbox {
   0% {
     transform: scale(0);

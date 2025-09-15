@@ -3,10 +3,6 @@ import sal from 'sal.js';
 
 // Components
 import Loader from '@ui/Loader';
-import { setMediaLoading } from '@redux/reducers/mediaLoading';
-import useReduxConsts from '@hooks/useReduxConsts';
-import { setImage } from '@redux/reducers/image';
-import { setToggler } from '@redux/reducers/toggler';
 import {
   ImageCol,
   Modal,
@@ -15,33 +11,38 @@ import {
   CloseLinkContainer,
 } from '@core/styles/photoItemStyles';
 import { ImgItem, ModalImg } from '@core/styles/listStyles';
+import { useGlobalContext } from '@core/states';
 
 const PhotoItem: React.FC<{
   item: HitsOfList;
 }> = ({ item }: { item: HitsOfList }) => {
-  const { image, mediaLoading, searchForm, toggler, dispatch } =
-    useReduxConsts();
+  const {
+    image,
+    mediaLoading,
+    searchForm,
+    toggler,
+    setToggler,
+    setImage,
+    setMediaLoading,
+  } = useGlobalContext();
 
   /**
    * Hide image previewer.
    * @function hideImagePreviewer
    * @param { boolean } toggler
-   * @param { Dispatch<any> } dispatch
-   * @returns { object }
+   * @returns { void }
    */
-  const hideImagePreviewer = (toggler: boolean, dispatch: any): object =>
-    dispatch(setToggler(!toggler));
+  const hideImagePreviewer = (toggler: boolean): void => setToggler(!toggler);
 
   /**
    * Hide image previewer.
    * @function toggleImagePreviewer
    * @param { HitsOfList } item
-   * @param { Dispatch<any> } dispatch
    * @returns { void }
    */
-  const toggleImagePreviewer = (item: HitsOfList, dispatch: any): void => {
-    dispatch(setToggler(true));
-    dispatch(setImage(item.webformatURL));
+  const toggleImagePreviewer = (item: HitsOfList): void => {
+    setToggler(true);
+    setImage(item.webformatURL);
   };
 
   useEffect(() => {
@@ -59,12 +60,12 @@ const PhotoItem: React.FC<{
           aria-label={searchForm.query}
           src={item.webformatURL}
           alt={searchForm.query}
-          onClick={() => toggleImagePreviewer(item, dispatch)}
+          onClick={() => toggleImagePreviewer(item)}
           style={{
             width: '100%',
             display: mediaLoading ? 'none' : 'block',
           }}
-          onLoad={() => dispatch(setMediaLoading(false))}
+          onLoad={() => setMediaLoading(false)}
         />
       )}
       {toggler && (
@@ -75,7 +76,7 @@ const PhotoItem: React.FC<{
                 <CloseLinkContainer>
                   <CloseLink
                     href='#'
-                    onClick={() => hideImagePreviewer(toggler, dispatch)}
+                    onClick={() => hideImagePreviewer(toggler)}
                   >
                     X
                   </CloseLink>

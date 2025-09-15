@@ -1,13 +1,11 @@
-import { setSearchForm } from '../redux/reducers/searchForm';
-import { setSearchType } from '../redux/reducers/searchType';
 import React from 'react';
 import { Col, Input, InputRow } from '@styles/globalStyles';
-import useReduxConsts from '../hooks/useReduxConsts';
 import { useTyper } from '../hooks';
 import useTranslate from '../hooks/useTranslate';
+import { useGlobalContext } from '@core/states';
 
 const SearchFormComp: React.FC = () => {
-  const { dispatch, searchForm, lang } = useReduxConsts();
+  const { searchForm, lang, setSearchType, setSearchForm } = useGlobalContext();
 
   return (
     <InputRow>
@@ -17,7 +15,7 @@ const SearchFormComp: React.FC = () => {
           placeholder={`${useTranslate('INPUT_PLACEHOLDER_TXT', lang)}...`}
           value={searchForm.query}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            useTyper(e, searchForm, dispatch)
+            useTyper(e, searchForm, setSearchForm)
           }
         />
       </Col>
@@ -29,8 +27,8 @@ const SearchFormComp: React.FC = () => {
           value={searchForm.type}
           checked={searchForm.type === 'Images'}
           onChange={() => {
-            dispatch(setSearchType('Images'));
-            dispatch(setSearchForm({ ...searchForm, type: 'Images' }));
+            setSearchType('Images');
+            setSearchForm({ ...searchForm, type: 'Images' });
           }}
         />
         {useTranslate('IMAGES', lang)}
@@ -41,8 +39,8 @@ const SearchFormComp: React.FC = () => {
           value={searchForm.type}
           checked={searchForm.type === 'Videos'}
           onChange={() => {
-            dispatch(setSearchType('Videos'));
-            dispatch(setSearchForm({ ...searchForm, type: 'Videos' }));
+            setSearchType('Videos');
+            setSearchForm({ ...searchForm, type: 'Videos' });
           }}
         />
         {useTranslate('VIDEOS', lang)}

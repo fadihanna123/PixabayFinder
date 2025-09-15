@@ -1,10 +1,10 @@
 import React from 'react';
 import MainFooter from '@ui/MainFooter';
 import useTranslate from '../hooks/useTranslate';
-import useReduxConsts from '../hooks/useReduxConsts';
+import { useGlobalContext } from '@core/states';
 
 const Footer = () => {
-  const { lang } = useReduxConsts();
+  const { lang } = useGlobalContext();
 
   return (
     <MainFooter dataSal='fade'>

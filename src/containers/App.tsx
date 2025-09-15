@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { PixabayBaseURL, PixabayKey } from '@utils/envsVariables';
 
@@ -8,9 +8,7 @@ import { localStorageKeys } from '@utils/consts';
 import Layout from '@app/Layout';
 import useAPI from '../hooks/useAPI';
 import useLog from '../hooks/useLog';
-import useReduxConsts from '../hooks/useReduxConsts';
-import { setImgList, setVideoList } from '../redux';
-import { setLang } from '../redux/reducers/lang';
+import { MyGlobalContext } from '@core/states';
 
 const App = () => {
   const globalHeader: string = 'application/json';
@@ -18,9 +16,28 @@ const App = () => {
   axios.defaults.baseURL = PixabayBaseURL;
   axios.defaults.headers.common['Content-Type'] = globalHeader;
 
-  const { dispatch, searchForm } = useReduxConsts();
-  const imagesEndPoint: string = `?key=${PixabayKey}&q=${searchForm.query}`;
-  const videosEndPoint: string = `videos/?key=${PixabayKey}&q=${searchForm.query}`;
+  const [searchType, setSearchType] = useState<searchFormType>('Images');
+  const [toggler, setToggler] = useState<boolean>(false);
+  const [mediaLoading, setMediaLoading] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [image, setImage] = useState<string>('');
+  const [lang, setLang] = useState<string>('');
+  const [searchForm, setSearchForm] = useState<SearchForm>({
+    query: 'car',
+    type: 'Images',
+  });
+  const [imgList, setImgList] = useState<IList>({
+    total: 0,
+    totalHits: 0,
+    hits: [],
+  });
+  const [videoList, setVideoList] = useState<IList>({
+    total: 0,
+    totalHits: 0,
+    hits: [],
+  });
+  const imagesEndPoint: string = `?key=${PixabayKey}&q=${searchForm!.query}`;
+  const videosEndPoint: string = `videos/?key=${PixabayKey}&q=${searchForm!.query}`;
   const { data: imgData } = useAPI(imagesEndPoint, 'get', searchForm);
   const { data: videoData } = useAPI(videosEndPoint, 'get', searchForm);
 
@@ -35,18 +52,42 @@ const App = () => {
     if (!langFromStorage) {
       localStorage.removeItem(localStorageKeys.Lang);
       localStorage.setItem(localStorageKeys.Lang, 'en');
-      dispatch(setLang('en'));
+      setLang('en');
     }
 
-    dispatch(setLang(langFromStorage!));
+    setLang(langFromStorage!);
   }, []);
 
   useEffect(() => {
-    dispatch(setImgList(imgData!));
-    dispatch(setVideoList(videoData!));
+    setImgList(imgData!);
+    setVideoList(videoData!);
   }, [imgData]);
 
-  return <Layout />;
+  return (
+    <MyGlobalContext.Provider
+      value={{
+        darkMode,
+        image,
+        imgList,
+        videoList,
+        lang,
+        searchForm,
+        searchType,
+        toggler,
+        mediaLoading,
+        setToggler,
+        setSearchType,
+        setSearchForm,
+        setMediaLoading,
+        setLang,
+        setImage,
+        setImgList,
+        setDarkMode,
+      }}
+    >
+      <Layout />
+    </MyGlobalContext.Provider>
+  );
 };
 
 export default App;

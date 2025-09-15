@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 import GlobalStyles from '@styles/globalStyles';
-import ReduxStore from '@redux/ReduxStore';
 import App from '@containers/App';
 import useLog from '@hooks/useLog';
 
@@ -24,8 +23,6 @@ const root = ReactDOM.createRoot(rootEl);
 root.render(
   <React.StrictMode>
     <GlobalStyles />
-    <ReduxStore>
-      <App />
-    </ReduxStore>
+    <App />
   </React.StrictMode>
 );

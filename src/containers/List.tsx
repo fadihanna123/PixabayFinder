@@ -4,12 +4,12 @@ import React from 'react';
 import PhotoItem from './PhotoItem';
 import Loader from '../ui/Loader';
 import { ImageRow, NoData, VideoItem, VideoRow } from '@styles/listStyles';
-import useReduxConsts from '../hooks/useReduxConsts';
 import useTranslate from '../hooks/useTranslate';
+import { useGlobalContext } from '@core/states';
 
 const List: React.FC = () => {
   const { mediaLoading, searchForm, searchType, imgList, videoList, lang } =
-    useReduxConsts();
+    useGlobalContext();
 
   if (mediaLoading) {
     return <Loader className={['spinner']} />;
