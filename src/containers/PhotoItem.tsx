@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import sal from 'sal.js';
+import ReactGA from 'react-ga4';
 
 // Components
 import Loader from '@ui/Loader';
@@ -41,6 +42,11 @@ const PhotoItem: React.FC<{
    * @returns { void }
    */
   const toggleImagePreviewer = (item: HitsOfList): void => {
+    ReactGA.event({
+      category: 'User Interaction',
+      action: 'Clicked Button',
+      label: 'Toggle image preview',
+    });
     setToggler(true);
     setImage(item.webformatURL);
   };

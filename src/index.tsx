@@ -7,6 +7,13 @@ import React from 'react';
 import GlobalStyles from '@styles/globalStyles';
 import App from '@containers/App';
 import useLog from '@hooks/useLog';
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize('G-19RMZWXZK8', {
+  gaOptions: {
+    anonymizeIp: true,
+  },
+});
 
 const { NODE_ENV } = process.env;
 

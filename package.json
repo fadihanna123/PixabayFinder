@@ -54,6 +54,7 @@
     "prettier": "3.6.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",
+    "react-ga4": "^2.1.0",
     "react-redux": "9.2.0",
     "react-toastify": "11.0.5",
     "redux": "5.0.1",
