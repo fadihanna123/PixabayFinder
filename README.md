@@ -2,8 +2,6 @@
 
 A modern React application for searching and browsing images from Pixabay. Built with TypeScript, Redux, and Styled Components.
 
-[Visit](https://pixabayfinderx.netlify.app)
-
 ## Features
 
 - 🔍 Search for images using Pixabay's API
