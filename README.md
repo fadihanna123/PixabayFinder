@@ -2,6 +2,8 @@
 
 A modern React application for searching and browsing images from Pixabay. Built with TypeScript, Redux, and Styled Components.
 
+## [Visit](https://pixabay-finder.vercel.app)
+
 ## Features
 
 - 🔍 Search for images using Pixabay's API
@@ -93,6 +95,8 @@ src/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Screenshot
+![Screenshot](screenshot.png "Screenshot")
 ## Author
 
 - **Fadi Hanna** - [GitHub](https://github.com/fadihanna123)
