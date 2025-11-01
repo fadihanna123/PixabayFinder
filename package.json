@@ -62,7 +62,7 @@
     "styled-components": "6.1.19",
     "stylelint": "16.25.0",
     "typescript": "5.9.2",
-    "vite": "7.1.11"
+    "vite": "7.1.12"
   },
   "browserslist": {
     "production": [
