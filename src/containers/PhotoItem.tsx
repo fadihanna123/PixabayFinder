@@ -66,6 +66,7 @@ const PhotoItem: React.FC<{
           aria-label={searchForm.query}
           src={item.webformatURL}
           alt={searchForm.query}
+          loading='lazy'
           onClick={() => toggleImagePreviewer(item)}
           style={{
             width: '100%',

@@ -8,7 +8,6 @@ import React from 'react';
  * Handle search-form values.
  * @param { React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> } e - Event
  * @param { SearchForm } searchForm - Search form values
- * @param { any } dispatch - Dispatch
  * @returns { void } Void
  * @example  typer(e, { query: "Cat"; type: "Images" }, dispatch);
  */

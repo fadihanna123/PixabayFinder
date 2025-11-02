@@ -15,7 +15,7 @@ ReactGA.initialize('G-19RMZWXZK8', {
   },
 });
 
-const { NODE_ENV } = process.env;
+const { NODE_ENV } = import.meta.env;
 
 if (NODE_ENV === 'development') {
   // eslint-disable-next-line quotes

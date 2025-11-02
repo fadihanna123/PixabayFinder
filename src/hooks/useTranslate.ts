@@ -10,10 +10,10 @@ import SV from '../translations/sv.json';
  * @function useTranslate
  * @param { string } val
  * @param { string } lang
- * @returns { any } Any
+ * @returns { string | undefined } String or Undefined
  * @example useTranslate("Start", "en");
  */
-const useTranslate = (val: keyof TRANSLATIONS, lang: string): any => {
+const useTranslate = (val: keyof TRANSLATIONS, lang: string) => {
   let data: Record<string, string> = {};
 
   data = lang === 'en' ? EN : lang === 'sv' ? SV : {};
