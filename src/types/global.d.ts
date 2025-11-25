@@ -112,7 +112,7 @@ declare global {
    * @param { string } dataSal
    */
   interface FooterProps {
-    children: JSX.Element;
+    children: JSX.Element[];
     dataSal: string;
   }
 

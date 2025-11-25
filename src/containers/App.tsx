@@ -19,7 +19,9 @@ const App = () => {
   const [searchType, setSearchType] = useState<searchFormType>('Images');
   const [toggler, setToggler] = useState<boolean>(false);
   const [mediaLoading, setMediaLoading] = useState<boolean>(false);
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(
+    localStorage.getItem(localStorageKeys.DarkMode) === 'true'
+  );
   const [image, setImage] = useState<string>('');
   const [lang, setLang] = useState<string>('');
   const [searchForm, setSearchForm] = useState<SearchForm>({

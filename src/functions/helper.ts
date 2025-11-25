@@ -6,6 +6,7 @@ const toggleTheme = (
   setDarkMode: (darkMode: boolean) => void
 ) => {
   setDarkMode(!darkMode);
+  localStorage.setItem(localStorageKeys.DarkMode, JSON.stringify(!darkMode));
 };
 
 const switchLang = (

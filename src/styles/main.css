@@ -9,6 +9,11 @@
   color: white;
 }
 
+.dark-mode input[type='search'] {
+  margin: 10px;
+  width: 97%;
+}
+
 .toggleThemeBtn {
   position: fixed;
   bottom: 0;

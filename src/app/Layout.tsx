@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Flip, ToastContainer } from 'react-toastify';
 import Footer from '../inc/Footer';
 import Header from '../inc/Header';
 import { Container } from '@styles/layoutStyles';
 import SearchFormComp from '@core/containers/SearchFormComp';
 import List from '@core/containers/List';
-import { toggleTheme } from '@core/functions/helper';
+import { useGlobalContext } from '@core/states';
 
 const Layout: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const { darkMode } = useGlobalContext();
 
   return (
     <Container className={`${darkMode && 'dark-mode'}`}>
@@ -18,16 +18,6 @@ const Layout: React.FC = () => {
       <SearchFormComp />
       <List />
       <Footer />
-      <button
-        className='toggleThemeBtn'
-        onClick={() => toggleTheme(darkMode, setDarkMode)}
-      >
-        {!darkMode ? (
-          <i className='fa-solid fa-moon moonIcon'></i>
-        ) : (
-          <i className='fa-solid fa-sun sunIcon'></i>
-        )}
-      </button>
       <ToastContainer transition={Flip} />
     </Container>
   );

@@ -12,6 +12,7 @@ const SearchFormComp: React.FC = () => {
       <Col>
         <Input
           name='query'
+          type='search'
           placeholder={`${useTranslate('INPUT_PLACEHOLDER_TXT', lang)}...`}
           value={searchForm.query}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
