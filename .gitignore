@@ -5,6 +5,7 @@ logs
 # Build
 build
 tsconfig.tsbuildinfo
+.cert
 
 # Node modules
 node_modules
