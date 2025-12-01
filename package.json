@@ -88,7 +88,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-react": "7.37.5",
     "globals": "16.5.0",
-    "htmlhint": "1.7.1",
+    "htmlhint": "1.8.0",
     "jsdom": "27.1.0",
     "react-test-renderer": "19.2.0",
     "rimraf": "6.1.0",
