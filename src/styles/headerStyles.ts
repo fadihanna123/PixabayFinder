@@ -1,14 +1,24 @@
 import styled from 'styled-components';
 
-export const MainHeader = styled.header``;
+export const MainHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-style: italic;
+  background: linear-gradient(300deg, #7c3aed 10%, #a78bfa 50%, #c4b5fd 0%);
+  border-radius: 30px;
+
+  h1,
+  i {
+    background: transparent;
+  }
+`;
 
 export const LangSwitcher = styled.select`
   float: right;
   border: 0;
   margin: 10px;
   font-size: 1rem;
-
-  /* Custom dropdown styling */
   padding: 0.5rem 1rem;
   box-shadow:
     inset 0 1px 0 hsla(0, 0%, 100%, 0.1),

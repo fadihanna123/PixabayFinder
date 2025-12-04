@@ -4,3 +4,5 @@ export * from './layoutStyles';
 export * from './listStyles';
 export * from './main.css';
 export * from './photoItemStyles';
+export * from './searchSectionStyles';
+export * from './footerStyles';

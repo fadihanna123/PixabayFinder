@@ -3,9 +3,9 @@ import { Flip, ToastContainer } from 'react-toastify';
 import Footer from '../inc/Footer';
 import Header from '../inc/Header';
 import { Container } from '@styles/layoutStyles';
-import SearchFormComp from '@core/containers/SearchFormComp';
 import List from '@core/containers/List';
 import { useGlobalContext } from '@core/states';
+import SearchSection from '@core/containers/SearchSection';
 
 const Layout: React.FC = () => {
   const { darkMode } = useGlobalContext();
@@ -14,8 +14,7 @@ const Layout: React.FC = () => {
     <Container className={`${darkMode && 'dark-mode'}`}>
       <Header />
       <br />
-      <h1>PixaBay Finder</h1>
-      <SearchFormComp />
+      <SearchSection />
       <List />
       <Footer />
       <ToastContainer transition={Flip} />

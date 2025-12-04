@@ -32,6 +32,7 @@ export const ImageRow = styled.div`
 
 export const VideoItem = styled.video`
   max-width: 100%;
+  width: 100%;
   height: 300px;
   padding: 40px;
   transition: 0.3s all;

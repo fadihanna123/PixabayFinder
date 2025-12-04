@@ -9,6 +9,7 @@ const Header = () => {
 
   return (
     <MainHeader>
+      <h1>Pixabay Finder</h1>
       <LangSwitcher
         defaultValue={lang || 'en'}
         onChange={(e) => switchLang(e, setLang)}

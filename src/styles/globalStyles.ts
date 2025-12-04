@@ -8,7 +8,9 @@ export default createGlobalStyle`
     box-sizing: border-box;
     outline: 0;
     font-size: 100%;
-    transition: 0.3s;
+    transition: 0.3s all;
+    color: #fff;
+    background: linear-gradient(#4f46e5 100%, #7c3aed 50%);
   }
 
   .fslightbox-toolbar-button:nth-child(1) {
@@ -97,6 +99,7 @@ export const Input = styled.input`
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
+  color: #fff;
   background-clip: padding-box;
   border: 1px solid gray;
   appearance: none;
