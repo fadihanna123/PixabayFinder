@@ -55,7 +55,6 @@
     "react-ga4": "^2.1.0",
     "react-toastify": "11.0.5",
     "sal.js": "0.8.5",
-    "styled-components": "6.1.19",
     "stylelint": "16.25.0",
     "typescript": "5.9.3",
     "vite": "7.2.6"

@@ -1,11 +1,5 @@
 import React from 'react';
 import SearchFormComp from './SearchFormComp';
-import {
-  SearchSectionWrapper,
-  HeroTitle,
-  HeroSubtitle,
-  SearchContainer,
-} from '@styles/searchSectionStyles';
 import { useGlobalContext } from '@core/states';
 import useTranslate from '@core/hooks/useTranslate';
 
@@ -13,13 +7,13 @@ const SearchSection = () => {
   const { lang } = useGlobalContext();
 
   return (
-    <SearchSectionWrapper>
-      <HeroTitle>{useTranslate('SECTION_TITLE', lang)}</HeroTitle>
-      <HeroSubtitle>{useTranslate('SECTION_TEXT', lang)}</HeroSubtitle>
-      <SearchContainer>
+    <section className='searchSectionWrapper'>
+      <h1 className='heroTitle'>{useTranslate('SECTION_TITLE', lang)}</h1>
+      <p className='heroSubtitle'>{useTranslate('SECTION_TEXT', lang)}</p>
+      <div className='searchContainer'>
         <SearchFormComp />
-      </SearchContainer>
-    </SearchSectionWrapper>
+      </div>
+    </section>
   );
 };
 

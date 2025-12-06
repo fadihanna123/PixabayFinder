@@ -3,7 +3,6 @@ import React from 'react';
 // Components
 import PhotoItem from './PhotoItem';
 import Loader from '../ui/Loader';
-import { ImageRow, NoData, VideoItem, VideoRow } from '@styles/listStyles';
 import useTranslate from '../hooks/useTranslate';
 import { useGlobalContext } from '@core/states';
 
@@ -27,7 +26,7 @@ const List: React.FC = () => {
           {imgList?.hits.length}
         </>
       )}
-      <ImageRow>
+      <div className='imageRow'>
         {searchType === 'Images' &&
           (searchForm.query ? (
             imgList && imgList.totalHits ? (
@@ -35,38 +34,43 @@ const List: React.FC = () => {
                 return <PhotoItem key={i} item={image} />;
               })
             ) : (
-              <NoData>{useTranslate('NO_IMAGES_FOUND_TXT', lang)}! 😔</NoData>
+              <div className='noData'>
+                {useTranslate('NO_IMAGES_FOUND_TXT', lang)}! 😔
+              </div>
             )
           ) : (
             ''
           ))}
-      </ImageRow>
-      <VideoRow>
+      </div>
+      <div className='videoRow'>
         {searchType === 'Videos' &&
           (searchForm.query ? (
             videoList && videoList.totalHits ? (
               !mediaLoading ? (
                 videoList?.hits.map((video: HitsOfList, i: number) => {
                   return (
-                    <VideoItem
+                    <video
+                      className='videoItem'
                       key={i}
                       controls
                       src={video.videos?.small.url}
                       autoPlay={false}
                       muted={true}
-                    ></VideoItem>
+                    ></video>
                   );
                 })
               ) : (
                 <Loader className={['spinner']} />
               )
             ) : (
-              <NoData>{useTranslate('NO_VIDEOS_FOUND_TXT', lang)}! 😔</NoData>
+              <div className='noData'>
+                {useTranslate('NO_VIDEOS_FOUND_TXT', lang)}! 😔
+              </div>
             )
           ) : (
             ''
           ))}
-      </VideoRow>
+      </div>
     </main>
   );
 };

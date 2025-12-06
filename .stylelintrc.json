@@ -2,6 +2,8 @@
   "extends": ["stylelint-config-standard", "stylelint-config-recommended"],
   "rules": {
     "declaration-property-value-no-unknown": null,
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "media-feature-range-notation": null,
+    "keyframes-name-pattern": null
   }
 }

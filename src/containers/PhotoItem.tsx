@@ -4,14 +4,6 @@ import ReactGA from 'react-ga4';
 
 // Components
 import Loader from '@ui/Loader';
-import {
-  ImageCol,
-  Modal,
-  ModalContent,
-  CloseLink,
-  CloseLinkContainer,
-} from '@core/styles/photoItemStyles';
-import { ImgItem, ModalImg } from '@core/styles/listStyles';
 import { useGlobalContext } from '@core/states';
 
 const PhotoItem: React.FC<{
@@ -60,9 +52,10 @@ const PhotoItem: React.FC<{
   }
 
   return (
-    <ImageCol>
+    <section className='imageCol'>
       {item?.webformatURL && (
-        <ImgItem
+        <img
+          className='imgItem'
           aria-label={searchForm.query}
           src={item.webformatURL}
           alt={searchForm.query}
@@ -75,26 +68,33 @@ const PhotoItem: React.FC<{
         />
       )}
       {toggler && (
-        <Modal className='modal' color='white'>
-          <ModalContent>
+        <div className='modal'>
+          <div className='modalContent'>
             {image && (
               <>
-                <CloseLinkContainer>
-                  <CloseLink
+                <div className='closeLinkContainer'>
+                  <a
+                    className='closeLink'
                     href='#'
                     onClick={() => hideImagePreviewer(toggler)}
                   >
                     X
-                  </CloseLink>
-                </CloseLinkContainer>
-                <ModalImg width='500' height='500' alt='preview' src={image} />
+                  </a>
+                </div>
+                <img
+                  className='modalImg'
+                  width='500'
+                  height='500'
+                  alt='preview'
+                  src={image}
+                />
               </>
             )}
-          </ModalContent>
-        </Modal>
+          </div>
+        </div>
       )}
       <br />
-    </ImageCol>
+    </section>
   );
 };
 

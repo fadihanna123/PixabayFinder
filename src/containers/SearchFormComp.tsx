@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col, Input, InputRow } from '@styles/globalStyles';
 import { useTyper } from '../hooks';
 import useTranslate from '../hooks/useTranslate';
 import { useGlobalContext } from '@core/states';
@@ -8,9 +7,10 @@ const SearchFormComp: React.FC = () => {
   const { searchForm, lang, setSearchType, setSearchForm } = useGlobalContext();
 
   return (
-    <InputRow>
-      <Col>
-        <Input
+    <section className='inputRow'>
+      <section className='col'>
+        <input
+          className='input'
           name='query'
           type='search'
           placeholder={`${useTranslate('INPUT_PLACEHOLDER_TXT', lang)}...`}
@@ -19,8 +19,8 @@ const SearchFormComp: React.FC = () => {
             useTyper(e, searchForm, setSearchForm)
           }
         />
-      </Col>
-      <Col>
+      </section>
+      <section className='col'>
         <input
           type='radio'
           className='m-2'
@@ -45,8 +45,8 @@ const SearchFormComp: React.FC = () => {
           }}
         />
         {useTranslate('VIDEOS', lang)}
-      </Col>
-    </InputRow>
+      </section>
+    </section>
   );
 };
 

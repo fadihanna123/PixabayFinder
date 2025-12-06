@@ -1,6 +1,5 @@
 import { localStorageKeys } from '@utils/consts';
 import { switchLang } from '@functions/helper';
-import { MainHeader, LangSwitcher } from '@styles/headerStyles';
 import { useGlobalContext } from '@core/states';
 
 const Header = () => {
@@ -8,17 +7,18 @@ const Header = () => {
   const { setLang } = useGlobalContext();
 
   return (
-    <MainHeader>
+    <header className='mainHeader'>
       <h1>Pixabay Finder</h1>
-      <LangSwitcher
+      <select
+        className='langSwitcher'
         defaultValue={lang || 'en'}
         onChange={(e) => switchLang(e, setLang)}
         name='langList'
       >
         <option value='en'>EN</option>
         <option value='sv'>SV</option>
-      </LangSwitcher>
-    </MainHeader>
+      </select>
+    </header>
   );
 };
 

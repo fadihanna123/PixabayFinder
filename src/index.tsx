@@ -1,10 +1,9 @@
 /* eslint-disable no-console */
-import '@styles/index';
+import '@styles/main.css';
 import 'sal.js/dist/sal.css';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactDOM from 'react-dom/client';
 import React from 'react';
-import GlobalStyles from '@styles/globalStyles';
 import App from '@containers/App';
 import useLog from '@hooks/useLog';
 import ReactGA from 'react-ga4';
@@ -29,7 +28,6 @@ const rootEl = document.getElementById('root')! as HTMLDivElement;
 const root = ReactDOM.createRoot(rootEl);
 root.render(
   <React.StrictMode>
-    <GlobalStyles />
     <App />
   </React.StrictMode>
 );
