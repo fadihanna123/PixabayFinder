@@ -1,6 +1,6 @@
 # PixabayFinder
 
-A modern React application for searching and browsing images from Pixabay. Built with TypeScript, and Styled Components.
+A modern React application for searching and browsing images from Pixabay. Built with TypeScript.
 
 ## [Visit](https://pixabay-finder.vercel.app)
 
@@ -17,7 +17,6 @@ A modern React application for searching and browsing images from Pixabay. Built
 
 - React 19
 - TypeScript
-- Styled Components
 - Vite
 - Vitest
 - ESLint
@@ -74,6 +73,7 @@ src/
 ├── functions/   # Utility functions
 ├── hooks/       # Custom React hooks
 ├── inc/         # Include files
+├── states/      # Global states
 ├── styles/      # Global styles
 ├── tests/       # Test files
 ├── translations/# Internationalization files

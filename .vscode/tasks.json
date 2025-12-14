@@ -14,7 +14,7 @@
     {
       "label": "Remove Dependencies",
       "type": "shell",
-      "command": "rimraf node_modules build",
+      "command": "rimraf ./node_modules ./build",
       "presentation": {
         "reveal": "silent",
         "close": true

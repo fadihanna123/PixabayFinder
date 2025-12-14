@@ -72,14 +72,16 @@ const PhotoItem: React.FC<{
           <div className='modalContent'>
             {image && (
               <>
-                <div className='closeLinkContainer'>
-                  <a
-                    className='closeLink'
-                    href='#'
-                    onClick={() => hideImagePreviewer(toggler)}
+                <div className='closePreviewerBtnContainer'>
+                  <button
+                    className='closePreviewerBtn'
+                    onClick={(e) => {
+                      e.preventDefault();
+                      hideImagePreviewer(toggler);
+                    }}
                   >
                     X
-                  </a>
+                  </button>
                 </div>
                 <img
                   className='modalImg'

@@ -179,6 +179,11 @@ i {
 .imgItem {
   width: 200px;
   height: 200px;
+  cursor: pointer;
+}
+
+.imgItem:hover {
+  transform: scale(1.1);
 }
 
 .modal {
@@ -228,17 +233,19 @@ i {
   max-width: 1300px;
 }
 
-.closeLink {
+.closePreviewerBtn {
   font-size: 30px;
   color: #fff;
   text-decoration: none;
+  border: 0;
+  cursor: pointer;
 }
 
-.closeLink:hover {
+.closePreviewerBtn:hover {
   color: #f00;
 }
 
-.closeLinkContainer {
+.closePreviewerBtnContainer {
   position: absolute;
   top: 0;
   right: 0;
