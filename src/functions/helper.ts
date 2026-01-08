@@ -1,7 +1,8 @@
 import { localStorageKeys } from '@utils/consts';
 import { toast } from 'react-toastify';
 
-const toggleTheme = (
+// toggleTheme: toggle the theme between light and dark
+export const toggleTheme = (
   darkMode: boolean,
   setDarkMode: (darkMode: boolean) => void
 ) => {
@@ -9,7 +10,8 @@ const toggleTheme = (
   localStorage.setItem(localStorageKeys.DarkMode, JSON.stringify(!darkMode));
 };
 
-const switchLang = (
+// switchLang: switch the language of the app
+export const switchLang = (
   e: { target: HTMLSelectElement },
   setLang: (lang: string) => void
 ) => {
@@ -21,5 +23,3 @@ const switchLang = (
     toast.error((err as Error).message);
   }
 };
-
-export { switchLang, toggleTheme };

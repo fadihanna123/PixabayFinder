@@ -290,7 +290,7 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   background: linear-gradient(
     135deg,
@@ -373,7 +373,7 @@ i {
 }
 
 @media (max-width: 1020px) {
-  .mainFooterWrrapper {
+  .mainFooterWrapper {
     font-size: 1rem;
     flex-direction: column-reverse;
   }

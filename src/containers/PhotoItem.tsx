@@ -60,11 +60,11 @@ const PhotoItem: React.FC<{
           src={item.webformatURL}
           alt={searchForm.query}
           onClick={() => toggleImagePreviewer(item)}
+          onLoad={() => setMediaLoading(false)}
           style={{
             width: '100%',
             display: mediaLoading ? 'none' : 'block',
           }}
-          onLoad={() => setMediaLoading(false)}
         />
       )}
       {toggler && (

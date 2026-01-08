@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
@@ -52,12 +52,12 @@
     }
   },
   "include": [
-    "src/**/*",
-    "jest.config.ts",
-    "index.d.ts",
-    "eslint.config.mjs",
-    "build/types/**/*.ts",
-    "vite.config.ts",
+    "./src/**/*",
+    "./jest.config.ts",
+    "./index.d.ts",
+    "./eslint.config.mjs",
+    "./build/types/**/*.ts",
+    "./vite.config.ts",
     "**/*.json"
   ],
   "exclude": ["node_modules", ".github", ".husky", ".vscode", "public"]

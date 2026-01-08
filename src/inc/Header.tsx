@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className='mainHeader'>
-      <h1>Pixabay Finder</h1>
+      <h1 className='m-2'>Pixabay Finder</h1>
       <select
         className='langSwitcher'
         defaultValue={lang || 'en'}

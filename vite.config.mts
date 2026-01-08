@@ -26,6 +26,7 @@ export default defineConfig({
   base: '/',
   server: {
     port: Number(isDev ? devPort : prodPort),
+    open: isDev,
     strictPort: true,
     host: true,
     watch: {
